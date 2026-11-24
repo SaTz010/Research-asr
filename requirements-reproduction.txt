@@ -1,0 +1,9 @@
+# Full offline tests and report build, without Whisper weights/CUDA.
+-r requirements-analysis.txt
+nbformat==5.11.1
+ipython==9.18.1
+openai==2.54.0
+# Used only by the dataset-recovery mock in the offline tests.
+datasets==4.4.1
+reportlab==4.4.9
+pypdf==6.21.4

@@ -1,0 +1,116 @@
+{
+  "checked_on": "2026-11-24",
+  "started_at_utc": "2026-11-24T04:55:15.591831+00:00",
+  "passed": true,
+  "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\.cache\\reproduction-20261124\\env\\Scripts\\python.exe",
+  "isolated_working_copy": "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\.cache\\reproduction-deoua_9u",
+  "site_packages_inherited": false,
+  "packages": {
+    "numpy": "2.3.5",
+    "soundfile": "0.13.1",
+    "jiwer": "4.0.0",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "nbformat": "5.11.1",
+    "openai": "2.54.0",
+    "reportlab": "4.4.9",
+    "pypdf": "6.21.4"
+  },
+  "audio_included": false,
+  "audio_revalidated": false,
+  "inference_requests": 0,
+  "stages": [
+    {
+      "name": "pip_check",
+      "exit_code": 0,
+      "elapsed_s": 2.135
+    },
+    {
+      "name": "offline_tests",
+      "exit_code": 0,
+      "elapsed_s": 17.964
+    },
+    {
+      "name": "reference_sensitivity",
+      "exit_code": 0,
+      "elapsed_s": 1.086
+    },
+    {
+      "name": "cmi_analysis",
+      "exit_code": 0,
+      "elapsed_s": 11.424
+    },
+    {
+      "name": "paired_uncertainty",
+      "exit_code": 0,
+      "elapsed_s": 9.477
+    },
+    {
+      "name": "reviewed_variants",
+      "exit_code": 0,
+      "elapsed_s": 0.674
+    },
+    {
+      "name": "report_pdf",
+      "exit_code": 0,
+      "elapsed_s": 0.795
+    }
+  ],
+  "pdf_pages": 17,
+  "pdf_text_and_page_count_match": true,
+  "regenerated_json_results_match": [
+    "audited_reference_comparison_20261116.json",
+    "cmi_analysis_20261116.json",
+    "paired_uncertainty_20261119.json",
+    "variant_sensitivity_20261122.json"
+  ],
+  "analysis_figures_regenerated": [
+    "cmi_band_error_rates_20261116",
+    "cmi_continuous_wer_20261116",
+    "cmi_by_channel_20261116",
+    "cmi_duration_checks_20261116",
+    "paired_uncertainty_20261119"
+  ],
+  "report_figures": "PDF uses the two included report figure assets; other analysis figures are regenerated.",
+  "network_connection_attempts": 0,
+  "input_hashes_unchanged": {
+    "data\\annotations\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "data\\annotations\\error_examples_20261120.json": "bc6c1b4de5542bf9d4cf061ea72c3cbdf1a54bb20ecc894f1452a9fa0ec09422",
+    "data\\annotations\\error_examples_20261123_pre_recovery.json": "11f4403c6287c4bd124189fc9a1429f427e218377edead0aff1b1b96a20aef7d",
+    "data\\annotations\\reference_audit_20261105.json": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+    "data\\annotations\\reference_audit_20261112_frozen.json": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+    "data\\annotations\\reference_audit_20261112_pre_freeze.json": "cab09135b8dcd88e3acdd813f2c7251595e3a1698ee07195584cbf62719447eb",
+    "data\\annotations\\word_variants_20261122.json": "561c2cb2c525308b36ced3981d1afea0bcfdcfda6a15b1459d95f03cddf49dd7",
+    "data\\annotations\\word_variants_20261123_snapshot.json": "102596ad97b76d89039339d53e02c0f6edf644d3d66b1d338458ba7c3769033c",
+    "data\\manifests\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "data\\manifests\\budget_metadata_20261022.json": "2ed67804fb11e2920795569288975b79f6adc9178ac53ac57c7ff8ad041d6eb2",
+    "data\\manifests\\reference_audit_20261105_selection.json": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+    "data\\manifests\\test_cs_20261105.json": "a6aa51bb2592022f3da004853457c871e709af0b820defd2ae0f0d1f479324fc",
+    "data\\manifests\\test_cs_benchmark_20261112.json": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+    "data\\manifests\\test_cs_preflight_20261112.json": "d8621f611cbb1a21372378a685acfcbca4c7f18c7c3ad2b336bb23db2174f43d",
+    "data\\manifests\\validation_api_access_20261112.json": "1dafc42db21bc6cf60d5ce0f655799b16067c81902247177185dfc3c4c7bd993",
+    "data\\manifests\\validation_api_access_retry1_20261112.json": "315f497304fad469b23624c4633eb290efc24bf5f9cddb38c7dae51d7d814adb",
+    "data\\manifests\\validation_api_access_retry2_20261112.json": "d8f40cacc48dc590b77dabd41c8c67db70199c847609065b7a4a9313bf754da4",
+    "data\\manifests\\validation_check_20261104.json": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21",
+    "data\\manifests\\validation_check_20261104_selection.json": "9525d1af677310c045515a8450e3651e19813bc6af9da4148edc5f33561e1ccd",
+    "configs\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "configs\\api_prices_20261022.json": "572d807eedf2b2d7edd9960e9abb3a3623a4cbb3141e8299e8fc9561e938e01e",
+    "configs\\evaluation_protocol_20261112.json": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+    "configs\\local_whisper_pilot.json": "f997b305e570820bdf990a2de56d1dc97b47982f3b4cf960f28a7311644b2495",
+    "results\\predictions\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "results\\predictions\\chirp3_api_pilot_20261023T080349973576Z.zip": "7aa7ed3b5acba14d906ced0b09bc40e532b409e4104ec43baa217ec52df19123",
+    "results\\predictions\\chirp3_api_pilot_20261023T090553705776Z.zip": "d8205069fb1f410d6a011b6a6643093fbfcda615da0830559121bf42e3092ef1",
+    "results\\predictions\\local_whisper_large_v2_pilot.json": "585b19af487abf78c50d4a0f85df67763cf435b7aeb1f71c72f1f94fb371977b",
+    "results\\predictions\\test_cs_benchmark_20261112_local.json": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+    "results\\predictions\\test_cs_benchmark_20261112_whisper_api.json": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+    "results\\predictions\\validation_api_access_20261112_whisper_api.json": "35e2933ec4cbe4ef82256428d00e1a65ca72a31e10917dcdabe244f6ef958aab",
+    "results\\predictions\\validation_api_access_retry1_20261112_whisper_api.json": "e5d11c8f6f37bd5e8a44141ffd136ef14dadd5e6c9821cd619bc5cc206ebb02f",
+    "results\\predictions\\validation_api_access_retry2_20261112_whisper_api.json": "f7052d24d83a899fdbebbd62e5efba7a2024fe98b24d3f4c9d93a7987394a69f",
+    "results\\predictions\\validation_check_20261104_local.json": "d8cdf097047f2900415f7897aa79efbfae1f44831a375d2ad5e750015316bcc1",
+    "results\\predictions\\whisper_api_pilot_20261022T105623043636Z.zip": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c",
+    "results\\predictions\\whisper_pilot_20261022T084926480010Z.zip": "ff3d8ffd26f70fd269d60b5b5cadc92c81f28dc2939b085d951d62f93db33cb0",
+    "results\\predictions\\whisper_precision_diagnostic_20261022T101530449039Z.zip": "0ce840665bb3f2d54be5767cc080ea2076c8b5a4cf8cbc7967ba82c3ffde1bfb"
+  },
+  "finished_at_utc": "2026-11-24T04:55:59.851610+00:00"
+}

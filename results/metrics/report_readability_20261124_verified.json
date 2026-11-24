@@ -1,0 +1,90 @@
+{
+  "verified_on": "2026-11-24",
+  "version": "0.4",
+  "pages": 17,
+  "author": "Sanskar Ananta Tiwari",
+  "figures": 2,
+  "features": [
+    "Dedicated cover",
+    "Single-page generated linked contents",
+    "Plain-language summary",
+    "Research text and references",
+    "Three appendices including glossary"
+  ],
+  "visually_checked_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "render_method": "Poppler PNGs at scale-to 1300; all pages inspected, changed pages re-inspected after final edits.",
+  "numerical_guards_passed": true,
+  "unchanged_research_tables": 10,
+  "toc_page": 2,
+  "plain_language_summary_page": 3,
+  "toc_printed_page_number_and_destination_checks": 32,
+  "toc_internal_links": 64,
+  "outline_headings_verified": 32,
+  "visible_revision_id_pages": [
+    15
+  ],
+  "pdf_character_bounds_checked": true,
+  "external_pdf_link_annotations_match_source": true,
+  "previous_verified_v03_preserved": true,
+  "frozen_inputs_results_and_annotations_unchanged": true,
+  "offline_tests_passed": 141,
+  "reader_comprehension_independently_tested": false,
+  "clean_environment_reproduction_completed": false,
+  "inference_requests": 0,
+  "published": false,
+  "build_runtime": {
+    "python": "3.12.14",
+    "executable": "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1123-915-0_26.1123.915.0_x64__3k8sg7r9htsxt\\dependencies\\python\\python.exe",
+    "reportlab": "4.4.9",
+    "pypdf": "6.21.4"
+  },
+  "source_sha256": {
+    "reports/research_report_draft.md": "225503f8bfefaaf46b6c4b4536d55b57cc7ac1022e1b64d37b2c599199a9f36c",
+    "output/pdf/nepali_english_asr_research_report_draft.pdf": "a9ef8f33c3e7db845ca07e351cce39a77da1ae9756b1360e7ef89a6fab933b03",
+    "output/pdf/nepali_english_asr_research_report_draft_v0.4_20261124.pdf": "a9ef8f33c3e7db845ca07e351cce39a77da1ae9756b1360e7ef89a6fab933b03",
+    "src/build_research_report.py": "f1e8e8885af492bc261a3e5011826e05f3b33b946f501798636e55bad4f9c74e",
+    "tests/test_report_numbers.py": "77b18d1255bd53f1e20027aa9d0cd323ef355d257bf9bf0ac764809781feb0f4",
+    "reports/research_report_draft_v0.3_20261124.md": "0a3ebd315ceb43ba4f994ddf6d09e9dca68c6a58199c6053810fd2decd112d1b",
+    "output/pdf/nepali_english_asr_research_report_draft_v0.3_20261124.pdf": "d943fe04f051bdf49a2b996ff5a1a728c96186cb2d87339a9c010a68e2902b6e",
+    "results/metrics/report_revision_20261124_verified.json": "393480d0cc0d88cfd9995601ff1160a28b664dd303f85bff70ebf9736f35897e",
+    "reports/progress_report_readability_20261124.md": "d722a6edde38e78d7677d61cacb6b8ff5c3be4e04ba399c391e481dfb4565abb",
+    "data/annotations/error_examples_20261120.json": "bc6c1b4de5542bf9d4cf061ea72c3cbdf1a54bb20ecc894f1452a9fa0ec09422",
+    "data/annotations/word_variants_20261122.json": "561c2cb2c525308b36ced3981d1afea0bcfdcfda6a15b1459d95f03cddf49dd7"
+  },
+  "protected_source_sha256": {
+    "configs\\evaluation_protocol_20261112.json": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+    "reports\\protocol_20261112.md": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4",
+    "data\\manifests\\test_cs_benchmark_20261112.json": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+    "data\\annotations\\reference_audit_20261112_frozen.json": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+    "results\\predictions\\test_cs_benchmark_20261112_local.json": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+    "results\\predictions\\test_cs_benchmark_20261112_whisper_api.json": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+    "results\\metrics\\paired_benchmark_overall_20261116.json": "af67ff4aacbfc60068cb67a6fcb5f2305e08079d974690e828212f1e8ddee7ad",
+    "results\\metrics\\cmi_analysis_20261116.json": "6982cf4ca1ec30c5f1c04247206ed6ae2bf71e5feedc1dc75dfe9de5f0c9421a",
+    "results\\metrics\\paired_uncertainty_20261119.json": "2c10a603267bc59a1d44a28b902df6c1bbba516b5f810bf9df309df310baf1bb",
+    "data\\annotations\\word_variants_20261123_snapshot.json": "102596ad97b76d89039339d53e02c0f6edf644d3d66b1d338458ba7c3769033c",
+    "results\\metrics\\variant_sensitivity_completed_20261123.json": "570717a7c93f653ad23114127f8b04c57eb4b728ff23f26de1792490ee7d7e25"
+  },
+  "remaining": [
+    "Clean-environment reproduction",
+    "Final author review",
+    "Release/public-link checks"
+  ]
+}

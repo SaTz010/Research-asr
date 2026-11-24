@@ -1,0 +1,161 @@
+{
+  "created_at_utc": "2026-11-12T06:53:22.683988+00:00",
+  "run_spec": {
+    "system": "whisper_api",
+    "dataset": {
+      "id": "saileshbro/nepali-cs-asr",
+      "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+      "config": "default",
+      "split": "validation"
+    },
+    "purpose": "validation_api_access_after_successful_metadata_auth",
+    "manifest_sha256": "d8f40cacc48dc590b77dabd41c8c67db70199c847609065b7a4a9313bf754da4",
+    "manifest": [
+      {
+        "transcription": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ profit आइरहेको छ।",
+        "transcription_devanagari": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ प्रोफिट आइरहेको छ।",
+        "transcription_romanized": "hoina aba pratyek barsa 50,000 ko darale chahi profit aairaheko cha",
+        "cmi": 10.0,
+        "speech_type": "cs",
+        "speaker_id": "UCLR1utoz9wpo4byPAOEIMRQ",
+        "video_id": "14DlFPc4VEw",
+        "start_ms": 1789696,
+        "end_ms": 1793456,
+        "duration_s": 3.76,
+        "clip_id": "validation/14DlFPc4VEw/1789696-1793456",
+        "decoded_duration_s": 3.76,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "428b72c10844a5fc33a15d155f5b7bdccc787dcb7fd978fd473a6f302b3558be"
+      }
+    ],
+    "payload_sha256": {
+      "validation/14DlFPc4VEw/1789696-1793456": "9693a3802f871daa7015ac8b4e0556fcb93b6ec86889e23adeada4fa7b43d90b"
+    },
+    "config": {
+      "request_settings": {
+        "model": "whisper-1",
+        "response_format": "verbose_json",
+        "temperature": 0.0
+      },
+      "base_url": "https://api.openai.com/v1",
+      "timeout_s": 120,
+      "max_retries": 0
+    },
+    "packages": {
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "openai": "2.54.0"
+    }
+  },
+  "predictions": [
+    {
+      "transcription": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ profit आइरहेको छ।",
+      "transcription_devanagari": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ प्रोफिट आइरहेको छ।",
+      "transcription_romanized": "hoina aba pratyek barsa 50,000 ko darale chahi profit aairaheko cha",
+      "cmi": 10.0,
+      "speech_type": "cs",
+      "speaker_id": "UCLR1utoz9wpo4byPAOEIMRQ",
+      "video_id": "14DlFPc4VEw",
+      "start_ms": 1789696,
+      "end_ms": 1793456,
+      "duration_s": 3.76,
+      "clip_id": "validation/14DlFPc4VEw/1789696-1793456",
+      "decoded_duration_s": 3.76,
+      "sample_rate": 16000,
+      "source_channels": 1,
+      "audio_sha256": "428b72c10844a5fc33a15d155f5b7bdccc787dcb7fd978fd473a6f302b3558be",
+      "status": "received",
+      "requested_at_utc": "2026-11-12T06:53:24.307984+00:00",
+      "response": {
+        "duration": 3.759999990463257,
+        "language": "nepali",
+        "text": "अब प्रतेक बर्सार 50,000 को दरले जे प्राफिट आई रा अच्छा",
+        "segments": [
+          {
+            "id": 0,
+            "avg_logprob": -0.43132710456848145,
+            "compression_ratio": 1.2999999523162842,
+            "end": 4.0,
+            "no_speech_prob": 0.3483084440231323,
+            "seek": 0,
+            "start": 0.0,
+            "temperature": 0.0,
+            "text": " अब प्रतेक बर्सार 50,000 को दरले जे प्राफिट आई रा अच्छा",
+            "tokens": [
+              50364,
+              8485,
+              227,
+              3941,
+              105,
+              8485,
+              103,
+              27099,
+              25411,
+              36158,
+              21981,
+              41858,
+              8485,
+              105,
+              25411,
+              27099,
+              45938,
+              17937,
+              25411,
+              2625,
+              11,
+              1360,
+              31970,
+              33926,
+              8485,
+              99,
+              25411,
+              46758,
+              21981,
+              8485,
+              250,
+              21981,
+              8485,
+              103,
+              27099,
+              25411,
+              17937,
+              3941,
+              104,
+              33279,
+              3941,
+              253,
+              8485,
+              228,
+              3941,
+              230,
+              8485,
+              108,
+              17937,
+              8485,
+              227,
+              3941,
+              248,
+              27099,
+              3941,
+              249,
+              17937,
+              50564
+            ]
+          }
+        ],
+        "usage": {
+          "seconds": 4.0,
+          "type": "duration"
+        },
+        "words": null,
+        "task": "transcribe"
+      },
+      "request_id": "req_12ad80514233466c9ff5d817f0fa6cee",
+      "request_latency_s": 2.860445800000889,
+      "hypothesis": "अब प्रतेक बर्सार 50,000 को दरले जे प्राफिट आई रा अच्छा"
+    }
+  ],
+  "api_request_attempts": 1
+}

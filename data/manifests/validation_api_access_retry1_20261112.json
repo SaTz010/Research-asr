@@ -1,0 +1,64 @@
+{
+  "purpose": "validation_api_access_explicit_retry_after_401",
+  "dataset": {
+    "id": "saileshbro/nepali-cs-asr",
+    "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+    "config": "default",
+    "split": "validation"
+  },
+  "source_manifest_sha256": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21",
+  "clips": [
+    {
+      "identity": {
+        "transcription": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ profit आइरहेको छ।",
+        "transcription_devanagari": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ प्रोफिट आइरहेको छ।",
+        "transcription_romanized": "hoina aba pratyek barsa 50,000 ko darale chahi profit aairaheko cha",
+        "cmi": 10.0,
+        "speech_type": "cs",
+        "speaker_id": "UCLR1utoz9wpo4byPAOEIMRQ",
+        "video_id": "14DlFPc4VEw",
+        "start_ms": 1789696,
+        "end_ms": 1793456,
+        "duration_s": 3.76,
+        "clip_id": "validation/14DlFPc4VEw/1789696-1793456",
+        "decoded_duration_s": 3.76,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "428b72c10844a5fc33a15d155f5b7bdccc787dcb7fd978fd473a6f302b3558be"
+      },
+      "payload_sha256": "9693a3802f871daa7015ac8b4e0556fcb93b6ec86889e23adeada4fa7b43d90b",
+      "audio_path": ".cache/validation_check_20261104/9693a3802f871daa7015ac8b4e0556fcb93b6ec86889e23adeada4fa7b43d90b.wav",
+      "source_file": "data/validation-00000-of-00003.parquet",
+      "row_in_file": 86,
+      "selection_role": "shortest_in_band"
+    }
+  ],
+  "frozen_system_configs": {
+    "whisper_api": {
+      "request_settings": {
+        "model": "whisper-1",
+        "response_format": "verbose_json",
+        "temperature": 0.0
+      },
+      "base_url": "https://api.openai.com/v1",
+      "timeout_s": 120,
+      "max_retries": 0
+    }
+  },
+  "frozen_packages": {
+    "whisper_api": {
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "openai": "2.54.0"
+    }
+  },
+  "previous_attempt": {
+    "checkpoint": "results/predictions/validation_api_access_20261112_whisper_api.json",
+    "sha256": "35e2933ec4cbe4ef82256428d00e1a65ca72a31e10917dcdabe244f6ef958aab",
+    "status": "api_error",
+    "http_status": 401,
+    "request_id": "req_4521ef00d2034c1abbbc772c5256732d",
+    "reason": "Explicit one-request retry after researcher replaces/corrects the credential; preserve original failed attempt."
+  }
+}

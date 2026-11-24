@@ -1,0 +1,19 @@
+{
+  "checked_on": "2026-11-12",
+  "phase": "validation_api_access",
+  "attempted_requests_observed": 1,
+  "status": "credential_authentication_failed",
+  "http_status": 401,
+  "error_type": "AuthenticationError",
+  "request_id": "req_4521ef00d2034c1abbbc772c5256732d",
+  "successful_transcriptions": 0,
+  "failed_checkpoint": "results/predictions/validation_api_access_20261112_whisper_api.json",
+  "failed_checkpoint_sha256": "35e2933ec4cbe4ef82256428d00e1a65ca72a31e10917dcdabe244f6ef958aab",
+  "prepared_retry_manifest": "data/manifests/validation_api_access_retry1_20261112.json",
+  "retry_executed_by_assistant": false,
+  "retry_requires_corrected_or_replaced_private_credential": true,
+  "retry_max_new_requests": 1,
+  "original_failure_preserved": true,
+  "billing_independently_verified": false,
+  "held_out_inference_enabled": false
+}

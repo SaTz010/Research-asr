@@ -1,0 +1,147 @@
+{
+  "source_archive": "whisper_pilot_20261022T084926480010Z.zip",
+  "source_sha256": "ff3d8ffd26f70fd269d60b5b5cadc92c81f28dc2939b085d951d62f93db33cb0",
+  "checks": "All stored per-clip and corpus WER/CER values recomputed successfully; clip metadata, hashes, normalization, language token IDs, and EOS flags agree within the exported data. Audio itself is not included and was not independently checked.",
+  "scope": "Five-clip validation pilot; not a CMI finding or a final benchmark.",
+  "clips": 5,
+  "total_audio_seconds": 50.976,
+  "channels": 2,
+  "videos": 3,
+  "cmi_range": [
+    18.75,
+    44.44
+  ],
+  "scores": {
+    "auto": {
+      "clips": 5,
+      "reference_words": 111,
+      "word_substitutions": 83,
+      "word_deletions": 10,
+      "word_insertions": 218,
+      "wer": 2.8018018018018016,
+      "reference_characters": 525,
+      "cer": 1.8628571428571428,
+      "language_tokens": {
+        "<|hi|>": 2,
+        "<|en|>": 3
+      },
+      "outputs_without_eos": 1
+    },
+    "forced_ne": {
+      "clips": 5,
+      "reference_words": 111,
+      "word_substitutions": 84,
+      "word_deletions": 24,
+      "word_insertions": 16,
+      "wer": 1.117117117117117,
+      "reference_characters": 525,
+      "cer": 1.5257142857142858,
+      "language_tokens": {
+        "<|ne|>": 5
+      },
+      "outputs_without_eos": 2
+    }
+  },
+  "per_clip": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "mode": "auto",
+      "cmi": 18.75,
+      "wer": 0.9411764705882353,
+      "cer": 0.6052631578947368,
+      "hypothesis_words": 20,
+      "language_token": "<|hi|>",
+      "reached_token_limit_without_eos": false
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "mode": "auto",
+      "cmi": 26.92,
+      "wer": 0.8518518518518519,
+      "cer": 0.7789473684210526,
+      "hypothesis_words": 17,
+      "language_token": "<|en|>",
+      "reached_token_limit_without_eos": false
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "mode": "auto",
+      "cmi": 36.0,
+      "wer": 8.88,
+      "cer": 5.815789473684211,
+      "hypothesis_words": 222,
+      "language_token": "<|en|>",
+      "reached_token_limit_without_eos": true
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "mode": "auto",
+      "cmi": 44.44,
+      "wer": 1.0,
+      "cer": 0.6533333333333333,
+      "hypothesis_words": 37,
+      "language_token": "<|en|>",
+      "reached_token_limit_without_eos": false
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "mode": "auto",
+      "cmi": 33.33,
+      "wer": 1.5333333333333334,
+      "cer": 1.0777777777777777,
+      "hypothesis_words": 23,
+      "language_token": "<|hi|>",
+      "reached_token_limit_without_eos": false
+    },
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "mode": "forced_ne",
+      "cmi": 18.75,
+      "wer": 1.0,
+      "cer": 3.736842105263158,
+      "hypothesis_words": 3,
+      "language_token": "<|ne|>",
+      "reached_token_limit_without_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "mode": "forced_ne",
+      "cmi": 26.92,
+      "wer": 0.9259259259259259,
+      "cer": 0.6947368421052632,
+      "hypothesis_words": 17,
+      "language_token": "<|ne|>",
+      "reached_token_limit_without_eos": false
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "mode": "forced_ne",
+      "cmi": 36.0,
+      "wer": 1.0,
+      "cer": 0.6578947368421053,
+      "hypothesis_words": 26,
+      "language_token": "<|ne|>",
+      "reached_token_limit_without_eos": false
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "mode": "forced_ne",
+      "cmi": 44.44,
+      "wer": 1.4814814814814814,
+      "cer": 1.9866666666666666,
+      "hypothesis_words": 40,
+      "language_token": "<|ne|>",
+      "reached_token_limit_without_eos": true
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "mode": "forced_ne",
+      "cmi": 33.33,
+      "wer": 1.1333333333333333,
+      "cer": 0.8666666666666667,
+      "hypothesis_words": 17,
+      "language_token": "<|ne|>",
+      "reached_token_limit_without_eos": false
+    }
+  ]
+}

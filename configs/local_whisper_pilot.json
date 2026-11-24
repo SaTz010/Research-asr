@@ -1,0 +1,18 @@
+{
+  "model_id": "Systran/faster-whisper-large-v2",
+  "model_revision": "f0fe81560cb8b68660e564f55dd99207059c092e",
+  "model_sha256": "bf2a9746382e1aa7ffff6b3a0d137ed9edbd9670c3b87e5d35f5e85e70d0333a",
+  "device": "cuda",
+  "compute_type": "float16",
+  "batch_size": 1,
+  "transcribe": {
+    "task": "transcribe",
+    "language": null,
+    "beam_size": 5,
+    "temperature": 0.0,
+    "condition_on_previous_text": false,
+    "vad_filter": false,
+    "word_timestamps": false,
+    "without_timestamps": true
+  }
+}

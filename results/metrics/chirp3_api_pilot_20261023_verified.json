@@ -1,0 +1,117 @@
+{
+  "source_archive": "chirp3_api_pilot_20261023T080349973576Z.zip",
+  "source_sha256": "7aa7ed3b5acba14d906ced0b09bc40e532b409e4104ec43baa217ec52df19123",
+  "checks": "All three per-clip scores independently recomputed; original Whisper baseline, manifest, revisions, payload hashes, request settings and checkpoint agree. Three distinct returned request IDs. No common API-key/OAuth-token/private-key patterns found in the JSON members.",
+  "scope": "Export consistency only. Audio, transmitted bytes, provider identity and live execution were not independently observed; invoices were not checked.",
+  "dataset": {
+    "id": "saileshbro/nepali-cs-asr",
+    "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+    "config": "default",
+    "split": "validation"
+  },
+  "api_model": "chirp_3",
+  "runtime": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "packages": {
+      "requests": "2.32.4",
+      "google-auth": "2.49.0",
+      "datasets": "4.4.1",
+      "huggingface-hub": "0.36.2",
+      "numpy": "2.1.3",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0"
+    }
+  },
+  "coverage": {
+    "expected_clips": 5,
+    "received": 3,
+    "read_timeouts": 1,
+    "not_attempted": 1,
+    "complete": false
+  },
+  "paired_complete_case_comparison": {
+    "scope": "Same three received clips only; not a five-clip headline score.",
+    "chirp_3": {
+      "word_errors": 57,
+      "character_errors": 212,
+      "reference_words": 69,
+      "reference_characters": 285,
+      "wer": 0.8260869565217391,
+      "cer": 0.743859649122807
+    },
+    "whisper-1": {
+      "word_errors": 61,
+      "character_errors": 205,
+      "reference_words": 69,
+      "reference_characters": 285,
+      "wer": 0.8840579710144928,
+      "cer": 0.7192982456140351
+    }
+  },
+  "reported_languages": {
+    "ne": 1,
+    "en": 1,
+    "hi": 1
+  },
+  "returned_billed_seconds": "32",
+  "billing_limit": "Returned usage covers three received responses only; the timed-out request may also have been processed/billed.",
+  "failures": [
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "status": "api_error",
+      "error_type": "ReadTimeout",
+      "request_latency_s": 120.10326540999995,
+      "requested_at_utc": "2026-10-23T07:59:45.979667+00:00"
+    }
+  ],
+  "not_attempted_clip_ids": [
+    "validation/TN8IzjVNnzs/1169296-1178352"
+  ],
+  "per_clip": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "cmi": 18.75,
+      "chirp_wer": 0.35294117647058826,
+      "chirp_cer": 0.3157894736842105,
+      "whisper_wer": 0.7647058823529411,
+      "whisper_cer": 0.5789473684210527,
+      "returned_languages": [
+        "ne"
+      ],
+      "request_id": "7001424c-0000-278c-bc1a-d4f547ed6f78",
+      "billed_duration_s": "9s",
+      "request_latency_s": 1.0910805359999358
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "cmi": 26.92,
+      "chirp_wer": 0.9629629629629629,
+      "chirp_cer": 0.9368421052631579,
+      "whisper_wer": 0.9629629629629629,
+      "whisper_cer": 0.9789473684210527,
+      "returned_languages": [
+        "en"
+      ],
+      "request_id": "7a27f213-0000-2763-be84-d4f547ecc56c",
+      "billed_duration_s": "9s",
+      "request_latency_s": 0.5607896230003462
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "cmi": 36.0,
+      "chirp_wer": 1.0,
+      "chirp_cer": 0.868421052631579,
+      "whisper_wer": 0.88,
+      "whisper_cer": 0.5964912280701754,
+      "returned_languages": [
+        "hi"
+      ],
+      "request_id": "7f6d16df-0000-231e-9449-d4f547ff3004",
+      "billed_duration_s": "14s",
+      "request_latency_s": 18.697143709000102
+    }
+  ],
+  "response_metadata_observation": "Each received response contains a provider-returned formatting prompt in metadata. The recorded client config contains no prompt. Retained as raw response data, not used as an instruction or assumed to prove hidden model implementation.",
+  "interpretation": "Incomplete pilot. Clip 1 has lower mixed-script WER than Whisper but transliterates student/study/hard; clip 2 returns only easy 25%; clip 3 returns Hindi with repeated 100. Auto-language detection returned ne/en/hi. No final model ranking or CMI association conclusion."
+}

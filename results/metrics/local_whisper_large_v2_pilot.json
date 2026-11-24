@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "successful_clips": 5,
+    "expected_clips": 5,
+    "complete": true,
+    "local_wer": 0.8738738738738738,
+    "local_cer": 0.6780952380952381,
+    "api_wer": 0.7297297297297297,
+    "api_cer": 0.4876190476190476,
+    "transcription_s": 8.516795300000013,
+    "audio_s": 50.976
+  },
+  "per_clip": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "cmi": 18.75,
+      "normalized_reference": "होइन धेरै जसो student के हुन्छन् तपाईँको study एकदम hard गर्छन् मतलब दिन रात 1 गर्छन् उनीहरू",
+      "normalized_hypothesis": "देरी जस्सो स्ट्रिडेंट के हुन्छन तोपाईको स्ट्रेडी एकदाम हार्ड गर्छन मतलब दिन रात एक गर्छन उनियारू",
+      "local_wer": 0.7647058823529411,
+      "local_cer": 0.5526315789473685,
+      "api_wer": 0.7647058823529411,
+      "api_cer": 0.5789473684210527,
+      "local_language": "ne"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "cmi": 26.92,
+      "normalized_reference": "यसलाई easily यतिकै पनि निकाल्न मिल्ने थियो 25 भनेको हो नि त so half life को meaning के हो आधा हुने हो नि त so तिम्रो like",
+      "normalized_hypothesis": "25 મલે 25 મલે",
+      "local_wer": 0.9629629629629629,
+      "local_cer": 0.9789473684210527,
+      "api_wer": 0.9629629629629629,
+      "api_cer": 0.9789473684210527,
+      "local_language": "ne"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "cmi": 36.0,
+      "normalized_reference": "यो हामीले निकाल्ने हो नि त mass भनेको basically n n हाम्रो कति निक्लियो यति निक्लियो into molar mass molar mass हाम्रो कति हुन्छ भन्दाखेरि",
+      "normalized_hypothesis": "यो आमले निकाल नियों ता सो मास मानीगो बिसिक्ली यन यन आमरो कती निकलियो एती निकलियो इंटू मोलर मास मोलर मास आमरो कती हुँँछा मनदाहिरी",
+      "local_wer": 0.96,
+      "local_cer": 0.6228070175438597,
+      "api_wer": 0.88,
+      "api_cer": 0.5964912280701754,
+      "local_language": "ne"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "cmi": 44.44,
+      "normalized_reference": "physical interpretation यदि गर्न सक्यो भने होइन त्यसबाट हामी question from the predictable last year को question बाट गर्न सक्छौँ marks ल्याउन सजिलो भइदिन्छ repetition rate होइन",
+      "normalized_hypothesis": "प्रिदिक्टेक्टेबल",
+      "local_wer": 1.0,
+      "local_cer": 0.94,
+      "api_wer": 0.5185185185185185,
+      "api_cer": 0.22666666666666666,
+      "local_language": "ne"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "cmi": 33.33,
+      "normalized_reference": "electric charge field potential capacitor dc circuit chapter हरू छन् होइन जसमध्ये mostly तपाईँको concept",
+      "normalized_hypothesis": "electric charge field potential capacitor dc circuit chapter हरु सान है न जस मदिये mostly तपाईंको concept",
+      "local_wer": 0.4666666666666667,
+      "local_cer": 0.1,
+      "api_wer": 0.4,
+      "api_cer": 0.18888888888888888,
+      "local_language": "ne"
+    }
+  ],
+  "limitations": [
+    "Five validation clips, not a final CMI analysis or broad system ranking.",
+    "API and local implementations/decoding may differ; hosting is not isolated.",
+    "GPU memory snapshots are whole-device observations, not exact per-model peaks.",
+    "Local elapsed time includes materialized generation; API turnaround includes networking.",
+    "Model-load timing is process startup with uncontrolled operating-system file cache."
+  ]
+}

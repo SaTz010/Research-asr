@@ -1,0 +1,19 @@
+{
+  "performed_on": "2026-11-12",
+  "scheduled_session": "November 13 preflight, started early",
+  "protocol_sha256": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4",
+  "protocol_config_sha256": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+  "prepared_test_manifest_sha256": "d8621f611cbb1a21372378a685acfcbca4c7f18c7c3ad2b336bb23db2174f43d",
+  "frozen_pool_and_audit_unchanged": true,
+  "local_dry_run_verified_clips": 1198,
+  "api_dry_run_verified_clips": 1198,
+  "validation_access_dry_run_verified_clips": 1,
+  "offline_tests_passed": 80,
+  "api_credit_user_reported_usd": "3.54",
+  "planned_total_with_reserve_usd": "1.51",
+  "live_api_access_verified": false,
+  "api_key_read": false,
+  "model_inference_performed": false,
+  "paid_api_requests": 0,
+  "held_out_inference_enabled": false
+}

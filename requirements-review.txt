@@ -1,0 +1,5 @@
+# Local VS Code notebook playback and schema validation; no ASR/API execution.
+-r requirements-local.txt
+ipykernel==7.4.0
+ipython==9.18.1
+nbformat==5.11.1

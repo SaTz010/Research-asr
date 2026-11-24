@@ -1,0 +1,70 @@
+{
+  "run_spec": {
+    "system": "whisper_api",
+    "dataset": {
+      "id": "saileshbro/nepali-cs-asr",
+      "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+      "config": "default",
+      "split": "validation"
+    },
+    "purpose": "validation_api_access_explicit_retry_after_401",
+    "manifest_sha256": "315f497304fad469b23624c4633eb290efc24bf5f9cddb38c7dae51d7d814adb",
+    "manifest": [
+      {
+        "transcription": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ profit आइरहेको छ।",
+        "transcription_devanagari": "होइन अब प्रत्येक वर्ष 50,000 को दरले चाहिँ प्रोफिट आइरहेको छ।",
+        "transcription_romanized": "hoina aba pratyek barsa 50,000 ko darale chahi profit aairaheko cha",
+        "cmi": 10.0,
+        "speech_type": "cs",
+        "speaker_id": "UCLR1utoz9wpo4byPAOEIMRQ",
+        "video_id": "14DlFPc4VEw",
+        "start_ms": 1789696,
+        "end_ms": 1793456,
+        "duration_s": 3.76,
+        "clip_id": "validation/14DlFPc4VEw/1789696-1793456",
+        "decoded_duration_s": 3.76,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "428b72c10844a5fc33a15d155f5b7bdccc787dcb7fd978fd473a6f302b3558be"
+      }
+    ],
+    "payload_sha256": {
+      "validation/14DlFPc4VEw/1789696-1793456": "9693a3802f871daa7015ac8b4e0556fcb93b6ec86889e23adeada4fa7b43d90b"
+    },
+    "config": {
+      "request_settings": {
+        "model": "whisper-1",
+        "response_format": "verbose_json",
+        "temperature": 0.0
+      },
+      "base_url": "https://api.openai.com/v1",
+      "timeout_s": 120,
+      "max_retries": 0
+    },
+    "packages": {
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "openai": "2.54.0"
+    }
+  },
+  "summary": {
+    "successful_clips": 0,
+    "expected_clips": 1,
+    "complete": false,
+    "unattempted_clips": 0,
+    "unresolved_attempts": 1
+  },
+  "per_clip": [
+    {
+      "clip_id": "validation/14DlFPc4VEw/1789696-1793456",
+      "cmi": 10.0,
+      "duration_s": 3.76,
+      "status": "api_error",
+      "error_type": "AuthenticationError",
+      "http_status": 401,
+      "parse_error": null
+    }
+  ],
+  "note": "Validation manifests are runtime diagnostics, not held-out benchmark findings. Failures are coverage events, not invented ASR scores."
+}

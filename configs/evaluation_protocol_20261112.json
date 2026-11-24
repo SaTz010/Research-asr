@@ -1,0 +1,125 @@
+{
+  "prepared_on": "2026-11-12",
+  "scheduled_session": "November 13 preflight, started early",
+  "status": "technical_protocol_frozen_live_api_access_pending",
+  "protocol_document": "reports/protocol_20261112.md",
+  "protocol_document_sha256": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4",
+  "pool_manifest_sha256": "a6aa51bb2592022f3da004853457c871e709af0b820defd2ae0f0d1f479324fc",
+  "audit_snapshot_sha256": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+  "audit_selection_sha256": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+  "systems": {
+    "local": {
+      "config": {
+        "model_id": "Systran/faster-whisper-large-v2",
+        "model_revision": "f0fe81560cb8b68660e564f55dd99207059c092e",
+        "model_sha256": "bf2a9746382e1aa7ffff6b3a0d137ed9edbd9670c3b87e5d35f5e85e70d0333a",
+        "device": "cuda",
+        "compute_type": "float16",
+        "batch_size": 1,
+        "transcribe": {
+          "task": "transcribe",
+          "language": null,
+          "beam_size": 5,
+          "temperature": 0.0,
+          "condition_on_previous_text": false,
+          "vad_filter": false,
+          "word_timestamps": false,
+          "without_timestamps": true
+        }
+      },
+      "packages": {
+        "numpy": "2.3.5",
+        "soundfile": "0.13.1",
+        "jiwer": "4.0.0",
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.8.5",
+        "huggingface-hub": "0.36.2"
+      }
+    },
+    "whisper_api": {
+      "config": {
+        "request_settings": {
+          "model": "whisper-1",
+          "response_format": "verbose_json",
+          "temperature": 0.0
+        },
+        "base_url": "https://api.openai.com/v1",
+        "timeout_s": 120,
+        "max_retries": 0
+      },
+      "packages": {
+        "numpy": "2.3.5",
+        "soundfile": "0.13.1",
+        "jiwer": "4.0.0",
+        "openai": "2.54.0"
+      }
+    }
+  },
+  "analysis": {
+    "primary_metric": "corpus_WER",
+    "secondary_metric": "corpus_CER",
+    "cmi_bands": [
+      "[0,10]",
+      "(10,20]",
+      "(20,30]",
+      "(30,40]",
+      "(40,50]"
+    ],
+    "continuous_association": "descriptive Spearman: reference CMI vs each system utterance WER; CMI vs paired local-minus-API WER",
+    "paired_difference_sign": "local minus hosted; positive is more local error",
+    "bootstrap": {
+      "resample": "source videos within each channel; same sampled clips for both systems",
+      "replicates": 2000,
+      "seed": 42,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "minimum_videos_for_interval": 10
+    },
+    "audited_sensitivity": "same 50 clips, published vs corrected reference and source-script vs audited-lexical CMI"
+  },
+  "error_example_clip_ids": [
+    "test/bZFcrpg-tlo/500784-509872",
+    "test/LhDdCCqBt4A/467552-472544",
+    "test/HUfMJuhOj5w/1300976-1309488",
+    "test/P9dy-ECijcI/3566016-3575392",
+    "test/qNsZlWl3yss/358592-369232",
+    "test/P9dy-ECijcI/2883472-2891792",
+    "test/sGhq22Tx5ew/226032-236624",
+    "test/yTZL86j1yRE/440208-453184",
+    "test/zYLanqYoX24/143984-152912",
+    "test/hDWNurAsWSE/209520-213136"
+  ],
+  "error_example_rule": "two per published CMI band from audited subset; sorted clip IDs, seed-42 shuffle",
+  "main_api_max_new_requests": 1198,
+  "access_check_max_new_requests": 1,
+  "automatic_retries": 0,
+  "price_checked_on": "2026-11-12",
+  "whisper_usd_per_minute": "0.006",
+  "price_source": "https://developers.openai.com/api/docs/models/whisper-1",
+  "budget_including_one_access_check": {
+    "clips": 1199,
+    "conditions_per_model": 1,
+    "requests_all_models": 1199,
+    "audio_minutes_once": 199.07471666666666,
+    "planning_billable_minutes_per_model_per_condition": 209.33333333333334,
+    "by_model": {
+      "whisper-1": {
+        "usd_per_minute": "0.006",
+        "nominal_duration_cost_usd": "1.194448300000000000000000000",
+        "rounded_duration_cost_usd": "1.256000000000000000000000000"
+      }
+    },
+    "rounded_duration_total_usd": "1.256000000000000000000000000",
+    "reserve_fraction": "0.20",
+    "with_reserve_usd": "1.507200000000000000000000000",
+    "planning_amount_rounded_up_usd": "1.51"
+  },
+  "user_reported_credit_usd": "3.54",
+  "credit_reported_on": "2026-11-12",
+  "account_balance_independently_verified": false,
+  "live_api_access_verified": false,
+  "key_configured_for_assistant_process": false,
+  "spending_limit_enforcement": "request cap and zero automatic retries; estimate is not a hard monetary cap"
+}

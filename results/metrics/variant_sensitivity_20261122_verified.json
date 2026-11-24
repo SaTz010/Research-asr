@@ -1,0 +1,20 @@
+{
+  "verified_on": "2026-11-22",
+  "post_hoc": true,
+  "selected_clips": 10,
+  "candidate_pairs": 159,
+  "human_pair_decisions": 0,
+  "offline_tests_passed": 132,
+  "strict_subset_counts_match_prior_verified_analysis": true,
+  "zero_approved_variants_reproduce_strict_scores": true,
+  "primary_input_output_hashes_unchanged": true,
+  "inference_requests": 0,
+  "new_dependencies": 0,
+  "sha256": {
+    "src/variant_sensitivity.py": "1b5e282e86dc07886c5d5b194c50e6f6bfb6be5460a7828482e1e19fc6f8ee7b",
+    "notebooks/08_reviewed_variant_sensitivity.ipynb": "015711099848b807b7b370de1edcb0dc9c09c0fc75fe29c6e59df0919c78f4cd",
+    "data/annotations/word_variants_20261122.json": "3f1b1a199e9d50c8fb77ef6247230862272c3dfb2728b674e20aa7fd2b7e395a",
+    "results/metrics/variant_sensitivity_20261122.json": "58e8b500f55b78744a19ef846b0fed0c6e61049e52ab28fe7cd1a06fd4734579"
+  },
+  "limitations": "Prepared review workflow only; no tolerant improvement established and no actual corpus-wide word-error cause split."
+}

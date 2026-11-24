@@ -1,0 +1,12 @@
+{
+  "notebook_schema_valid": true,
+  "code_cells_smoke_executed": 101,
+  "audio_players_constructed_with_matching_wav_hashes": 50,
+  "annotations_unchanged": true,
+  "human_reviews_completed": 0,
+  "human_audio_listening_performed": false,
+  "model_inference_performed": false,
+  "paid_api_requests": 0,
+  "notebook_sha256": "d70bed2ddf7beffdb263e268bd41132114422e3e2686ca981e6def1d8a0347d2",
+  "selection_sha256": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555"
+}

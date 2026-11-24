@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-12",
+  "summary": {
+    "reviewed_clips": 50,
+    "verdict_counts": {
+      "match": 42,
+      "corrected": 8
+    },
+    "tagging_methods": {
+      "script_suggestions_human_checked": 50
+    },
+    "reviews_with_tag_overrides": [
+      7,
+      20
+    ],
+    "unresolved_cmi": 0,
+    "pending_or_unsure": 0,
+    "human_audio_listening_independently_verified_by_code": false
+  },
+  "reviewer": "researcher_1",
+  "reviewer_count": 1,
+  "reviewer_identity_basis": "Single session researcher; pseudonym for the user-reported listening review.",
+  "human_review_basis": "Researcher reports completing all 50 listening/tag reviews in chat; code validates records, not speech judgments.",
+  "frozen_snapshot": "data/annotations/reference_audit_20261112_frozen.json",
+  "frozen_snapshot_sha256": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+  "pre_freeze_backup": "data/annotations/reference_audit_20261112_pre_freeze.json",
+  "pre_freeze_sha256": "cab09135b8dcd88e3acdd813f2c7251595e3a1698ee07195584cbf62719447eb",
+  "selection_sha256": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+  "evaluation_pool_sha256": "a6aa51bb2592022f3da004853457c871e709af0b820defd2ae0f0d1f479324fc",
+  "published_cmi_bands_in_audit": {
+    "[0,10]": 10,
+    "(10,20]": 10,
+    "(20,30]": 10,
+    "(30,40]": 10,
+    "(40,50]": 10
+  },
+  "audited_cmi_bands": {
+    "[0,10]": 11,
+    "(10,20]": 8,
+    "(20,30]": 10,
+    "(30,40]": 13,
+    "(40,50]": 8
+  },
+  "band_changed_after_human_audit": [
+    7,
+    20,
+    30,
+    42
+  ],
+  "test_inference_still_blocked": true,
+  "asr_inference_performed": false,
+  "paid_api_requests": 0,
+  "offline_tests_passed": 79
+}

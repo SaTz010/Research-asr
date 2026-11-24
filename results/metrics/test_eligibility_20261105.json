@@ -1,0 +1,113 @@
+{
+  "dataset": {
+    "id": "saileshbro/nepali-cs-asr",
+    "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+    "config": "default",
+    "split": "test"
+  },
+  "metadata_sha256": "2ed67804fb11e2920795569288975b79f6adc9178ac53ac57c7ff8ad041d6eb2",
+  "manifest_sha256": "a6aa51bb2592022f3da004853457c871e709af0b820defd2ae0f0d1f479324fc",
+  "candidate_cs_clips": 1201,
+  "metadata_eligible_clips": 1198,
+  "audio_checked_clips": 1198,
+  "included_clips": 1198,
+  "exclusions": [
+    {
+      "source_file": "data/test-00000-of-00003.parquet",
+      "row_in_file": 169,
+      "provenance": null,
+      "reasons": [
+        "missing_or_invalid_provenance"
+      ]
+    },
+    {
+      "source_file": "data/test-00000-of-00003.parquet",
+      "row_in_file": 205,
+      "provenance": null,
+      "reasons": [
+        "missing_or_invalid_provenance"
+      ]
+    },
+    {
+      "source_file": "data/test-00000-of-00003.parquet",
+      "row_in_file": 237,
+      "provenance": null,
+      "reasons": [
+        "missing_or_invalid_provenance"
+      ]
+    }
+  ],
+  "metadata_overlap_flags": [],
+  "source_shards_verified": [
+    {
+      "path": "data/test-00000-of-00003.parquet",
+      "sha256": "c4c1d72f36d30f56dd1a23db99d354aed3c0f2325d05492049e02f02475f46e7",
+      "rows": 579
+    },
+    {
+      "path": "data/test-00001-of-00003.parquet",
+      "sha256": "c99637edc9cc860b6ebbadfd9f09d3901258558a13c631bc8ec32fc491c7eb61",
+      "rows": 579
+    },
+    {
+      "path": "data/test-00002-of-00003.parquet",
+      "sha256": "c57bbd216261ff567ff414481d422942f8f5f0013af84405b66a00236fd85e13",
+      "rows": 579
+    },
+    {
+      "path": "data/test-v2moved-00000.parquet",
+      "sha256": "4ea5b3802202d87c8db7a44df81414b653c2f147d83b2b17fa531f8a89caa924",
+      "rows": 28
+    }
+  ],
+  "included_cmi_bands": {
+    "(40,50]": 123,
+    "(10,20]": 360,
+    "[0,10]": 199,
+    "(30,40]": 230,
+    "(20,30]": 286
+  },
+  "included_channels": {
+    "UCy-Q66KQYSQAUVKvdNxgKbw": 590,
+    "UChx9-bynjfm6Js3k54Sf1Mg": 608
+  },
+  "included_videos": 22,
+  "audit_cmi_bands": {
+    "[0,10]": 10,
+    "(10,20]": 10,
+    "(20,30]": 10,
+    "(30,40]": 10,
+    "(40,50]": 10
+  },
+  "audit_channels": {
+    "UChx9-bynjfm6Js3k54Sf1Mg": 25,
+    "UCy-Q66KQYSQAUVKvdNxgKbw": 25
+  },
+  "audit_videos": 18,
+  "budget_at_historical_20261022_rate_not_current_price_verification": {
+    "clips": 1198,
+    "conditions_per_model": 1,
+    "requests_all_models": 1198,
+    "audio_minutes_once": 199.01205,
+    "planning_billable_minutes_per_model_per_condition": 209.26666666666668,
+    "by_model": {
+      "whisper-1": {
+        "usd_per_minute": "0.006",
+        "nominal_duration_cost_usd": "1.19407230",
+        "rounded_duration_cost_usd": "1.255600000000000000000000000"
+      }
+    },
+    "rounded_duration_total_usd": "1.255600000000000000000000000",
+    "reserve_fraction": "0.20",
+    "with_reserve_usd": "1.506720000000000000000000000",
+    "planning_amount_rounded_up_usd": "1.51"
+  },
+  "limitations": [
+    "Audio duplicates checked among metadata-eligible CS test clips using exact decoded waveform hashes, not perceptual similarity.",
+    "Cross-split overlap checked by source video, intervals, channel and exact reference text; full other-split waveform hashes not scanned.",
+    "No access to provider model-training data; no claim of freedom from pretraining contamination.",
+    "Two source channels are not verified speaker identities; 50-clip audit requires human listening and is still pending."
+  ],
+  "asr_inference_performed": false,
+  "paid_api_requests": 0
+}

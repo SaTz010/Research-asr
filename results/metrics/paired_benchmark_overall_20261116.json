@@ -1,0 +1,64 @@
+{
+  "completed_on": "2026-11-16",
+  "paired_successful_clips": 1198,
+  "planned_clips_per_system": 1198,
+  "same_clip_identities_order_references_and_wav_hashes": true,
+  "ready_manifest_sha256": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+  "reference_words": 28216,
+  "reference_characters": 111262,
+  "systems": {
+    "local": {
+      "raw_sha256": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+      "verification": "results/metrics/test_cs_benchmark_20261112_local_verified.json",
+      "scores": {
+        "wer": 0.9095194216047633,
+        "cer": 0.6960417752691844,
+        "raw_wer": 0.9375155411885902,
+        "raw_cer": 0.716140770204948
+      },
+      "edit_counts": {
+        "word_errors": 25663,
+        "character_errors": 77443,
+        "reference_words": 28216,
+        "reference_characters": 111262,
+        "raw_word_errors": 26392,
+        "raw_character_errors": 80298,
+        "raw_reference_words": 28151,
+        "raw_reference_characters": 112126
+      },
+      "successful_empty_hypotheses": 11
+    },
+    "whisper_api": {
+      "raw_sha256": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+      "verification": "results/metrics/test_cs_benchmark_20261112_whisper_api_verified.json",
+      "scores": {
+        "wer": 0.9641338247802665,
+        "cer": 0.7339163416080962,
+        "raw_wer": 0.9876025718446947,
+        "raw_cer": 0.7536699784171379
+      },
+      "edit_counts": {
+        "word_errors": 27204,
+        "character_errors": 81657,
+        "reference_words": 28216,
+        "reference_characters": 111262,
+        "raw_word_errors": 27802,
+        "raw_character_errors": 84506,
+        "raw_reference_words": 28151,
+        "raw_reference_characters": 112126
+      },
+      "successful_empty_hypotheses": 1
+    }
+  },
+  "api_minus_local_percentage_points": {
+    "wer": 5.461440317550325,
+    "cer": 3.787456633891173
+  },
+  "interpretation": "Observed corpus errors are lower for this configured local system on this frozen silver-reference test pool. No causal hosting claim, population-wide superiority, statistical-significance claim or CMI conclusion follows from this table alone.",
+  "analyses_remaining": [
+    "Published vs corrected references on frozen 50-clip audit",
+    "CMI continuous/band analyses",
+    "Paired video-cluster uncertainty and confound checks",
+    "Predefined error examples and final report/reproduction/release"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "predictions": "results/predictions/validation_check_20261104_local.json",
+  "predictions_sha256": "d8cdf097047f2900415f7897aa79efbfae1f44831a375d2ad5e750015316bcc1",
+  "manifest_sha256": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21",
+  "system": "local",
+  "purpose": "validation_runtime",
+  "coverage": {
+    "expected": 15,
+    "received": 15,
+    "complete": true
+  },
+  "independent_edit_counts": {
+    "word_errors": 259,
+    "character_errors": 948,
+    "reference_words": 324,
+    "reference_characters": 1455,
+    "raw_word_errors": 273,
+    "raw_character_errors": 971,
+    "raw_reference_words": 324,
+    "raw_reference_characters": 1467
+  },
+  "independent_scores": {
+    "wer": 0.7993827160493827,
+    "cer": 0.6515463917525773,
+    "raw_wer": 0.8425925925925926,
+    "raw_cer": 0.6618950238582141
+  },
+  "checks": "All WAV payloads/waveform hashes and identities rechecked. Raw hypotheses reconstructed from saved responses. Every per-clip and corpus normalized/raw WER/CER independently recomputed without jiwer.",
+  "audio_s": 129.837,
+  "completed_request_s": 20.335945800004993,
+  "reported_languages": {
+    "ne": 11,
+    "en": 2,
+    "hi": 2
+  },
+  "largest_observed_device_memory_mib": 5327,
+  "scope": "Validation-only, metadata-selected runtime check. No held-out test predictions or new API calls in verification. Memory is whole-device snapshots, not continuously measured model peak."
+}

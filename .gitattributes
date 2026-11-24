@@ -1,0 +1,5 @@
+# Frozen research records use byte checksums; preserve their exact bytes on every platform.
+* -text
+*.pdf binary
+*.png binary
+*.zip binary

@@ -1,0 +1,515 @@
+{
+  "prepared_on": "2026-11-20",
+  "reviewer": "Sanskar Ananta Tiwari",
+  "source_sha256": {
+    "selection": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+    "audit": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+    "manifest": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+    "protocol": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+    "local_predictions": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+    "local_verification": "8e58da520c08bc3ac4f22ce140145edd86cc2ce3bd278c21bad55278fe20f632",
+    "whisper_api_predictions": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+    "whisper_api_verification": "ea414031e05ed4118f86042855981b26aa4bc7f3b3ca0bac7e44535770eefecf",
+    "protocol_document": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4"
+  },
+  "scope": "Ten preselected qualitative examples; categories overlap and cannot estimate corpus error causes/prevalence.",
+  "human_listening_independently_verified": false,
+  "history": [
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "different language output"
+        },
+        "whisper_api": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "different language output"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T08:24:42.838088+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech",
+            "script_or_spelling_difference"
+          ],
+          "notes": "some missing words and spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T08:37:41.160128+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech",
+            "script_or_spelling_difference"
+          ],
+          "notes": "some missing words and spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T08:41:01.990582+00:00"
+    },
+    {
+      "number": 10,
+      "clip_id": "test/hDWNurAsWSE/209520-213136",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T08:39:09.280731+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech",
+            "script_or_spelling_difference"
+          ],
+          "notes": "some missing words and spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:17:09.896028+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech",
+            "script_or_spelling_difference"
+          ],
+          "notes": "some missing words and spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:17:47.157424+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech",
+            "script_or_spelling_difference"
+          ],
+          "notes": "some missing words and spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:17:51.903907+00:00"
+    },
+    {
+      "number": 7,
+      "clip_id": "test/sGhq22Tx5ew/226032-236624",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference",
+            "missing_speech"
+          ],
+          "notes": "overall greaet with some spellings errors and a word missing"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some words missing"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T08:23:36.789684+00:00"
+    },
+    {
+      "number": 10,
+      "clip_id": "test/hDWNurAsWSE/209520-213136",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:17:25.958099+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "different language output"
+        },
+        "whisper_api": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "different language output"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:17:58.867059+00:00"
+    }
+  ],
+  "reviews": [
+    {
+      "number": 1,
+      "clip_id": "test/bZFcrpg-tlo/500784-509872",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "missing_speech"
+          ],
+          "notes": "Missing word hard,okay,or"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech"
+          ],
+          "notes": "Missing word hard"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T06:00:48.795533+00:00"
+    },
+    {
+      "number": 2,
+      "clip_id": "test/LhDdCCqBt4A/467552-472544",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "spelling difference"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "spelling difference"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T06:40:54.108168+00:00"
+    },
+    {
+      "number": 3,
+      "clip_id": "test/HUfMJuhOj5w/1300976-1309488",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "output in another language"
+        },
+        "whisper_api": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "output in another language"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T06:44:21.859808+00:00"
+    },
+    {
+      "number": 4,
+      "clip_id": "test/P9dy-ECijcI/3566016-3575392",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some words are together in the output"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some wortds are together in the output"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T06:48:35.033991+00:00"
+    },
+    {
+      "number": 5,
+      "clip_id": "test/qNsZlWl3yss/358592-369232",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "wrong_word",
+            "script_or_spelling_difference"
+          ],
+          "notes": "one word is missing and some have spellings errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "no_clear_error"
+          ],
+          "notes": "no particular error"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T06:51:38.993663+00:00"
+    },
+    {
+      "number": 6,
+      "clip_id": "test/P9dy-ECijcI/2883472-2891792",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "missing_speech",
+            "extra_or_repeated_text"
+          ],
+          "notes": "missing speech and repeated phrase word"
+        },
+        "whisper_api": {
+          "categories": [
+            "extra_or_repeated_text"
+          ],
+          "notes": "same phrase repeated many times"
+        }
+      },
+      "reviewed_at_utc": "2026-11-22T07:20:32.994556+00:00"
+    },
+    {
+      "number": 7,
+      "clip_id": "test/sGhq22Tx5ew/226032-236624",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference",
+            "missing_speech"
+          ],
+          "notes": "overall greaet with some spellings errors and a word missing"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some words missing"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:18:13.343857+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "different language output"
+        },
+        "whisper_api": {
+          "categories": [
+            "wrong_language_output"
+          ],
+          "notes": "different language output"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:29:27.760154+00:00",
+      "recovery_provenance": {
+        "action": "mechanical_recovery_of_user_entered_answers",
+        "performed_by": "assistant",
+        "recovered_at_utc": "2026-11-23T05:29:27.179771+00:00",
+        "source_notebook": ".cache/07_user_buffer_20261123.ipynb",
+        "source_notebook_sha256": "e01587da080f1ca64183226b7d0f65f71b7599727ceb69395598f52ac177b0fa",
+        "source_cell_id": "f5c23932",
+        "user_listened_confirmation": true,
+        "assistant_listened": false,
+        "reviewed_at_utc_semantics": "Time of recovery/save, not independently established listening time.",
+        "reason": "Restore user answers overwritten by the Example 09 save targeting 8."
+      }
+    },
+    {
+      "number": 9,
+      "clip_id": "test/zYLanqYoX24/143984-152912",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "missing_speech",
+            "script_or_spelling_difference"
+          ],
+          "notes": "some missing words and spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:29:27.789693+00:00",
+      "recovery_provenance": {
+        "action": "mechanical_recovery_of_user_entered_answers",
+        "performed_by": "assistant",
+        "recovered_at_utc": "2026-11-23T05:29:27.179771+00:00",
+        "source_notebook": ".cache/07_user_buffer_20261123.ipynb",
+        "source_notebook_sha256": "e01587da080f1ca64183226b7d0f65f71b7599727ceb69395598f52ac177b0fa",
+        "source_cell_id": "ec3e1052",
+        "user_listened_confirmation": true,
+        "assistant_listened": false,
+        "reviewed_at_utc_semantics": "Time of recovery/save, not independently established listening time.",
+        "reason": "Example 09 user answers had incorrectly been saved to Example 08."
+      }
+    },
+    {
+      "number": 10,
+      "clip_id": "test/hDWNurAsWSE/209520-213136",
+      "status": "reviewed",
+      "listened": true,
+      "reference_assessment": "matches_audio",
+      "reference_notes": "",
+      "systems": {
+        "local": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        },
+        "whisper_api": {
+          "categories": [
+            "script_or_spelling_difference"
+          ],
+          "notes": "some spelling errors"
+        }
+      },
+      "reviewed_at_utc": "2026-11-23T05:19:06.867988+00:00"
+    }
+  ]
+}

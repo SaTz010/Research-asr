@@ -1,0 +1,3389 @@
+{
+  "created_at_utc": "2026-11-03T16:12:34.057749+00:00",
+  "run_spec": {
+    "config": {
+      "model_id": "Systran/faster-whisper-large-v2",
+      "model_revision": "f0fe81560cb8b68660e564f55dd99207059c092e",
+      "model_sha256": "bf2a9746382e1aa7ffff6b3a0d137ed9edbd9670c3b87e5d35f5e85e70d0333a",
+      "device": "cuda",
+      "compute_type": "float16",
+      "batch_size": 1,
+      "transcribe": {
+        "task": "transcribe",
+        "language": null,
+        "beam_size": 5,
+        "temperature": 0.0,
+        "condition_on_previous_text": false,
+        "vad_filter": false,
+        "word_timestamps": false,
+        "without_timestamps": true
+      }
+    },
+    "dataset": {
+      "id": "saileshbro/nepali-cs-asr",
+      "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+      "config": "default",
+      "split": "validation"
+    },
+    "manifest": [
+      {
+        "transcription": "होइन धेरै जसो student के हुन्छन् तपाईँको study एकदम hard गर्छन् मतलब दिन रात 1 गर्छन् उनीहरू",
+        "transcription_devanagari": "होइन धेरै जसो स्टुडेन्ट के हुन्छन् तपाईँको सटुडय एकदम हारड गर्छन् मतलब दिन रात 1 गर्छन् उनीहरू",
+        "transcription_romanized": "hoina dherai jaso student ke hunchan tapaiko study ekdam hard garchan matlab dina rata 1 garchan uniharu",
+        "cmi": 18.75,
+        "speech_type": "cs",
+        "speaker_id": "UCBbxIYJ35vGP8qWMJn3RmTA",
+        "video_id": "JF_HlxEXcHQ",
+        "start_ms": 90896,
+        "end_ms": 99488,
+        "duration_s": 8.592,
+        "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+        "decoded_duration_s": 8.592,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "5d7728fbbec30b6f4f42110ecd48a76d19dea181673460552219a1f9beefcaa8"
+      },
+      {
+        "transcription": "यसलाई easily यतिकै पनि निकाल्न मिल्ने थियो 25% भनेको हो नि त so half life को meaning के हो आधा हुने हो नि त so तिम्रो like",
+        "transcription_devanagari": "यसलाई ईसिलय यतिकै पनि निकाल्न मिल्ने थियो 25% भनेको हो नि त सो हाफ लाइफ को meaning के हो आधा हुने हो नि त सो तिम्रो लाइक",
+        "transcription_romanized": "yaslai easily yatikai pani nikalna milne thiyo 25% bhaneko ho ni ta so half life ko meaning ke ho aadha hune ho ni ta so timro like",
+        "cmi": 26.92,
+        "speech_type": "cs",
+        "speaker_id": "UCeq9rTo9W93NfJNP9n1eRGw",
+        "video_id": "zJYS-XNDP2Q",
+        "start_ms": 633264,
+        "end_ms": 642192,
+        "duration_s": 8.928,
+        "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+        "decoded_duration_s": 8.928,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "a19babdc7287647007c9675646769c74d8dd186b780fb5ce9ae8a74f887c52ef"
+      },
+      {
+        "transcription": "यो हामीले निकाल्ने हो नि त mass भनेको basically N N हाम्रो कति निक्लियो यति निक्लियो into molar mass molar mass हाम्रो कति हुन्छ भन्दाखेरि",
+        "transcription_devanagari": "यो हामीले निकाल्ने हो नि त म्यास भनेको बेसिकली एन एन हाम्रो कति निक्लियो यति निक्लियो इन्टु molar म्यास molar म्यास हाम्रो कति हुन्छ भन्दाखेरि",
+        "transcription_romanized": "yo hamile nikalne ho ni ta mass bhaneko basically N N hamro kati nikliyo yati nikliyo into molar mass molar mass hamro kati huncha bhandakheri",
+        "cmi": 36.0,
+        "speech_type": "cs",
+        "speaker_id": "UCeq9rTo9W93NfJNP9n1eRGw",
+        "video_id": "zJYS-XNDP2Q",
+        "start_ms": 1512240,
+        "end_ms": 1525520,
+        "duration_s": 13.28,
+        "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+        "decoded_duration_s": 13.28,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "574ae80ba5da885329f71a80a96040083e9b54e656a9f3f7f9aa15b8980c94b4"
+      },
+      {
+        "transcription": "physical interpretation यदि गर्न सक्यो भने होइन त्यसबाट हामी question from the predictable last year को question बाट गर्न सक्छौँ marks ल्याउन सजिलो भइदिन्छ repetition rate होइन",
+        "transcription_devanagari": "फिजिकल इन्टरप्रिटेसन यदि गर्न सक्यो भने होइन त्यसबाट हामी क्वेश्चन फ्रम द प्रेडिक्टेबल लास्ट यीयर को क्वेश्चन बाट गर्न सक्छौँ मार्कस ल्याउन सजिलो भइदिन्छ रेपिटिशन रेट होइन",
+        "transcription_romanized": "physical interpretation yadi garna sakyo bhane hoina tyasbata hami question from the predictable last year ko question bata garna sakchau marks lyauna sajilo bhaidincha repetition rate hoina",
+        "cmi": 44.44,
+        "speech_type": "cs",
+        "speaker_id": "UCBbxIYJ35vGP8qWMJn3RmTA",
+        "video_id": "TN8IzjVNnzs",
+        "start_ms": 1205232,
+        "end_ms": 1216352,
+        "duration_s": 11.12,
+        "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+        "decoded_duration_s": 11.12,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "aae11f0b20a48ac8d2b029fe82fbc8b5cda3bc675594c692368a1ba2d30de2d9"
+      },
+      {
+        "transcription": "Electric charge field potential capacitor DC circuit chapter हरू छन् होइन जसमध्ये mostly तपाईँको concept",
+        "transcription_devanagari": "इलेक्ट्रिक चार्ज फिल्ड पोटेनशल क्यापासिटर डीसी सर्किट च्याप्टर हरू छन् होइन जसमध्ये मोसटलय तपाईँको कन्सेप्ट",
+        "transcription_romanized": "Electric charge field potential capacitor DC circuit chapter haru chan hoina jasamadhye mostly tapaiko concept",
+        "cmi": 33.33,
+        "speech_type": "cs",
+        "speaker_id": "UCBbxIYJ35vGP8qWMJn3RmTA",
+        "video_id": "TN8IzjVNnzs",
+        "start_ms": 1169296,
+        "end_ms": 1178352,
+        "duration_s": 9.056,
+        "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+        "decoded_duration_s": 9.056,
+        "sample_rate": 16000,
+        "source_channels": 1,
+        "audio_sha256": "52e59651d4a7af08a78092d441cebc8414550ca2721ceb5476644d8d1d8162a1"
+      }
+    ],
+    "payload_sha256": {
+      "validation/JF_HlxEXcHQ/90896-99488": "05010983d2ef654342f94082f5ad6c2df58f7529c8612c4369dd4a80099e9daf",
+      "validation/zJYS-XNDP2Q/633264-642192": "347deefc571d7c56d5d1f1b2dd7f1792f32b0ec4f78687853e24f1e878a109fa",
+      "validation/zJYS-XNDP2Q/1512240-1525520": "ee29c9847d2acc9b91594e58e1a264b73c0acf1dc091da6aa2153dcf5af6cd61",
+      "validation/TN8IzjVNnzs/1205232-1216352": "d4c9ba8ec46ce1550380582fb124363a1bf9ddbaa510e1533f04a9e2fef9030b",
+      "validation/TN8IzjVNnzs/1169296-1178352": "3a99696fcb29b26be75bbbd85e9d185cd50a14dd32e0a0cbd40dba65891cb194"
+    },
+    "saved_api_baseline": {
+      "archive": "whisper_api_pilot_20261022T105623043636Z.zip",
+      "sha256": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c",
+      "clips": 5,
+      "wer": 0.7297297297297297,
+      "cer": 0.4876190476190476
+    },
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.5",
+      "datasets": "4.4.1",
+      "huggingface-hub": "0.36.2",
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0"
+    }
+  },
+  "predictions": [
+    {
+      "transcription": "होइन धेरै जसो student के हुन्छन् तपाईँको study एकदम hard गर्छन् मतलब दिन रात 1 गर्छन् उनीहरू",
+      "transcription_devanagari": "होइन धेरै जसो स्टुडेन्ट के हुन्छन् तपाईँको सटुडय एकदम हारड गर्छन् मतलब दिन रात 1 गर्छन् उनीहरू",
+      "transcription_romanized": "hoina dherai jaso student ke hunchan tapaiko study ekdam hard garchan matlab dina rata 1 garchan uniharu",
+      "cmi": 18.75,
+      "speech_type": "cs",
+      "speaker_id": "UCBbxIYJ35vGP8qWMJn3RmTA",
+      "video_id": "JF_HlxEXcHQ",
+      "start_ms": 90896,
+      "end_ms": 99488,
+      "duration_s": 8.592,
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "decoded_duration_s": 8.592,
+      "sample_rate": 16000,
+      "source_channels": 1,
+      "audio_sha256": "5d7728fbbec30b6f4f42110ecd48a76d19dea181673460552219a1f9beefcaa8",
+      "status": "received",
+      "requested_at_utc": "2026-11-03T16:12:40.313612+00:00",
+      "transcription_s": 2.429098000000522,
+      "response": {
+        "segments": [
+          {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 8.59,
+            "text": " देरी जस्सो स्ट्रिडेंट के हुन्छन तोपाईको स्ट्रेडी एकदाम हार्ड गर्छन, मतलब दिन रात एक गर्छन उनियारू",
+            "tokens": [
+              8485,
+              99,
+              21981,
+              25411,
+              31881,
+              8485,
+              250,
+              45938,
+              27099,
+              45938,
+              33926,
+              49316,
+              27099,
+              3941,
+              253,
+              27099,
+              25411,
+              33279,
+              3941,
+              94,
+              21981,
+              31945,
+              3941,
+              253,
+              31970,
+              21981,
+              37139,
+              8703,
+              223,
+              35082,
+              27099,
+              3941,
+              249,
+              35082,
+              8485,
+              97,
+              33926,
+              3941,
+              103,
+              17937,
+              3941,
+              230,
+              41858,
+              33926,
+              49316,
+              27099,
+              3941,
+              253,
+              27099,
+              25411,
+              21981,
+              3941,
+              94,
+              31881,
+              8485,
+              237,
+              41858,
+              3941,
+              99,
+              17937,
+              48521,
+              37139,
+              17937,
+              25411,
+              27099,
+              3941,
+              94,
+              8485,
+              245,
+              25411,
+              27099,
+              3941,
+              249,
+              35082,
+              11,
+              48449,
+              36158,
+              46758,
+              3941,
+              105,
+              8485,
+              99,
+              33279,
+              35082,
+              8485,
+              108,
+              17937,
+              36158,
+              8485,
+              237,
+              41858,
+              8485,
+              245,
+              25411,
+              27099,
+              3941,
+              249,
+              35082,
+              8485,
+              231,
+              35082,
+              33279,
+              48268,
+              17937,
+              25411,
+              8703,
+              224
+            ],
+            "avg_logprob": -0.35677082036380414,
+            "compression_ratio": 1.823943661971831,
+            "no_speech_prob": 0.32470703125,
+            "words": null,
+            "temperature": 0.0
+          }
+        ],
+        "info": {
+          "language": "ne",
+          "language_probability": 0.89892578125,
+          "duration": 8.592,
+          "duration_after_vad": 8.592,
+          "all_language_probs": [
+            [
+              "ne",
+              0.89892578125
+            ],
+            [
+              "hi",
+              0.049163818359375
+            ],
+            [
+              "ur",
+              0.017120361328125
+            ],
+            [
+              "en",
+              0.01006317138671875
+            ],
+            [
+              "as",
+              0.006153106689453125
+            ],
+            [
+              "bn",
+              0.0032672882080078125
+            ],
+            [
+              "ms",
+              0.00176239013671875
+            ],
+            [
+              "gu",
+              0.001708984375
+            ],
+            [
+              "fr",
+              0.0011835098266601562
+            ],
+            [
+              "tr",
+              0.0011472702026367188
+            ],
+            [
+              "pa",
+              0.0008459091186523438
+            ],
+            [
+              "mr",
+              0.0008006095886230469
+            ],
+            [
+              "ko",
+              0.0006384849548339844
+            ],
+            [
+              "id",
+              0.0006189346313476562
+            ],
+            [
+              "sa",
+              0.0005679130554199219
+            ],
+            [
+              "th",
+              0.0005588531494140625
+            ],
+            [
+              "fa",
+              0.0004744529724121094
+            ],
+            [
+              "bo",
+              0.0003445148468017578
+            ],
+            [
+              "ja",
+              0.0003311634063720703
+            ],
+            [
+              "si",
+              0.0003039836883544922
+            ],
+            [
+              "de",
+              0.0002968311309814453
+            ],
+            [
+              "la",
+              0.00028777122497558594
+            ],
+            [
+              "tl",
+              0.00027680397033691406
+            ],
+            [
+              "sd",
+              0.0002682209014892578
+            ],
+            [
+              "jw",
+              0.0002560615539550781
+            ],
+            [
+              "te",
+              0.0002155303955078125
+            ],
+            [
+              "ps",
+              0.00019466876983642578
+            ],
+            [
+              "vi",
+              0.00019025802612304688
+            ],
+            [
+              "lt",
+              0.00018870830535888672
+            ],
+            [
+              "zh",
+              0.0001691579818725586
+            ],
+            [
+              "kn",
+              0.0001614093780517578
+            ],
+            [
+              "sn",
+              0.00011533498764038086
+            ],
+            [
+              "ta",
+              0.00010025501251220703
+            ],
+            [
+              "my",
+              0.00010025501251220703
+            ],
+            [
+              "uk",
+              8.308887481689453e-05
+            ],
+            [
+              "km",
+              8.177757263183594e-05
+            ],
+            [
+              "es",
+              6.371736526489258e-05
+            ],
+            [
+              "el",
+              5.799531936645508e-05
+            ],
+            [
+              "da",
+              5.447864532470703e-05
+            ],
+            [
+              "pt",
+              5.120038986206055e-05
+            ],
+            [
+              "nn",
+              5.078315734863281e-05
+            ],
+            [
+              "no",
+              5.0008296966552734e-05
+            ],
+            [
+              "cy",
+              4.9233436584472656e-05
+            ],
+            [
+              "ro",
+              4.887580871582031e-05
+            ],
+            [
+              "br",
+              4.6253204345703125e-05
+            ],
+            [
+              "cs",
+              4.017353057861328e-05
+            ],
+            [
+              "nl",
+              3.802776336669922e-05
+            ],
+            [
+              "ar",
+              2.9861927032470703e-05
+            ],
+            [
+              "sl",
+              2.9146671295166016e-05
+            ],
+            [
+              "mi",
+              2.849102020263672e-05
+            ],
+            [
+              "ru",
+              2.7179718017578125e-05
+            ],
+            [
+              "sw",
+              2.676248550415039e-05
+            ],
+            [
+              "pl",
+              2.6345252990722656e-05
+            ],
+            [
+              "hu",
+              2.3424625396728516e-05
+            ],
+            [
+              "ht",
+              2.1517276763916016e-05
+            ],
+            [
+              "eu",
+              2.09808349609375e-05
+            ],
+            [
+              "hy",
+              1.9252300262451172e-05
+            ],
+            [
+              "sq",
+              1.7583370208740234e-05
+            ],
+            [
+              "ca",
+              1.728534698486328e-05
+            ],
+            [
+              "haw",
+              1.6391277313232422e-05
+            ],
+            [
+              "yo",
+              1.5497207641601562e-05
+            ],
+            [
+              "lo",
+              1.4424324035644531e-05
+            ],
+            [
+              "mn",
+              1.233816146850586e-05
+            ],
+            [
+              "sr",
+              8.940696716308594e-06
+            ],
+            [
+              "ml",
+              8.702278137207031e-06
+            ],
+            [
+              "it",
+              8.285045623779297e-06
+            ],
+            [
+              "bg",
+              6.377696990966797e-06
+            ],
+            [
+              "et",
+              5.781650543212891e-06
+            ],
+            [
+              "az",
+              5.424022674560547e-06
+            ],
+            [
+              "oc",
+              5.245208740234375e-06
+            ],
+            [
+              "kk",
+              4.172325134277344e-06
+            ],
+            [
+              "am",
+              4.112720489501953e-06
+            ],
+            [
+              "af",
+              3.635883331298828e-06
+            ],
+            [
+              "sv",
+              3.2186508178710938e-06
+            ],
+            [
+              "be",
+              3.159046173095703e-06
+            ],
+            [
+              "fi",
+              2.9802322387695312e-06
+            ],
+            [
+              "is",
+              2.384185791015625e-06
+            ],
+            [
+              "ha",
+              1.9669532775878906e-06
+            ],
+            [
+              "he",
+              1.7881393432617188e-06
+            ],
+            [
+              "lv",
+              1.6093254089355469e-06
+            ],
+            [
+              "fo",
+              1.3113021850585938e-06
+            ],
+            [
+              "mk",
+              1.2516975402832031e-06
+            ],
+            [
+              "ln",
+              1.2516975402832031e-06
+            ],
+            [
+              "ka",
+              1.0132789611816406e-06
+            ],
+            [
+              "tg",
+              9.5367431640625e-07
+            ],
+            [
+              "sk",
+              9.5367431640625e-07
+            ],
+            [
+              "so",
+              7.152557373046875e-07
+            ],
+            [
+              "bs",
+              5.960464477539062e-07
+            ],
+            [
+              "gl",
+              5.364418029785156e-07
+            ],
+            [
+              "hr",
+              4.76837158203125e-07
+            ],
+            [
+              "su",
+              3.5762786865234375e-07
+            ],
+            [
+              "yi",
+              2.980232238769531e-07
+            ],
+            [
+              "mt",
+              2.384185791015625e-07
+            ],
+            [
+              "tt",
+              2.384185791015625e-07
+            ],
+            [
+              "lb",
+              1.7881393432617188e-07
+            ],
+            [
+              "uz",
+              1.1920928955078125e-07
+            ],
+            [
+              "ba",
+              0.0
+            ],
+            [
+              "mg",
+              0.0
+            ],
+            [
+              "tk",
+              0.0
+            ]
+          ],
+          "transcription_options": {
+            "beam_size": 5,
+            "best_of": 5,
+            "patience": 1,
+            "length_penalty": 1,
+            "repetition_penalty": 1,
+            "no_repeat_ngram_size": 0,
+            "log_prob_threshold": -1.0,
+            "no_speech_threshold": 0.6,
+            "compression_ratio_threshold": 2.4,
+            "condition_on_previous_text": false,
+            "prompt_reset_on_temperature": 0.5,
+            "temperatures": [
+              0.0
+            ],
+            "initial_prompt": null,
+            "prefix": null,
+            "suppress_blank": true,
+            "suppress_tokens": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              10,
+              14,
+              25,
+              26,
+              27,
+              28,
+              29,
+              31,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              90,
+              91,
+              92,
+              93,
+              359,
+              503,
+              522,
+              542,
+              873,
+              893,
+              902,
+              918,
+              922,
+              931,
+              1350,
+              1853,
+              1982,
+              2460,
+              2627,
+              3246,
+              3253,
+              3268,
+              3536,
+              3846,
+              3961,
+              4183,
+              4667,
+              6585,
+              6647,
+              7273,
+              9061,
+              9383,
+              10428,
+              10929,
+              11938,
+              12033,
+              12331,
+              12562,
+              13793,
+              14157,
+              14635,
+              15265,
+              15618,
+              16553,
+              16604,
+              18362,
+              18956,
+              20075,
+              21675,
+              22520,
+              26130,
+              26161,
+              26435,
+              28279,
+              29464,
+              31650,
+              32302,
+              32470,
+              36865,
+              42863,
+              47425,
+              49870,
+              50254,
+              50258,
+              50358,
+              50359,
+              50360,
+              50361,
+              50362
+            ],
+            "without_timestamps": true,
+            "max_initial_timestamp": 1.0,
+            "word_timestamps": false,
+            "prepend_punctuations": "\"'“¿([{-",
+            "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+            "multilingual": false,
+            "max_new_tokens": null,
+            "clip_timestamps": [
+              0.0
+            ],
+            "hallucination_silence_threshold": null,
+            "hotwords": null
+          },
+          "vad_options": null
+        }
+      },
+      "hypothesis": "देरी जस्सो स्ट्रिडेंट के हुन्छन तोपाईको स्ट्रेडी एकदाम हार्ड गर्छन, मतलब दिन रात एक गर्छन उनियारू",
+      "gpu_after_transcription": {
+        "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "total_memory_mib": 6144,
+        "used_memory_mib": 5040,
+        "driver": "592.27"
+      }
+    },
+    {
+      "transcription": "यसलाई easily यतिकै पनि निकाल्न मिल्ने थियो 25% भनेको हो नि त so half life को meaning के हो आधा हुने हो नि त so तिम्रो like",
+      "transcription_devanagari": "यसलाई ईसिलय यतिकै पनि निकाल्न मिल्ने थियो 25% भनेको हो नि त सो हाफ लाइफ को meaning के हो आधा हुने हो नि त सो तिम्रो लाइक",
+      "transcription_romanized": "yaslai easily yatikai pani nikalna milne thiyo 25% bhaneko ho ni ta so half life ko meaning ke ho aadha hune ho ni ta so timro like",
+      "cmi": 26.92,
+      "speech_type": "cs",
+      "speaker_id": "UCeq9rTo9W93NfJNP9n1eRGw",
+      "video_id": "zJYS-XNDP2Q",
+      "start_ms": 633264,
+      "end_ms": 642192,
+      "duration_s": 8.928,
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "decoded_duration_s": 8.928,
+      "sample_rate": 16000,
+      "source_channels": 1,
+      "audio_sha256": "a19babdc7287647007c9675646769c74d8dd186b780fb5ce9ae8a74f887c52ef",
+      "status": "received",
+      "requested_at_utc": "2026-11-03T16:12:42.822911+00:00",
+      "transcription_s": 0.9434750000000349,
+      "response": {
+        "segments": [
+          {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 8.92,
+            "text": " 25% મલે 25% મલે",
+            "tokens": [
+              3552,
+              4,
+              220,
+              156,
+              103,
+              106,
+              156,
+              103,
+              110,
+              156,
+              104,
+              229,
+              3552,
+              4,
+              220,
+              156,
+              103,
+              106,
+              156,
+              103,
+              110,
+              156,
+              104,
+              229
+            ],
+            "avg_logprob": -0.5965624809265136,
+            "compression_ratio": 1.0384615384615385,
+            "no_speech_prob": 0.281005859375,
+            "words": null,
+            "temperature": 0.0
+          }
+        ],
+        "info": {
+          "language": "ne",
+          "language_probability": 0.9384765625,
+          "duration": 8.928,
+          "duration_after_vad": 8.928,
+          "all_language_probs": [
+            [
+              "ne",
+              0.9384765625
+            ],
+            [
+              "as",
+              0.029693603515625
+            ],
+            [
+              "en",
+              0.00864410400390625
+            ],
+            [
+              "bn",
+              0.006626129150390625
+            ],
+            [
+              "hi",
+              0.0064239501953125
+            ],
+            [
+              "si",
+              0.0010404586791992188
+            ],
+            [
+              "ko",
+              0.0008559226989746094
+            ],
+            [
+              "bo",
+              0.0006461143493652344
+            ],
+            [
+              "gu",
+              0.000640869140625
+            ],
+            [
+              "jw",
+              0.0006117820739746094
+            ],
+            [
+              "la",
+              0.0005030632019042969
+            ],
+            [
+              "te",
+              0.0004439353942871094
+            ],
+            [
+              "mr",
+              0.00037384033203125
+            ],
+            [
+              "nn",
+              0.00033783912658691406
+            ],
+            [
+              "fr",
+              0.0003123283386230469
+            ],
+            [
+              "id",
+              0.00029349327087402344
+            ],
+            [
+              "vi",
+              0.0002777576446533203
+            ],
+            [
+              "ms",
+              0.0002491474151611328
+            ],
+            [
+              "sa",
+              0.00022494792938232422
+            ],
+            [
+              "ur",
+              0.00020813941955566406
+            ],
+            [
+              "ja",
+              0.00020813941955566406
+            ],
+            [
+              "kn",
+              0.00019550323486328125
+            ],
+            [
+              "th",
+              0.00018656253814697266
+            ],
+            [
+              "sd",
+              0.0001633167266845703
+            ],
+            [
+              "haw",
+              0.0001595020294189453
+            ],
+            [
+              "cy",
+              0.00015342235565185547
+            ],
+            [
+              "da",
+              0.00014638900756835938
+            ],
+            [
+              "fa",
+              0.00014078617095947266
+            ],
+            [
+              "my",
+              0.0001386404037475586
+            ],
+            [
+              "pa",
+              0.00013124942779541016
+            ],
+            [
+              "tr",
+              0.0001232624053955078
+            ],
+            [
+              "km",
+              0.00010710954666137695
+            ],
+            [
+              "br",
+              9.60230827331543e-05
+            ],
+            [
+              "sn",
+              9.232759475708008e-05
+            ],
+            [
+              "es",
+              7.2479248046875e-05
+            ],
+            [
+              "tl",
+              6.914138793945312e-05
+            ],
+            [
+              "zh",
+              5.7756900787353516e-05
+            ],
+            [
+              "lt",
+              5.346536636352539e-05
+            ],
+            [
+              "ro",
+              5.179643630981445e-05
+            ],
+            [
+              "de",
+              4.982948303222656e-05
+            ],
+            [
+              "ml",
+              4.863739013671875e-05
+            ],
+            [
+              "no",
+              4.792213439941406e-05
+            ],
+            [
+              "mn",
+              3.88026237487793e-05
+            ],
+            [
+              "sw",
+              3.7610530853271484e-05
+            ],
+            [
+              "el",
+              3.504753112792969e-05
+            ],
+            [
+              "mi",
+              3.069639205932617e-05
+            ],
+            [
+              "eu",
+              2.8848648071289062e-05
+            ],
+            [
+              "hu",
+              2.7298927307128906e-05
+            ],
+            [
+              "ta",
+              2.6881694793701172e-05
+            ],
+            [
+              "pt",
+              2.3543834686279297e-05
+            ],
+            [
+              "pl",
+              2.282857894897461e-05
+            ],
+            [
+              "ht",
+              2.1755695343017578e-05
+            ],
+            [
+              "ru",
+              2.110004425048828e-05
+            ],
+            [
+              "lo",
+              1.996755599975586e-05
+            ],
+            [
+              "am",
+              1.9490718841552734e-05
+            ],
+            [
+              "cs",
+              1.7642974853515625e-05
+            ],
+            [
+              "it",
+              1.7344951629638672e-05
+            ],
+            [
+              "nl",
+              1.5437602996826172e-05
+            ],
+            [
+              "ps",
+              1.5079975128173828e-05
+            ],
+            [
+              "ar",
+              1.3828277587890625e-05
+            ],
+            [
+              "sl",
+              1.3828277587890625e-05
+            ],
+            [
+              "is",
+              1.3828277587890625e-05
+            ],
+            [
+              "fi",
+              1.3589859008789062e-05
+            ],
+            [
+              "sq",
+              8.225440979003906e-06
+            ],
+            [
+              "hy",
+              7.927417755126953e-06
+            ],
+            [
+              "yo",
+              7.748603820800781e-06
+            ],
+            [
+              "et",
+              7.510185241699219e-06
+            ],
+            [
+              "uk",
+              6.377696990966797e-06
+            ],
+            [
+              "fo",
+              6.198883056640625e-06
+            ],
+            [
+              "bg",
+              6.139278411865234e-06
+            ],
+            [
+              "sv",
+              6.020069122314453e-06
+            ],
+            [
+              "ca",
+              5.9604644775390625e-06
+            ],
+            [
+              "sr",
+              5.781650543212891e-06
+            ],
+            [
+              "oc",
+              5.7220458984375e-06
+            ],
+            [
+              "sk",
+              4.947185516357422e-06
+            ],
+            [
+              "ka",
+              3.6954879760742188e-06
+            ],
+            [
+              "az",
+              2.5033950805664062e-06
+            ],
+            [
+              "he",
+              1.3709068298339844e-06
+            ],
+            [
+              "kk",
+              1.1920928955078125e-06
+            ],
+            [
+              "af",
+              1.1920928955078125e-06
+            ],
+            [
+              "be",
+              1.1920928955078125e-06
+            ],
+            [
+              "ha",
+              1.1920928955078125e-06
+            ],
+            [
+              "so",
+              1.0132789611816406e-06
+            ],
+            [
+              "gl",
+              8.344650268554688e-07
+            ],
+            [
+              "su",
+              8.344650268554688e-07
+            ],
+            [
+              "lv",
+              7.152557373046875e-07
+            ],
+            [
+              "ln",
+              6.556510925292969e-07
+            ],
+            [
+              "mk",
+              5.364418029785156e-07
+            ],
+            [
+              "hr",
+              4.76837158203125e-07
+            ],
+            [
+              "tg",
+              2.980232238769531e-07
+            ],
+            [
+              "lb",
+              2.980232238769531e-07
+            ],
+            [
+              "mt",
+              2.384185791015625e-07
+            ],
+            [
+              "bs",
+              2.384185791015625e-07
+            ],
+            [
+              "tt",
+              1.7881393432617188e-07
+            ],
+            [
+              "yi",
+              1.7881393432617188e-07
+            ],
+            [
+              "uz",
+              1.1920928955078125e-07
+            ],
+            [
+              "tk",
+              0.0
+            ],
+            [
+              "mg",
+              0.0
+            ],
+            [
+              "ba",
+              0.0
+            ]
+          ],
+          "transcription_options": {
+            "beam_size": 5,
+            "best_of": 5,
+            "patience": 1,
+            "length_penalty": 1,
+            "repetition_penalty": 1,
+            "no_repeat_ngram_size": 0,
+            "log_prob_threshold": -1.0,
+            "no_speech_threshold": 0.6,
+            "compression_ratio_threshold": 2.4,
+            "condition_on_previous_text": false,
+            "prompt_reset_on_temperature": 0.5,
+            "temperatures": [
+              0.0
+            ],
+            "initial_prompt": null,
+            "prefix": null,
+            "suppress_blank": true,
+            "suppress_tokens": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              10,
+              14,
+              25,
+              26,
+              27,
+              28,
+              29,
+              31,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              90,
+              91,
+              92,
+              93,
+              359,
+              503,
+              522,
+              542,
+              873,
+              893,
+              902,
+              918,
+              922,
+              931,
+              1350,
+              1853,
+              1982,
+              2460,
+              2627,
+              3246,
+              3253,
+              3268,
+              3536,
+              3846,
+              3961,
+              4183,
+              4667,
+              6585,
+              6647,
+              7273,
+              9061,
+              9383,
+              10428,
+              10929,
+              11938,
+              12033,
+              12331,
+              12562,
+              13793,
+              14157,
+              14635,
+              15265,
+              15618,
+              16553,
+              16604,
+              18362,
+              18956,
+              20075,
+              21675,
+              22520,
+              26130,
+              26161,
+              26435,
+              28279,
+              29464,
+              31650,
+              32302,
+              32470,
+              36865,
+              42863,
+              47425,
+              49870,
+              50254,
+              50258,
+              50358,
+              50359,
+              50360,
+              50361,
+              50362
+            ],
+            "without_timestamps": true,
+            "max_initial_timestamp": 1.0,
+            "word_timestamps": false,
+            "prepend_punctuations": "\"'“¿([{-",
+            "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+            "multilingual": false,
+            "max_new_tokens": null,
+            "clip_timestamps": [
+              0.0
+            ],
+            "hallucination_silence_threshold": null,
+            "hotwords": null
+          },
+          "vad_options": null
+        }
+      },
+      "hypothesis": "25% મલે 25% મલે",
+      "gpu_after_transcription": {
+        "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "total_memory_mib": 6144,
+        "used_memory_mib": 5039,
+        "driver": "592.27"
+      }
+    },
+    {
+      "transcription": "यो हामीले निकाल्ने हो नि त mass भनेको basically N N हाम्रो कति निक्लियो यति निक्लियो into molar mass molar mass हाम्रो कति हुन्छ भन्दाखेरि",
+      "transcription_devanagari": "यो हामीले निकाल्ने हो नि त म्यास भनेको बेसिकली एन एन हाम्रो कति निक्लियो यति निक्लियो इन्टु molar म्यास molar म्यास हाम्रो कति हुन्छ भन्दाखेरि",
+      "transcription_romanized": "yo hamile nikalne ho ni ta mass bhaneko basically N N hamro kati nikliyo yati nikliyo into molar mass molar mass hamro kati huncha bhandakheri",
+      "cmi": 36.0,
+      "speech_type": "cs",
+      "speaker_id": "UCeq9rTo9W93NfJNP9n1eRGw",
+      "video_id": "zJYS-XNDP2Q",
+      "start_ms": 1512240,
+      "end_ms": 1525520,
+      "duration_s": 13.28,
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "decoded_duration_s": 13.28,
+      "sample_rate": 16000,
+      "source_channels": 1,
+      "audio_sha256": "574ae80ba5da885329f71a80a96040083e9b54e656a9f3f7f9aa15b8980c94b4",
+      "status": "received",
+      "requested_at_utc": "2026-11-03T16:12:43.843486+00:00",
+      "transcription_s": 3.008072999999058,
+      "response": {
+        "segments": [
+          {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 13.280000000000001,
+            "text": " यो आमले निकाल नियों ता सो मास मानीगो बिसिक्ली यन यन आमरो कती निकलियो एती निकलियो इंटू मोलर मास, मोलर मास आमरो कती हुँँछा मनदाहिरी",
+            "tokens": [
+              8485,
+              107,
+              33926,
+              220,
+              156,
+              97,
+              228,
+              156,
+              97,
+              106,
+              156,
+              97,
+              110,
+              21981,
+              8485,
+              101,
+              33279,
+              41858,
+              17937,
+              46758,
+              8485,
+              101,
+              33279,
+              48268,
+              33926,
+              31945,
+              8485,
+              97,
+              17937,
+              220,
+              156,
+              97,
+              116,
+              33926,
+              48449,
+              17937,
+              45938,
+              220,
+              156,
+              97,
+              106,
+              17937,
+              35082,
+              31881,
+              3941,
+              245,
+              33926,
+              8485,
+              105,
+              33279,
+              45938,
+              33279,
+              41858,
+              27099,
+              46758,
+              31881,
+              8485,
+              107,
+              35082,
+              8485,
+              107,
+              35082,
+              220,
+              156,
+              97,
+              228,
+              156,
+              97,
+              106,
+              156,
+              97,
+              108,
+              33926,
+              31970,
+              36158,
+              31881,
+              8485,
+              101,
+              33279,
+              41858,
+              46758,
+              33279,
+              48268,
+              33926,
+              8485,
+              237,
+              36158,
+              31881,
+              8485,
+              101,
+              33279,
+              41858,
+              46758,
+              33279,
+              48268,
+              33926,
+              220,
+              156,
+              97,
+              229,
+              156,
+              97,
+              224,
+              3941,
+              253,
+              8703,
+              224,
+              48449,
+              33926,
+              46758,
+              25411,
+              48449,
+              17937,
+              45938,
+              11,
+              48449,
+              33926,
+              46758,
+              25411,
+              48449,
+              17937,
+              45938,
+              220,
+              156,
+              97,
+              228,
+              156,
+              97,
+              106,
+              156,
+              97,
+              108,
+              33926,
+              220,
+              156,
+              97,
+              243,
+              156,
+              97,
+              97,
+              31881,
+              37139,
+              8703,
+              223,
+              3941,
+              223,
+              3941,
+              223,
+              3941,
+              249,
+              17937,
+              220,
+              156,
+              97,
+              106,
+              156,
+              97,
+              101,
+              156,
+              97,
+              99,
+              17937,
+              44500,
+              33279,
+              25411,
+              31881
+            ],
+            "avg_logprob": -0.42178142534758517,
+            "compression_ratio": 2.2171052631578947,
+            "no_speech_prob": 0.283447265625,
+            "words": null,
+            "temperature": 0.0
+          }
+        ],
+        "info": {
+          "language": "ne",
+          "language_probability": 0.94921875,
+          "duration": 13.28,
+          "duration_after_vad": 13.28,
+          "all_language_probs": [
+            [
+              "ne",
+              0.94921875
+            ],
+            [
+              "en",
+              0.0230255126953125
+            ],
+            [
+              "as",
+              0.0105438232421875
+            ],
+            [
+              "hi",
+              0.005344390869140625
+            ],
+            [
+              "id",
+              0.0015430450439453125
+            ],
+            [
+              "bn",
+              0.0010442733764648438
+            ],
+            [
+              "te",
+              0.0010194778442382812
+            ],
+            [
+              "jw",
+              0.0007758140563964844
+            ],
+            [
+              "ko",
+              0.0007519721984863281
+            ],
+            [
+              "bo",
+              0.0007119178771972656
+            ],
+            [
+              "vi",
+              0.0005373954772949219
+            ],
+            [
+              "si",
+              0.00043511390686035156
+            ],
+            [
+              "la",
+              0.0003581047058105469
+            ],
+            [
+              "nn",
+              0.00034165382385253906
+            ],
+            [
+              "th",
+              0.0003390312194824219
+            ],
+            [
+              "sa",
+              0.00032591819763183594
+            ],
+            [
+              "tr",
+              0.00029206275939941406
+            ],
+            [
+              "da",
+              0.0002620220184326172
+            ],
+            [
+              "fr",
+              0.000244140625
+            ],
+            [
+              "ms",
+              0.00023114681243896484
+            ],
+            [
+              "km",
+              0.0001785755157470703
+            ],
+            [
+              "fa",
+              0.00017452239990234375
+            ],
+            [
+              "ja",
+              0.0001575946807861328
+            ],
+            [
+              "gu",
+              0.0001468658447265625
+            ],
+            [
+              "cy",
+              0.00014460086822509766
+            ],
+            [
+              "lt",
+              0.00013375282287597656
+            ],
+            [
+              "sn",
+              0.00012767314910888672
+            ],
+            [
+              "mr",
+              0.0001266002655029297
+            ],
+            [
+              "ro",
+              9.560585021972656e-05
+            ],
+            [
+              "es",
+              8.702278137207031e-05
+            ],
+            [
+              "br",
+              8.434057235717773e-05
+            ],
+            [
+              "ur",
+              8.243322372436523e-05
+            ],
+            [
+              "kn",
+              7.56382942199707e-05
+            ],
+            [
+              "my",
+              7.331371307373047e-05
+            ],
+            [
+              "el",
+              7.271766662597656e-05
+            ],
+            [
+              "de",
+              7.104873657226562e-05
+            ],
+            [
+              "sd",
+              6.67572021484375e-05
+            ],
+            [
+              "haw",
+              6.568431854248047e-05
+            ],
+            [
+              "sw",
+              5.984306335449219e-05
+            ],
+            [
+              "ml",
+              5.936622619628906e-05
+            ],
+            [
+              "ru",
+              5.0008296966552734e-05
+            ],
+            [
+              "eu",
+              4.4465065002441406e-05
+            ],
+            [
+              "hu",
+              4.410743713378906e-05
+            ],
+            [
+              "tl",
+              4.2438507080078125e-05
+            ],
+            [
+              "pl",
+              4.0471553802490234e-05
+            ],
+            [
+              "zh",
+              3.921985626220703e-05
+            ],
+            [
+              "mn",
+              3.832578659057617e-05
+            ],
+            [
+              "am",
+              2.759695053100586e-05
+            ],
+            [
+              "ar",
+              2.6106834411621094e-05
+            ],
+            [
+              "ta",
+              2.491474151611328e-05
+            ],
+            [
+              "pt",
+              2.4378299713134766e-05
+            ],
+            [
+              "pa",
+              2.3424625396728516e-05
+            ],
+            [
+              "no",
+              2.3066997528076172e-05
+            ],
+            [
+              "mi",
+              1.895427703857422e-05
+            ],
+            [
+              "lo",
+              1.6510486602783203e-05
+            ],
+            [
+              "ca",
+              1.4007091522216797e-05
+            ],
+            [
+              "it",
+              1.245737075805664e-05
+            ],
+            [
+              "nl",
+              1.1324882507324219e-05
+            ],
+            [
+              "is",
+              1.1265277862548828e-05
+            ],
+            [
+              "sq",
+              1.1146068572998047e-05
+            ],
+            [
+              "ht",
+              1.0073184967041016e-05
+            ],
+            [
+              "fi",
+              9.179115295410156e-06
+            ],
+            [
+              "hy",
+              8.64267349243164e-06
+            ],
+            [
+              "sr",
+              7.092952728271484e-06
+            ],
+            [
+              "ps",
+              6.556510925292969e-06
+            ],
+            [
+              "sv",
+              6.318092346191406e-06
+            ],
+            [
+              "cs",
+              5.900859832763672e-06
+            ],
+            [
+              "sl",
+              5.781650543212891e-06
+            ],
+            [
+              "uk",
+              5.4836273193359375e-06
+            ],
+            [
+              "fo",
+              4.649162292480469e-06
+            ],
+            [
+              "bg",
+              4.351139068603516e-06
+            ],
+            [
+              "yo",
+              4.231929779052734e-06
+            ],
+            [
+              "oc",
+              3.0994415283203125e-06
+            ],
+            [
+              "az",
+              1.8477439880371094e-06
+            ],
+            [
+              "et",
+              1.7881393432617188e-06
+            ],
+            [
+              "ka",
+              1.7285346984863281e-06
+            ],
+            [
+              "be",
+              1.6689300537109375e-06
+            ],
+            [
+              "sk",
+              1.1324882507324219e-06
+            ],
+            [
+              "ha",
+              1.1324882507324219e-06
+            ],
+            [
+              "he",
+              1.0728836059570312e-06
+            ],
+            [
+              "su",
+              1.0728836059570312e-06
+            ],
+            [
+              "lv",
+              9.5367431640625e-07
+            ],
+            [
+              "gl",
+              8.940696716308594e-07
+            ],
+            [
+              "bs",
+              7.748603820800781e-07
+            ],
+            [
+              "kk",
+              7.748603820800781e-07
+            ],
+            [
+              "hr",
+              7.152557373046875e-07
+            ],
+            [
+              "so",
+              5.960464477539062e-07
+            ],
+            [
+              "tg",
+              4.172325134277344e-07
+            ],
+            [
+              "ln",
+              2.980232238769531e-07
+            ],
+            [
+              "af",
+              2.384185791015625e-07
+            ],
+            [
+              "lb",
+              1.7881393432617188e-07
+            ],
+            [
+              "mk",
+              1.7881393432617188e-07
+            ],
+            [
+              "tt",
+              1.1920928955078125e-07
+            ],
+            [
+              "yi",
+              1.1920928955078125e-07
+            ],
+            [
+              "mt",
+              1.1920928955078125e-07
+            ],
+            [
+              "uz",
+              5.960464477539063e-08
+            ],
+            [
+              "tk",
+              0.0
+            ],
+            [
+              "mg",
+              0.0
+            ],
+            [
+              "ba",
+              0.0
+            ]
+          ],
+          "transcription_options": {
+            "beam_size": 5,
+            "best_of": 5,
+            "patience": 1,
+            "length_penalty": 1,
+            "repetition_penalty": 1,
+            "no_repeat_ngram_size": 0,
+            "log_prob_threshold": -1.0,
+            "no_speech_threshold": 0.6,
+            "compression_ratio_threshold": 2.4,
+            "condition_on_previous_text": false,
+            "prompt_reset_on_temperature": 0.5,
+            "temperatures": [
+              0.0
+            ],
+            "initial_prompt": null,
+            "prefix": null,
+            "suppress_blank": true,
+            "suppress_tokens": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              10,
+              14,
+              25,
+              26,
+              27,
+              28,
+              29,
+              31,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              90,
+              91,
+              92,
+              93,
+              359,
+              503,
+              522,
+              542,
+              873,
+              893,
+              902,
+              918,
+              922,
+              931,
+              1350,
+              1853,
+              1982,
+              2460,
+              2627,
+              3246,
+              3253,
+              3268,
+              3536,
+              3846,
+              3961,
+              4183,
+              4667,
+              6585,
+              6647,
+              7273,
+              9061,
+              9383,
+              10428,
+              10929,
+              11938,
+              12033,
+              12331,
+              12562,
+              13793,
+              14157,
+              14635,
+              15265,
+              15618,
+              16553,
+              16604,
+              18362,
+              18956,
+              20075,
+              21675,
+              22520,
+              26130,
+              26161,
+              26435,
+              28279,
+              29464,
+              31650,
+              32302,
+              32470,
+              36865,
+              42863,
+              47425,
+              49870,
+              50254,
+              50258,
+              50358,
+              50359,
+              50360,
+              50361,
+              50362
+            ],
+            "without_timestamps": true,
+            "max_initial_timestamp": 1.0,
+            "word_timestamps": false,
+            "prepend_punctuations": "\"'“¿([{-",
+            "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+            "multilingual": false,
+            "max_new_tokens": null,
+            "clip_timestamps": [
+              0.0
+            ],
+            "hallucination_silence_threshold": null,
+            "hotwords": null
+          },
+          "vad_options": null
+        }
+      },
+      "hypothesis": "यो आमले निकाल नियों ता सो मास मानीगो बिसिक्ली यन यन आमरो कती निकलियो एती निकलियो इंटू मोलर मास, मोलर मास आमरो कती हुँँछा मनदाहिरी",
+      "gpu_after_transcription": {
+        "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "total_memory_mib": 6144,
+        "used_memory_mib": 5040,
+        "driver": "592.27"
+      }
+    },
+    {
+      "transcription": "physical interpretation यदि गर्न सक्यो भने होइन त्यसबाट हामी question from the predictable last year को question बाट गर्न सक्छौँ marks ल्याउन सजिलो भइदिन्छ repetition rate होइन",
+      "transcription_devanagari": "फिजिकल इन्टरप्रिटेसन यदि गर्न सक्यो भने होइन त्यसबाट हामी क्वेश्चन फ्रम द प्रेडिक्टेबल लास्ट यीयर को क्वेश्चन बाट गर्न सक्छौँ मार्कस ल्याउन सजिलो भइदिन्छ रेपिटिशन रेट होइन",
+      "transcription_romanized": "physical interpretation yadi garna sakyo bhane hoina tyasbata hami question from the predictable last year ko question bata garna sakchau marks lyauna sajilo bhaidincha repetition rate hoina",
+      "cmi": 44.44,
+      "speech_type": "cs",
+      "speaker_id": "UCBbxIYJ35vGP8qWMJn3RmTA",
+      "video_id": "TN8IzjVNnzs",
+      "start_ms": 1205232,
+      "end_ms": 1216352,
+      "duration_s": 11.12,
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "decoded_duration_s": 11.12,
+      "sample_rate": 16000,
+      "source_channels": 1,
+      "audio_sha256": "aae11f0b20a48ac8d2b029fe82fbc8b5cda3bc675594c692368a1ba2d30de2d9",
+      "status": "received",
+      "requested_at_utc": "2026-11-03T16:12:46.915354+00:00",
+      "transcription_s": 0.8783622000009927,
+      "response": {
+        "segments": [
+          {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 11.120000000000001,
+            "text": " प्रिदिक्टेक्टेबल",
+            "tokens": [
+              8485,
+              103,
+              27099,
+              25411,
+              33279,
+              3941,
+              99,
+              33279,
+              41858,
+              27099,
+              3941,
+              253,
+              21981,
+              41858,
+              27099,
+              3941,
+              253,
+              21981,
+              3941,
+              105,
+              46758
+            ],
+            "avg_logprob": -0.6118608225475658,
+            "compression_ratio": 1.2,
+            "no_speech_prob": 0.274169921875,
+            "words": null,
+            "temperature": 0.0
+          }
+        ],
+        "info": {
+          "language": "ne",
+          "language_probability": 0.9794921875,
+          "duration": 11.12,
+          "duration_after_vad": 11.12,
+          "all_language_probs": [
+            [
+              "ne",
+              0.9794921875
+            ],
+            [
+              "en",
+              0.0105438232421875
+            ],
+            [
+              "hi",
+              0.002109527587890625
+            ],
+            [
+              "as",
+              0.0009813308715820312
+            ],
+            [
+              "ko",
+              0.0007638931274414062
+            ],
+            [
+              "si",
+              0.0004456043243408203
+            ],
+            [
+              "ms",
+              0.0003581047058105469
+            ],
+            [
+              "sa",
+              0.000347137451171875
+            ],
+            [
+              "te",
+              0.00034427642822265625
+            ],
+            [
+              "id",
+              0.00034165382385253906
+            ],
+            [
+              "jw",
+              0.0003364086151123047
+            ],
+            [
+              "la",
+              0.0003185272216796875
+            ],
+            [
+              "bo",
+              0.00030159950256347656
+            ],
+            [
+              "km",
+              0.00024044513702392578
+            ],
+            [
+              "th",
+              0.00023484230041503906
+            ],
+            [
+              "fr",
+              0.00020885467529296875
+            ],
+            [
+              "sn",
+              0.00019931793212890625
+            ],
+            [
+              "vi",
+              0.00018870830535888672
+            ],
+            [
+              "ja",
+              0.00017309188842773438
+            ],
+            [
+              "bn",
+              0.00017309188842773438
+            ],
+            [
+              "gu",
+              0.0001704692840576172
+            ],
+            [
+              "da",
+              0.0001704692840576172
+            ],
+            [
+              "nn",
+              0.0001480579376220703
+            ],
+            [
+              "lt",
+              0.00012862682342529297
+            ],
+            [
+              "fa",
+              0.00011718273162841797
+            ],
+            [
+              "tr",
+              0.00011444091796875
+            ],
+            [
+              "tl",
+              8.910894393920898e-05
+            ],
+            [
+              "ur",
+              8.70823860168457e-05
+            ],
+            [
+              "ta",
+              6.127357482910156e-05
+            ],
+            [
+              "de",
+              5.799531936645508e-05
+            ],
+            [
+              "mi",
+              5.620718002319336e-05
+            ],
+            [
+              "mn",
+              5.447864532470703e-05
+            ],
+            [
+              "cy",
+              5.155801773071289e-05
+            ],
+            [
+              "br",
+              4.661083221435547e-05
+            ],
+            [
+              "haw",
+              4.661083221435547e-05
+            ],
+            [
+              "mr",
+              4.6253204345703125e-05
+            ],
+            [
+              "ro",
+              3.713369369506836e-05
+            ],
+            [
+              "kn",
+              3.3855438232421875e-05
+            ],
+            [
+              "pa",
+              3.2782554626464844e-05
+            ],
+            [
+              "es",
+              3.1054019927978516e-05
+            ],
+            [
+              "sd",
+              2.7835369110107422e-05
+            ],
+            [
+              "my",
+              2.7179718017578125e-05
+            ],
+            [
+              "sw",
+              2.378225326538086e-05
+            ],
+            [
+              "pt",
+              2.2709369659423828e-05
+            ],
+            [
+              "el",
+              2.2351741790771484e-05
+            ],
+            [
+              "zh",
+              1.895427703857422e-05
+            ],
+            [
+              "ru",
+              1.7702579498291016e-05
+            ],
+            [
+              "ml",
+              1.6987323760986328e-05
+            ],
+            [
+              "pl",
+              1.2934207916259766e-05
+            ],
+            [
+              "uk",
+              1.2755393981933594e-05
+            ],
+            [
+              "hu",
+              1.1265277862548828e-05
+            ],
+            [
+              "ps",
+              1.0907649993896484e-05
+            ],
+            [
+              "nl",
+              9.59634780883789e-06
+            ],
+            [
+              "sl",
+              7.569789886474609e-06
+            ],
+            [
+              "lo",
+              6.794929504394531e-06
+            ],
+            [
+              "no",
+              6.735324859619141e-06
+            ],
+            [
+              "eu",
+              6.377696990966797e-06
+            ],
+            [
+              "am",
+              5.245208740234375e-06
+            ],
+            [
+              "et",
+              5.125999450683594e-06
+            ],
+            [
+              "bg",
+              5.0067901611328125e-06
+            ],
+            [
+              "hy",
+              4.887580871582031e-06
+            ],
+            [
+              "ht",
+              4.827976226806641e-06
+            ],
+            [
+              "sr",
+              4.708766937255859e-06
+            ],
+            [
+              "ca",
+              3.993511199951172e-06
+            ],
+            [
+              "fi",
+              2.8014183044433594e-06
+            ],
+            [
+              "af",
+              2.6226043701171875e-06
+            ],
+            [
+              "it",
+              2.562999725341797e-06
+            ],
+            [
+              "ar",
+              2.5033950805664062e-06
+            ],
+            [
+              "is",
+              2.4437904357910156e-06
+            ],
+            [
+              "cs",
+              2.205371856689453e-06
+            ],
+            [
+              "oc",
+              2.0265579223632812e-06
+            ],
+            [
+              "yo",
+              1.7285346984863281e-06
+            ],
+            [
+              "sq",
+              1.7285346984863281e-06
+            ],
+            [
+              "kk",
+              1.430511474609375e-06
+            ],
+            [
+              "fo",
+              1.2516975402832031e-06
+            ],
+            [
+              "be",
+              8.344650268554688e-07
+            ],
+            [
+              "lv",
+              7.152557373046875e-07
+            ],
+            [
+              "ha",
+              6.556510925292969e-07
+            ],
+            [
+              "az",
+              4.76837158203125e-07
+            ],
+            [
+              "ka",
+              2.980232238769531e-07
+            ],
+            [
+              "su",
+              2.980232238769531e-07
+            ],
+            [
+              "sv",
+              2.980232238769531e-07
+            ],
+            [
+              "hr",
+              2.980232238769531e-07
+            ],
+            [
+              "bs",
+              2.384185791015625e-07
+            ],
+            [
+              "he",
+              2.384185791015625e-07
+            ],
+            [
+              "gl",
+              1.7881393432617188e-07
+            ],
+            [
+              "tg",
+              1.7881393432617188e-07
+            ],
+            [
+              "sk",
+              1.7881393432617188e-07
+            ],
+            [
+              "ln",
+              1.7881393432617188e-07
+            ],
+            [
+              "lb",
+              1.7881393432617188e-07
+            ],
+            [
+              "yi",
+              1.1920928955078125e-07
+            ],
+            [
+              "so",
+              5.960464477539063e-08
+            ],
+            [
+              "tt",
+              5.960464477539063e-08
+            ],
+            [
+              "mk",
+              5.960464477539063e-08
+            ],
+            [
+              "uz",
+              0.0
+            ],
+            [
+              "tk",
+              0.0
+            ],
+            [
+              "mt",
+              0.0
+            ],
+            [
+              "mg",
+              0.0
+            ],
+            [
+              "ba",
+              0.0
+            ]
+          ],
+          "transcription_options": {
+            "beam_size": 5,
+            "best_of": 5,
+            "patience": 1,
+            "length_penalty": 1,
+            "repetition_penalty": 1,
+            "no_repeat_ngram_size": 0,
+            "log_prob_threshold": -1.0,
+            "no_speech_threshold": 0.6,
+            "compression_ratio_threshold": 2.4,
+            "condition_on_previous_text": false,
+            "prompt_reset_on_temperature": 0.5,
+            "temperatures": [
+              0.0
+            ],
+            "initial_prompt": null,
+            "prefix": null,
+            "suppress_blank": true,
+            "suppress_tokens": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              10,
+              14,
+              25,
+              26,
+              27,
+              28,
+              29,
+              31,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              90,
+              91,
+              92,
+              93,
+              359,
+              503,
+              522,
+              542,
+              873,
+              893,
+              902,
+              918,
+              922,
+              931,
+              1350,
+              1853,
+              1982,
+              2460,
+              2627,
+              3246,
+              3253,
+              3268,
+              3536,
+              3846,
+              3961,
+              4183,
+              4667,
+              6585,
+              6647,
+              7273,
+              9061,
+              9383,
+              10428,
+              10929,
+              11938,
+              12033,
+              12331,
+              12562,
+              13793,
+              14157,
+              14635,
+              15265,
+              15618,
+              16553,
+              16604,
+              18362,
+              18956,
+              20075,
+              21675,
+              22520,
+              26130,
+              26161,
+              26435,
+              28279,
+              29464,
+              31650,
+              32302,
+              32470,
+              36865,
+              42863,
+              47425,
+              49870,
+              50254,
+              50258,
+              50358,
+              50359,
+              50360,
+              50361,
+              50362
+            ],
+            "without_timestamps": true,
+            "max_initial_timestamp": 1.0,
+            "word_timestamps": false,
+            "prepend_punctuations": "\"'“¿([{-",
+            "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+            "multilingual": false,
+            "max_new_tokens": null,
+            "clip_timestamps": [
+              0.0
+            ],
+            "hallucination_silence_threshold": null,
+            "hotwords": null
+          },
+          "vad_options": null
+        }
+      },
+      "hypothesis": "प्रिदिक्टेक्टेबल",
+      "gpu_after_transcription": {
+        "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "total_memory_mib": 6144,
+        "used_memory_mib": 5039,
+        "driver": "592.27"
+      }
+    },
+    {
+      "transcription": "Electric charge field potential capacitor DC circuit chapter हरू छन् होइन जसमध्ये mostly तपाईँको concept",
+      "transcription_devanagari": "इलेक्ट्रिक चार्ज फिल्ड पोटेनशल क्यापासिटर डीसी सर्किट च्याप्टर हरू छन् होइन जसमध्ये मोसटलय तपाईँको कन्सेप्ट",
+      "transcription_romanized": "Electric charge field potential capacitor DC circuit chapter haru chan hoina jasamadhye mostly tapaiko concept",
+      "cmi": 33.33,
+      "speech_type": "cs",
+      "speaker_id": "UCBbxIYJ35vGP8qWMJn3RmTA",
+      "video_id": "TN8IzjVNnzs",
+      "start_ms": 1169296,
+      "end_ms": 1178352,
+      "duration_s": 9.056,
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "decoded_duration_s": 9.056,
+      "sample_rate": 16000,
+      "source_channels": 1,
+      "audio_sha256": "52e59651d4a7af08a78092d441cebc8414550ca2721ceb5476644d8d1d8162a1",
+      "status": "received",
+      "requested_at_utc": "2026-11-03T16:12:47.855462+00:00",
+      "transcription_s": 1.2577870999994047,
+      "response": {
+        "segments": [
+          {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 9.05,
+            "text": " Electric Charge Field Potential Capacitor DC Circuit Chapter हरु सान है न? जस मदिये mostly तपाईंको concept",
+            "tokens": [
+              24677,
+              40546,
+              17952,
+              9145,
+              2549,
+              8363,
+              326,
+              3029,
+              9114,
+              36939,
+              18874,
+              220,
+              156,
+              97,
+              117,
+              156,
+              97,
+              108,
+              8703,
+              223,
+              49316,
+              17937,
+              35082,
+              37139,
+              43372,
+              8485,
+              101,
+              30,
+              8485,
+              250,
+              45938,
+              48449,
+              3941,
+              99,
+              33279,
+              48268,
+              21981,
+              5240,
+              8485,
+              97,
+              3941,
+              103,
+              17937,
+              3941,
+              230,
+              31945,
+              41858,
+              33926,
+              3410
+            ],
+            "avg_logprob": -0.5334375011920929,
+            "compression_ratio": 1.0857142857142856,
+            "no_speech_prob": 0.4345703125,
+            "words": null,
+            "temperature": 0.0
+          }
+        ],
+        "info": {
+          "language": "ne",
+          "language_probability": 0.80029296875,
+          "duration": 9.056,
+          "duration_after_vad": 9.056,
+          "all_language_probs": [
+            [
+              "ne",
+              0.80029296875
+            ],
+            [
+              "en",
+              0.07330322265625
+            ],
+            [
+              "bn",
+              0.03802490234375
+            ],
+            [
+              "as",
+              0.03460693359375
+            ],
+            [
+              "hi",
+              0.024932861328125
+            ],
+            [
+              "si",
+              0.004367828369140625
+            ],
+            [
+              "gu",
+              0.0030975341796875
+            ],
+            [
+              "la",
+              0.0022487640380859375
+            ],
+            [
+              "ja",
+              0.0021457672119140625
+            ],
+            [
+              "ko",
+              0.0015697479248046875
+            ],
+            [
+              "sa",
+              0.0013742446899414062
+            ],
+            [
+              "ms",
+              0.0012807846069335938
+            ],
+            [
+              "kn",
+              0.0012607574462890625
+            ],
+            [
+              "bo",
+              0.0011758804321289062
+            ],
+            [
+              "jw",
+              0.0009517669677734375
+            ],
+            [
+              "id",
+              0.0008335113525390625
+            ],
+            [
+              "nn",
+              0.0008077621459960938
+            ],
+            [
+              "te",
+              0.0007710456848144531
+            ],
+            [
+              "mr",
+              0.0006647109985351562
+            ],
+            [
+              "km",
+              0.0005817413330078125
+            ],
+            [
+              "sn",
+              0.0004940032958984375
+            ],
+            [
+              "pa",
+              0.0004496574401855469
+            ],
+            [
+              "cy",
+              0.00032138824462890625
+            ],
+            [
+              "tl",
+              0.000308990478515625
+            ],
+            [
+              "my",
+              0.0002949237823486328
+            ],
+            [
+              "de",
+              0.0002903938293457031
+            ],
+            [
+              "ur",
+              0.0002791881561279297
+            ],
+            [
+              "th",
+              0.0002541542053222656
+            ],
+            [
+              "zh",
+              0.0002225637435913086
+            ],
+            [
+              "fr",
+              0.00020110607147216797
+            ],
+            [
+              "vi",
+              0.00020110607147216797
+            ],
+            [
+              "ta",
+              0.0001964569091796875
+            ],
+            [
+              "haw",
+              0.00017750263214111328
+            ],
+            [
+              "mn",
+              0.00017750263214111328
+            ],
+            [
+              "mi",
+              0.0001404285430908203
+            ],
+            [
+              "lt",
+              0.00013506412506103516
+            ],
+            [
+              "sw",
+              0.00011283159255981445
+            ],
+            [
+              "sd",
+              0.00011020898818969727
+            ],
+            [
+              "es",
+              0.0001043081283569336
+            ],
+            [
+              "tr",
+              9.500980377197266e-05
+            ],
+            [
+              "fa",
+              9.423494338989258e-05
+            ],
+            [
+              "pt",
+              8.380413055419922e-05
+            ],
+            [
+              "br",
+              8.255243301391602e-05
+            ],
+            [
+              "sl",
+              8.189678192138672e-05
+            ],
+            [
+              "da",
+              6.949901580810547e-05
+            ],
+            [
+              "ml",
+              6.633996963500977e-05
+            ],
+            [
+              "nl",
+              5.626678466796875e-05
+            ],
+            [
+              "eu",
+              5.161762237548828e-05
+            ],
+            [
+              "pl",
+              4.965066909790039e-05
+            ],
+            [
+              "no",
+              3.9577484130859375e-05
+            ],
+            [
+              "ro",
+              3.0338764190673828e-05
+            ],
+            [
+              "uk",
+              2.8312206268310547e-05
+            ],
+            [
+              "el",
+              2.8073787689208984e-05
+            ],
+            [
+              "cs",
+              2.5391578674316406e-05
+            ],
+            [
+              "hu",
+              2.5153160095214844e-05
+            ],
+            [
+              "ru",
+              2.3126602172851562e-05
+            ],
+            [
+              "yo",
+              2.2590160369873047e-05
+            ],
+            [
+              "lo",
+              2.008676528930664e-05
+            ],
+            [
+              "ps",
+              1.9729137420654297e-05
+            ],
+            [
+              "ht",
+              1.5020370483398438e-05
+            ],
+            [
+              "am",
+              1.3887882232666016e-05
+            ],
+            [
+              "fi",
+              1.239776611328125e-05
+            ],
+            [
+              "bg",
+              1.233816146850586e-05
+            ],
+            [
+              "af",
+              9.59634780883789e-06
+            ],
+            [
+              "et",
+              9.298324584960938e-06
+            ],
+            [
+              "sr",
+              8.761882781982422e-06
+            ],
+            [
+              "hy",
+              8.64267349243164e-06
+            ],
+            [
+              "sk",
+              8.58306884765625e-06
+            ],
+            [
+              "it",
+              7.867813110351562e-06
+            ],
+            [
+              "is",
+              5.781650543212891e-06
+            ],
+            [
+              "sq",
+              5.543231964111328e-06
+            ],
+            [
+              "ar",
+              3.6954879760742188e-06
+            ],
+            [
+              "oc",
+              3.635883331298828e-06
+            ],
+            [
+              "ka",
+              3.635883331298828e-06
+            ],
+            [
+              "fo",
+              3.2782554626464844e-06
+            ],
+            [
+              "sv",
+              3.039836883544922e-06
+            ],
+            [
+              "kk",
+              2.8014183044433594e-06
+            ],
+            [
+              "lv",
+              2.7418136596679688e-06
+            ],
+            [
+              "ca",
+              2.7418136596679688e-06
+            ],
+            [
+              "ha",
+              2.4437904357910156e-06
+            ],
+            [
+              "he",
+              2.3245811462402344e-06
+            ],
+            [
+              "be",
+              8.344650268554688e-07
+            ],
+            [
+              "hr",
+              7.748603820800781e-07
+            ],
+            [
+              "so",
+              7.748603820800781e-07
+            ],
+            [
+              "mk",
+              7.748603820800781e-07
+            ],
+            [
+              "yi",
+              5.364418029785156e-07
+            ],
+            [
+              "su",
+              5.364418029785156e-07
+            ],
+            [
+              "az",
+              5.364418029785156e-07
+            ],
+            [
+              "lb",
+              4.172325134277344e-07
+            ],
+            [
+              "ln",
+              4.172325134277344e-07
+            ],
+            [
+              "gl",
+              2.384185791015625e-07
+            ],
+            [
+              "mt",
+              2.384185791015625e-07
+            ],
+            [
+              "tg",
+              2.384185791015625e-07
+            ],
+            [
+              "tt",
+              2.384185791015625e-07
+            ],
+            [
+              "uz",
+              1.7881393432617188e-07
+            ],
+            [
+              "bs",
+              1.7881393432617188e-07
+            ],
+            [
+              "tk",
+              0.0
+            ],
+            [
+              "mg",
+              0.0
+            ],
+            [
+              "ba",
+              0.0
+            ]
+          ],
+          "transcription_options": {
+            "beam_size": 5,
+            "best_of": 5,
+            "patience": 1,
+            "length_penalty": 1,
+            "repetition_penalty": 1,
+            "no_repeat_ngram_size": 0,
+            "log_prob_threshold": -1.0,
+            "no_speech_threshold": 0.6,
+            "compression_ratio_threshold": 2.4,
+            "condition_on_previous_text": false,
+            "prompt_reset_on_temperature": 0.5,
+            "temperatures": [
+              0.0
+            ],
+            "initial_prompt": null,
+            "prefix": null,
+            "suppress_blank": true,
+            "suppress_tokens": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              10,
+              14,
+              25,
+              26,
+              27,
+              28,
+              29,
+              31,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              90,
+              91,
+              92,
+              93,
+              359,
+              503,
+              522,
+              542,
+              873,
+              893,
+              902,
+              918,
+              922,
+              931,
+              1350,
+              1853,
+              1982,
+              2460,
+              2627,
+              3246,
+              3253,
+              3268,
+              3536,
+              3846,
+              3961,
+              4183,
+              4667,
+              6585,
+              6647,
+              7273,
+              9061,
+              9383,
+              10428,
+              10929,
+              11938,
+              12033,
+              12331,
+              12562,
+              13793,
+              14157,
+              14635,
+              15265,
+              15618,
+              16553,
+              16604,
+              18362,
+              18956,
+              20075,
+              21675,
+              22520,
+              26130,
+              26161,
+              26435,
+              28279,
+              29464,
+              31650,
+              32302,
+              32470,
+              36865,
+              42863,
+              47425,
+              49870,
+              50254,
+              50258,
+              50358,
+              50359,
+              50360,
+              50361,
+              50362
+            ],
+            "without_timestamps": true,
+            "max_initial_timestamp": 1.0,
+            "word_timestamps": false,
+            "prepend_punctuations": "\"'“¿([{-",
+            "append_punctuations": "\"'.。,，!！?？:：”)]}、",
+            "multilingual": false,
+            "max_new_tokens": null,
+            "clip_timestamps": [
+              0.0
+            ],
+            "hallucination_silence_threshold": null,
+            "hotwords": null
+          },
+          "vad_options": null
+        }
+      },
+      "hypothesis": "Electric Charge Field Potential Capacitor DC Circuit Chapter हरु सान है न? जस मदिये mostly तपाईंको concept",
+      "gpu_after_transcription": {
+        "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+        "total_memory_mib": 6144,
+        "used_memory_mib": 5040,
+        "driver": "592.27"
+      }
+    }
+  ],
+  "paid_api_calls": 0,
+  "model_files_sha256": {
+    "model.bin": "bf2a9746382e1aa7ffff6b3a0d137ed9edbd9670c3b87e5d35f5e85e70d0333a",
+    "config.json": "d86b7a7664a12559d644aa210a32ce9a7e03913e794b7ea4fb7182de69e273a7",
+    "tokenizer.json": "fb7b63191e9bb045082c79fd742a3106a12c99513ab30df4a0d47fa6cb6fd0ab",
+    "vocabulary.txt": "34ce3fe1c5041027b3f8d42912270993f986dbc4bb34cf27f951e34a1e453913"
+  },
+  "runtime": {
+    "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "gpu_before_load": {
+      "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "total_memory_mib": 6144,
+      "used_memory_mib": 1009,
+      "driver": "592.27"
+    }
+  },
+  "model_load_s": 2.922691299998405,
+  "gpu_after_load": {
+    "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "total_memory_mib": 6144,
+    "used_memory_mib": 4894,
+    "driver": "592.27"
+  },
+  "actual_device": "cuda",
+  "actual_compute_type": "float16"
+}

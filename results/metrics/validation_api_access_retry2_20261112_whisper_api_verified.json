@@ -1,0 +1,34 @@
+{
+  "predictions": "results/predictions/validation_api_access_retry2_20261112_whisper_api.json",
+  "predictions_sha256": "f7052d24d83a899fdbebbd62e5efba7a2024fe98b24d3f4c9d93a7987394a69f",
+  "manifest_sha256": "d8f40cacc48dc590b77dabd41c8c67db70199c847609065b7a4a9313bf754da4",
+  "system": "whisper_api",
+  "purpose": "validation_api_access_after_successful_metadata_auth",
+  "coverage": {
+    "expected": 1,
+    "received": 1,
+    "complete": true
+  },
+  "independent_edit_counts": {
+    "word_errors": 8,
+    "character_errors": 27,
+    "reference_words": 12,
+    "reference_characters": 48,
+    "raw_word_errors": 8,
+    "raw_character_errors": 27,
+    "raw_reference_words": 11,
+    "raw_reference_characters": 50
+  },
+  "independent_scores": {
+    "wer": 0.6666666666666666,
+    "cer": 0.5625,
+    "raw_wer": 0.7272727272727273,
+    "raw_cer": 0.54
+  },
+  "checks": "All WAV payloads/waveform hashes and identities rechecked. Raw hypotheses reconstructed from saved responses. Every per-clip and corpus normalized/raw WER/CER independently recomputed without jiwer.",
+  "audio_s": 3.76,
+  "completed_request_s": 2.860445800000889,
+  "reported_languages": {},
+  "largest_observed_device_memory_mib": null,
+  "scope": "Validation-only, metadata-selected runtime check. No held-out test predictions or new API calls in verification. Memory is whole-device snapshots, not continuously measured model peak."
+}

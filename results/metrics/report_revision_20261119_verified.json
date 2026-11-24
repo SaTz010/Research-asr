@@ -1,0 +1,40 @@
+{
+  "verified_on": "2026-11-19",
+  "scheduled_work": "November 20 report revision, completed early",
+  "version": "0.2",
+  "pages": 9,
+  "figures": 2,
+  "author": "Sanskar Ananta Tiwari",
+  "visually_checked_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "numerical_guards_passed": true,
+  "frozen_inputs_unchanged": true,
+  "offline_tests_passed": 116,
+  "source_sha256": {
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\output\\pdf\\nepali_english_asr_research_report_draft.pdf": "796339029c48b99b52f9a5052061ce0ec5bc8256d13be02068fc593f4a3a3618",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\reports\\research_report_draft.md": "356cf4498c8b8efaec2de67c64715e5121b1291cbbc1976edcd9f9f0005524bf",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\output\\pdf\\nepali_english_asr_research_report_draft_v0.1_20261116.pdf": "df35f820a8e147e05a244635051e566ccf64b109e01843d620c01eec2b79dad8",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\reports\\research_report_draft_v0.1_20261116.md": "a25a24d92d40cfd8dd432b7e80cee6068f7d281e4fa8d91d0a3a86c321588e1d",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\src\\build_research_report.py": "8ef30977dee6aa14300c996fd7aa1090e7490b2c38f297691c3b51842c035d50",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\results\\metrics\\paired_uncertainty_20261119.json": "2c10a603267bc59a1d44a28b902df6c1bbba516b5f810bf9df309df310baf1bb",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\results\\metrics\\paired_uncertainty_20261119_verified.json": "86a2af3e41cbcf2324a948e0dee8e5111c2b973fdcd74ec436cbef5b3f19c039",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\results\\figures\\research_report_cmi_bands_20261116.png": "0fbb82745dd9fe8e907f52d70e51efc427b3dc6ff83ab6faa43cd86516e42ab2",
+    "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\results\\figures\\research_report_uncertainty_20261119.png": "c61bacaa9d1ac08d1d58389be4914a750e14aad5fc2ccdb4f070e2a66abae879"
+  },
+  "inference_requests": 0,
+  "published": false,
+  "remaining": [
+    "Ten predefined listening examples",
+    "Clean-environment reproduction",
+    "Final author/release and public-link checks"
+  ]
+}

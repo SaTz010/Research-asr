@@ -1,0 +1,8 @@
+# Local validation runtime; hosted responses are read from the existing pilot archive.
+faster-whisper==1.2.1
+ctranslate2==4.8.5
+huggingface-hub==0.36.2
+datasets==4.4.1
+numpy==2.3.5
+soundfile==0.13.1
+jiwer==4.0.0

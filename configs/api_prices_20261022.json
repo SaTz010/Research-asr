@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-10-22",
+  "currency": "USD",
+  "usd_per_audio_minute": {
+    "whisper-1": "0.006",
+    "gpt-transcribe": "0.0045",
+    "chirp_3_standard_v2": "0.016"
+  },
+  "sources": {
+    "whisper-1": "https://developers.openai.com/api/docs/models/whisper-1",
+    "gpt-transcribe": "https://developers.openai.com/api/docs/models/gpt-transcribe",
+    "chirp_3_standard_v2": "https://cloud.google.com/speech-to-text/pricing?authuser=0"
+  },
+  "request_conditions_per_model": 1,
+  "reserve_fraction": "0.20",
+  "billing_assumption": "Plan conservatively by rounding every clip up to the next whole second for every service. Google documents this rounding. Exact OpenAI rounding remains to be reconciled with returned usage. Mono audio assumed.",
+  "google_assumption": "Standard Speech-to-Text V2 first-tier pay-as-you-go recognition rate; confirm the applied Chirp 3 SKU and region on a pilot before the full run. No dynamic-batch, contractual discount, free-tier, or trial-credit deduction.",
+  "excluded_costs": ["Taxes", "Currency conversion or payment fees", "Cloud storage and egress if later required", "Colab subscriptions", "Human annotation time"],
+  "note": "A planning estimate, not an invoice, account credit balance, or authorization to spend. Historical pilot costs are already incurred and not subtracted from future test-set evaluation."
+}

@@ -1,0 +1,121 @@
+{
+  "checked_on": "2026-11-24",
+  "version": "0.5",
+  "technical_checks_passed": true,
+  "status": "Technically ready local release candidate; final author review and publication/public-download verification remain.",
+  "clean_reproduction": {
+    "passed": true,
+    "offline_tests": 145,
+    "result_jsons_match": 4,
+    "pdf_text_and_pages_match": true,
+    "network_attempts": 0,
+    "paid_requests": 0,
+    "scope": "Fresh Windows/CPython 3.13 environment on the same host; saved-output replay, not inference or an independent listening audit."
+  },
+  "credential_pattern_findings": [],
+  "credentials_tracked": false,
+  "audio_video_weights_in_candidate": false,
+  "notebook_outputs_present": false,
+  "common_secret_scan_scope": "Candidate files and nested pilot ZIP text; no .env content was read. Targeted patterns are not an exhaustive guarantee.",
+  "local_markdown_link_failures": [],
+  "public_url_checks": [
+    {
+      "url": "https://aclanthology.org/2024.findings-emnlp.356/",
+      "status": 200,
+      "final_url": "https://aclanthology.org/2024.findings-emnlp.356/"
+    },
+    {
+      "url": "https://aclanthology.org/L16-1292/",
+      "status": 200,
+      "final_url": "https://aclanthology.org/L16-1292/"
+    },
+    {
+      "url": "https://aclanthology.org/W14-5152/",
+      "status": 200,
+      "final_url": "https://aclanthology.org/W14-5152/"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "status": 200,
+      "final_url": "https://creativecommons.org/licenses/by-nc/4.0/"
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "status": 200,
+      "final_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "url": "https://developers.openai.com/api/reference/python/resources/audio/subresources/transcriptions/methods/create",
+      "status": 200,
+      "final_url": "https://developers.openai.com/api/reference/python/resources/audio/subresources/transcriptions/methods/create"
+    },
+    {
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "status": 200,
+      "final_url": "https://github.com/SYSTRAN/faster-whisper"
+    },
+    {
+      "url": "https://github.com/SaTz010/Research-asr",
+      "status": 200,
+      "final_url": "https://github.com/SaTz010/Research-asr"
+    },
+    {
+      "url": "https://huggingface.co/datasets/saileshbro/nepali-cs-asr",
+      "status": 200,
+      "final_url": "https://huggingface.co/datasets/saileshbro/nepali-cs-asr"
+    },
+    {
+      "url": "https://huggingface.co/datasets/saileshbro/nepali-cs-asr/blob/dd00ca41dd38774cd6097c372c16939d7f3746df/README.md",
+      "status": 200,
+      "final_url": "https://huggingface.co/datasets/saileshbro/nepali-cs-asr/blob/dd00ca41dd38774cd6097c372c16939d7f3746df/README.md"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v202/radford23a.html",
+      "status": 200,
+      "final_url": "https://proceedings.mlr.press/v202/radford23a.html"
+    },
+    {
+      "url": "https://research.google/pubs/transliteration-based-approaches-to-improve-code-switched-speech-recognition-performance/",
+      "status": 200,
+      "final_url": "https://research.google/pubs/transliteration-based-approaches-to-improve-code-switched-speech-recognition-performance/"
+    }
+  ],
+  "licenses": {
+    "original_code": "MIT",
+    "original_report_figures": "CC-BY-4.0",
+    "dataset_derived_material": "CC-BY-NC-4.0, excluded from original-work grants",
+    "author_choice_recorded": "November 24 chat confirmation"
+  },
+  "dataset_card_sha256": "b0f6d62102fbedf85b46142637d5d34c583a094cc3019c5239c4242c74fe280c",
+  "frozen_sources_and_annotations_unchanged": true,
+  "report_pages": 17,
+  "candidate_files_scanned": 199,
+  "candidate_bytes_before_archive": 63245106,
+  "largest_file_bytes": 21656428,
+  "public_repository_visibility": "public",
+  "remote_latest_package_published": false,
+  "remote_checked_state": "Earlier scaffold; last push 2026-10-16, before current local research artifacts.",
+  "published": false,
+  "remaining": [
+    "Final author read-through",
+    "Publish reviewed package",
+    "Verify new public report/download links"
+  ],
+  "artifact_sha256": {
+    "README.md": "632bc14493f8058d880b2da62c5551c6c9ad8fe0287422dd51e640ce25b41557",
+    "REPRODUCING.md": "ef2b4fc168a7bd479b938c22e77ad8d086d2c5afabc4130f20a68de221fbcb50",
+    "LICENSE": "a2349814a26b6c52450e292611968b50ca17ad1cb674c043c934e86a379ffe3b",
+    "LICENSING.md": "cf293543d2ac74e850c332ab719dcf8c10e8b1597e15abc0c8a126d5bce2a8ed",
+    "DATA_SOURCES.md": "9a266c7af849fb2804f42c4db9848739bbe2e065ceda7c73b76d668b68b070de",
+    "CITATION.cff": "fe5fa8f4524e43ba6cc532465952470f4c749e5a4e34b58e45ab2a451bb5901e",
+    "requirements-reproduction-lock.txt": "960ae783005e6c85eb923a372d297e450653eb7727131bcd713d24ae11699fea",
+    "src/reproduce_results.py": "77736c0de496255daf2fa7a0a06285cbcf428dfee4cff0fc392c6d6288fc9ccf",
+    "reports/research_report_draft.md": "cf77196a442676d52d28a11f3c7c204acd365e606b4929d955a6855ab5ab3bcc",
+    "output/pdf/nepali_english_asr_research_report_draft.pdf": "0d16fc8b0ecf87d660a0526e0f2085808968e7ff8b17b5b2dd3bff23b907df5f",
+    "output/pdf/nepali_english_asr_research_report_draft_v0.5_20261124.pdf": "0d16fc8b0ecf87d660a0526e0f2085808968e7ff8b17b5b2dd3bff23b907df5f",
+    "results/metrics/clean_reproduction_20261124.json": "2ec04e275aa2cbb0838d756c4ce55af8d6b407b7e8e626f936bd39e1bb66ef10",
+    "reports/publication_readiness_20261124.md": "32fe27eee97f7e3ddc0d84376661d76a7420e1a62350a8ce57715ddbcb70dd36"
+  },
+  "release_archive": "output/release/research-asr-v0.5-candidate-20261124.zip",
+  "archive_receipt": "Detached SHA-256 beside the ignored release archive; archive hash is not embedded in its own contents."
+}

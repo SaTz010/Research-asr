@@ -1,0 +1,32 @@
+{
+  "completed_on": "2026-11-12",
+  "scheduled_session": "November 13 preflight, completed early",
+  "ready_manifest": "data/manifests/test_cs_benchmark_20261112.json",
+  "ready_manifest_sha256": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+  "identical_pool_entries": 1198,
+  "reviewed_audit_clips": 50,
+  "technical_protocol_sha256": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4",
+  "live_api_preflight": {
+    "checkpoint": "results/predictions/validation_api_access_retry2_20261112_whisper_api.json",
+    "checkpoint_sha256": "f7052d24d83a899fdbebbd62e5efba7a2024fe98b24d3f4c9d93a7987394a69f",
+    "request_id": "req_12ad80514233466c9ff5d817f0fa6cee",
+    "usage": {
+      "seconds": 4.0,
+      "type": "duration"
+    },
+    "request_latency_s": 2.860445800000889,
+    "verified_clips": 1,
+    "complete": true,
+    "prior_auth_failures_preserved": true,
+    "billing_invoice_independently_verified": false
+  },
+  "metadata_auth_succeeded": true,
+  "project_env_key_not_exported": true,
+  "additional_successful_transcription_requests_by_assistant_this_turn": 1,
+  "observed_prior_auth_failure_attempts": 2,
+  "held_out_transcription_requests": 0,
+  "main_benchmark_started": false,
+  "main_api_execution_still_requires_explicit_flag_and_request_limit": true,
+  "balance_user_reported_before_check_usd": "3.54",
+  "balance_after_check_independently_verified": false
+}

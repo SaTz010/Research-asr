@@ -1,0 +1,117 @@
+{
+  "source": "results\\predictions\\local_whisper_large_v2_pilot.json",
+  "source_sha256": "585b19af487abf78c50d4a0f85df67763cf435b7aeb1f71c72f1f94fb371977b",
+  "checks": "All five local/API word and character edit counts independently recomputed without jiwer. Saved baseline checksum, exact five cached WAV payloads and waveform hashes, references, revisions/settings and materialized raw responses agree.",
+  "coverage": {
+    "expected": 5,
+    "received": 5,
+    "complete": true
+  },
+  "scores": {
+    "local": {
+      "word_errors": 97,
+      "character_errors": 356,
+      "reference_words": 111,
+      "reference_characters": 525,
+      "wer": 0.8738738738738738,
+      "cer": 0.6780952380952381
+    },
+    "api": {
+      "word_errors": 81,
+      "character_errors": 256,
+      "reference_words": 111,
+      "reference_characters": 525,
+      "wer": 0.7297297297297297,
+      "cer": 0.4876190476190476
+    }
+  },
+  "per_clip": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "cmi": 18.75,
+      "local": {
+        "wer": 0.7647058823529411,
+        "cer": 0.5526315789473685
+      },
+      "api": {
+        "wer": 0.7647058823529411,
+        "cer": 0.5789473684210527
+      },
+      "local_reported_language": "ne"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "cmi": 26.92,
+      "local": {
+        "wer": 0.9629629629629629,
+        "cer": 0.9789473684210527
+      },
+      "api": {
+        "wer": 0.9629629629629629,
+        "cer": 0.9789473684210527
+      },
+      "local_reported_language": "ne"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "cmi": 36.0,
+      "local": {
+        "wer": 0.96,
+        "cer": 0.6228070175438597
+      },
+      "api": {
+        "wer": 0.88,
+        "cer": 0.5964912280701754
+      },
+      "local_reported_language": "ne"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "cmi": 44.44,
+      "local": {
+        "wer": 1.0,
+        "cer": 0.94
+      },
+      "api": {
+        "wer": 0.5185185185185185,
+        "cer": 0.22666666666666666
+      },
+      "local_reported_language": "ne"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "cmi": 33.33,
+      "local": {
+        "wer": 0.4666666666666667,
+        "cer": 0.1
+      },
+      "api": {
+        "wer": 0.4,
+        "cer": 0.18888888888888888
+      },
+      "local_reported_language": "ne"
+    }
+  ],
+  "model_load_s": 2.922691299998405,
+  "local_transcription_s": 8.516795300000013,
+  "audio_s": 50.976,
+  "request_time_per_audio_time": 0.16707460962021367,
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "total_memory_mib": 6144,
+    "used_memory_mib": 1009,
+    "driver": "592.27"
+  },
+  "largest_observed_device_memory_mib": 5040,
+  "memory_limit": "Whole-device snapshots at model load/clip completion, not continuous peak or isolated model allocation.",
+  "new_paid_api_calls": 0,
+  "api_baseline": {
+    "archive": "whisper_api_pilot_20261022T105623043636Z.zip",
+    "sha256": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c",
+    "clips": 5,
+    "wer": 0.7297297297297297,
+    "cer": 0.4876190476190476
+  },
+  "scope": "Five validation clips. This process observed real local GPU execution and independently checked cached inputs/scores. Historical API execution and current invoices were not observed.",
+  "interpretation": "For these five clips/configurations, hosted Whisper has lower corpus WER/CER. Different implementations and unavailable API internals prevent attributing the difference solely to hosting. No CMI association or population-wide model ranking is established."
+}

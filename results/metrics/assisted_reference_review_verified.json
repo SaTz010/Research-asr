@@ -1,0 +1,19 @@
+{
+  "notebook_schema_valid": true,
+  "code_cells_smoke_executed": 151,
+  "audio_players_constructed_with_matching_wav_hashes": 50,
+  "tag_drafts_generated": 50,
+  "all_tag_counts_match_normalized_tokens": true,
+  "protected_files_unchanged": true,
+  "protected_sha256": {
+    "notebooks/05_reference_cmi_audit.ipynb": "d70bed2ddf7beffdb263e268bd41132114422e3e2686ca981e6def1d8a0347d2",
+    "data/annotations/reference_audit_20261105.json": "e653b4942a65785ff5f32f778a386553ef22047f8455dfb27124cacd82d0844b",
+    "data/manifests/reference_audit_20261105_selection.json": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+    "data/manifests/test_cs_20261105.json": "a6aa51bb2592022f3da004853457c871e709af0b820defd2ae0f0d1f479324fc"
+  },
+  "reviews_saved_by_smoke_test": 0,
+  "human_listening_performed": false,
+  "api_calls": 0,
+  "tests_passed": 75,
+  "notebook_sha256": "49636551a8747ba59bd352e3a711e99f2ca2a6913b9a9b7c0dd158866311ce11"
+}

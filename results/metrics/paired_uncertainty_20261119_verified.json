@@ -1,0 +1,12 @@
+{
+  "verified_on": "2026-11-19",
+  "result_sha256": "2c10a603267bc59a1d44a28b902df6c1bbba516b5f810bf9df309df310baf1bb",
+  "cmi_analysis_sha256": "6982cf4ca1ec30c5f1c04247206ed6ae2bf71e5feedc1dc75dfe9de5f0c9421a",
+  "reference_comparison_sha256": "16854bfd24d1b390b464d49053d0ea8daa64970be085af56e049a9acce598e05",
+  "groups_checked": 20,
+  "draws_per_interval": 2000,
+  "influence_checks": 22,
+  "method": "Independent standard-library weighted edit-difference sums and sorted linear percentiles, from separately saved CMI/reference-comparison per-clip scores. Checked every interval, withheld small-group interval, channel stratum and leave-one-video-out point.",
+  "passed": true,
+  "inference_requests": 0
+}

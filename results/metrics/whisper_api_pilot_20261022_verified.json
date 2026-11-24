@@ -1,0 +1,184 @@
+{
+  "source_archive": "whisper_api_pilot_20261022T105623043636Z.zip",
+  "source_sha256": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c",
+  "checks": "All ten per-clip and both corpus scores independently recomputed. Embedded baseline matches original archive. Manifest, revisions, settings, checkpoint responses, unique request IDs, task, and reported durations agree within the supplied exports. No API-key-shaped strings found in the two JSON members.",
+  "scope": "Five validation clips. Source audio, actual transmitted bytes, and API execution were not independently observed; stored hashes/request metadata were checked for consistency.",
+  "clips": 5,
+  "total_audio_seconds": 50.976,
+  "api_model": "whisper-1",
+  "runtime": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "packages": {
+      "openai": "2.54.0",
+      "datasets": "4.4.1",
+      "huggingface-hub": "0.36.2",
+      "numpy": "2.1.3",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0"
+    }
+  },
+  "scores": {
+    "auto": {
+      "successful_clips": 5,
+      "expected_clips": 5,
+      "complete": true,
+      "wer": 0.7297297297297297,
+      "cer": 0.4876190476190476,
+      "word_errors": 81,
+      "reference_words": 111,
+      "character_errors": 256,
+      "reference_characters": 525,
+      "reported_languages": {
+        "nepali": 5
+      },
+      "returned_usage_seconds": 54.0,
+      "clips_with_lower_wer_than_turbo": 4,
+      "wer_change_from_turbo_percentage_points": -207.20720720720718,
+      "cer_change_from_turbo_percentage_points": -137.52380952380952
+    },
+    "forced_ne": {
+      "successful_clips": 5,
+      "expected_clips": 5,
+      "complete": true,
+      "wer": 0.7297297297297297,
+      "cer": 0.4876190476190476,
+      "word_errors": 81,
+      "reference_words": 111,
+      "character_errors": 256,
+      "reference_characters": 525,
+      "reported_languages": {
+        "nepali": 5
+      },
+      "returned_usage_seconds": 54.0,
+      "clips_with_lower_wer_than_turbo": 4,
+      "wer_change_from_turbo_percentage_points": -38.73873873873873,
+      "cer_change_from_turbo_percentage_points": -103.80952380952382
+    }
+  },
+  "original_turbo_summary": {
+    "auto": {
+      "clips": 5,
+      "reference_words": 111,
+      "wer": 2.8018018018018016,
+      "cer": 1.8628571428571428,
+      "outputs_without_eos": 1
+    },
+    "forced_ne": {
+      "clips": 5,
+      "reference_words": 111,
+      "wer": 1.117117117117117,
+      "cer": 1.5257142857142858,
+      "outputs_without_eos": 2
+    }
+  },
+  "identical_auto_forced_ne_hypotheses": 5,
+  "repetition_observation": {
+    "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+    "hypothesis": "25% 25% 25% 25% 25%",
+    "both_modes": true
+  },
+  "per_clip": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "mode": "auto",
+      "cmi": 18.75,
+      "api_wer": 0.7647058823529411,
+      "api_cer": 0.5789473684210527,
+      "turbo_wer": 0.9411764705882353,
+      "wer_change_percentage_points": -17.647058823529417,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "mode": "auto",
+      "cmi": 26.92,
+      "api_wer": 0.9629629629629629,
+      "api_cer": 0.9789473684210527,
+      "turbo_wer": 0.8518518518518519,
+      "wer_change_percentage_points": 11.111111111111105,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "mode": "auto",
+      "cmi": 36.0,
+      "api_wer": 0.88,
+      "api_cer": 0.5964912280701754,
+      "turbo_wer": 8.88,
+      "wer_change_percentage_points": -800.0,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "mode": "auto",
+      "cmi": 44.44,
+      "api_wer": 0.5185185185185185,
+      "api_cer": 0.22666666666666666,
+      "turbo_wer": 1.0,
+      "wer_change_percentage_points": -48.14814814814815,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "mode": "auto",
+      "cmi": 33.33,
+      "api_wer": 0.4,
+      "api_cer": 0.18888888888888888,
+      "turbo_wer": 1.5333333333333334,
+      "wer_change_percentage_points": -113.33333333333333,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "mode": "forced_ne",
+      "cmi": 18.75,
+      "api_wer": 0.7647058823529411,
+      "api_cer": 0.5789473684210527,
+      "turbo_wer": 1.0,
+      "wer_change_percentage_points": -23.529411764705888,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "mode": "forced_ne",
+      "cmi": 26.92,
+      "api_wer": 0.9629629629629629,
+      "api_cer": 0.9789473684210527,
+      "turbo_wer": 0.9259259259259259,
+      "wer_change_percentage_points": 3.703703703703698,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "mode": "forced_ne",
+      "cmi": 36.0,
+      "api_wer": 0.88,
+      "api_cer": 0.5964912280701754,
+      "turbo_wer": 1.0,
+      "wer_change_percentage_points": -12.0,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "mode": "forced_ne",
+      "cmi": 44.44,
+      "api_wer": 0.5185185185185185,
+      "api_cer": 0.22666666666666666,
+      "turbo_wer": 1.4814814814814814,
+      "wer_change_percentage_points": -96.29629629629629,
+      "reported_language": "nepali"
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "mode": "forced_ne",
+      "cmi": 33.33,
+      "api_wer": 0.4,
+      "api_cer": 0.18888888888888888,
+      "turbo_wer": 1.1333333333333333,
+      "wer_change_percentage_points": -73.33333333333333,
+      "reported_language": "nepali"
+    }
+  ],
+  "interpretation": "Hosted whisper-1 had lower corpus WER/CER and lower per-clip WER on four of five clips than the tested V3 Turbo configuration in each mode. Auto and forced-Nepali text outputs were identical on all five API clips. One repeated-percent output remains a major failure. Different checkpoints/decoding mean this does not isolate hosting or establish general API superiority. No CMI association conclusion is supported."
+}

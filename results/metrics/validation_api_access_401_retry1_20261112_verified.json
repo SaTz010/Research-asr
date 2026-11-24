@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-11-12",
+  "observed_transcription_request_attempts": 2,
+  "attempts": [
+    {
+      "checkpoint": "results/predictions/validation_api_access_20261112_whisper_api.json",
+      "sha256": "35e2933ec4cbe4ef82256428d00e1a65ca72a31e10917dcdabe244f6ef958aab",
+      "http_status": 401,
+      "error_type": "AuthenticationError",
+      "request_id": "req_4521ef00d2034c1abbbc772c5256732d"
+    },
+    {
+      "checkpoint": "results/predictions/validation_api_access_retry1_20261112_whisper_api.json",
+      "sha256": "e5d11c8f6f37bd5e8a44141ffd136ef14dadd5e6c9821cd619bc5cc206ebb02f",
+      "http_status": 401,
+      "error_type": "AuthenticationError",
+      "request_id": "req_c517f329e441402a9e168613ddd43ec1"
+    }
+  ],
+  "successful_transcriptions": 0,
+  "new_transcription_retries_prepared": false,
+  "diagnostic": "src/check_api_auth.py",
+  "diagnostic_request": "GET /v1/models/whisper-1, only after local input checks",
+  "diagnostic_executed_by_assistant": false,
+  "key_read_by_assistant": false,
+  "held_out_inference_enabled": false
+}

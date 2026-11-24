@@ -1,0 +1,25 @@
+{
+  "recovered_at_utc": "2026-11-14T07:32:34.934402+00:00",
+  "operation": "promote completed temporary save after Windows atomic-replace PermissionError",
+  "cause_limit": "Windows denied atomic replacement; specific locking process not established.",
+  "checkpoint": "results/predictions/test_cs_benchmark_20261112_local.json",
+  "original_json_sha256": "aa66d209a2cbcb19e555d9adc1faa5a8c7a1aa7ea40833050d8c3164614d7355",
+  "complete_temp_sha256": "436c5d0d725b29e4d0805175c58ed5acaf73538a4abe20d08c0332c1c2d287ee",
+  "restored_json_sha256": "436c5d0d725b29e4d0805175c58ed5acaf73538a4abe20d08c0332c1c2d287ee",
+  "backup_directory": ".cache/local_checkpoint_recovery_20261114T073234884981Z",
+  "completed_results_before": 5,
+  "completed_results_after": 6,
+  "promoted_clip_ids": [
+    "test/-3PhO-CA2iw/536496-540208"
+  ],
+  "earlier_completed_records_unchanged": true,
+  "references_settings_and_identities_unchanged": true,
+  "inference_performed_during_recovery": false,
+  "missing_gpu_snapshot_clip_ids": [
+    "test/-3PhO-CA2iw/536496-540208"
+  ],
+  "interrupted_session_model_load_s": 8.123130299994955,
+  "gpu_driver_recorded_during_run": "610.91",
+  "offline_tests_passed": 92,
+  "retry_policy": "At most eight attempts per atomic save on PermissionError; total backoff at most 4.5 seconds. No ASR/API regeneration."
+}

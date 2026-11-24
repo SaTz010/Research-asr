@@ -1,0 +1,165 @@
+{
+  "as_of": "2026-10-22",
+  "purpose": "Preliminary budget, not a frozen evaluation manifest.",
+  "dataset_id": "saileshbro/nepali-cs-asr",
+  "dataset_revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+  "metadata_file": "data/manifests/budget_metadata_20261022.json",
+  "metadata_sha256": "2ed67804fb11e2920795569288975b79f6adc9178ac53ac57c7ff8ad041d6eb2",
+  "metadata_bytes_retrieved": 2800125,
+  "pricing": {
+    "checked_on": "2026-10-22",
+    "currency": "USD",
+    "usd_per_audio_minute": {
+      "whisper-1": "0.006",
+      "gpt-transcribe": "0.0045",
+      "chirp_3_standard_v2": "0.016"
+    },
+    "sources": {
+      "whisper-1": "https://developers.openai.com/api/docs/models/whisper-1",
+      "gpt-transcribe": "https://developers.openai.com/api/docs/models/gpt-transcribe",
+      "chirp_3_standard_v2": "https://cloud.google.com/speech-to-text/pricing?authuser=0"
+    },
+    "request_conditions_per_model": 1,
+    "reserve_fraction": "0.20",
+    "billing_assumption": "Plan conservatively by rounding every clip up to the next whole second for every service. Google documents this rounding. Exact OpenAI rounding remains to be reconciled with returned usage. Mono audio assumed.",
+    "google_assumption": "Standard Speech-to-Text V2 first-tier pay-as-you-go recognition rate; confirm the applied Chirp 3 SKU and region on a pilot before the full run. No dynamic-batch, contractual discount, free-tier, or trial-credit deduction.",
+    "excluded_costs": [
+      "Taxes",
+      "Currency conversion or payment fees",
+      "Cloud storage and egress if later required",
+      "Colab subscriptions",
+      "Human annotation time"
+    ],
+    "note": "A planning estimate, not an invoice, account credit balance, or authorization to spend. Historical pilot costs are already incurred and not subtracted from future test-set evaluation."
+  },
+  "split_inventory": {
+    "train": {
+      "all_clips": 16702,
+      "cs_clips": 16078,
+      "cs_audio_minutes": 2734.1100166666665,
+      "cs_cmi_band_counts": {
+        "(20,30]": 4834,
+        "(40,50]": 3116,
+        "(10,20]": 2749,
+        "(30,40]": 4722,
+        "[0,10]": 657
+      }
+    },
+    "validation": {
+      "all_clips": 2338,
+      "cs_clips": 2310,
+      "cs_audio_minutes": 389.5718833333333,
+      "cs_cmi_band_counts": {
+        "(30,40]": 689,
+        "(20,30]": 789,
+        "(10,20]": 382,
+        "(40,50]": 377,
+        "[0,10]": 73
+      }
+    },
+    "test": {
+      "all_clips": 1765,
+      "cs_clips": 1201,
+      "cs_audio_minutes": 199.53978333333333,
+      "cs_cmi_band_counts": {
+        "(40,50]": 123,
+        "(10,20]": 360,
+        "[0,10]": 200,
+        "(30,40]": 231,
+        "(20,30]": 287
+      }
+    }
+  },
+  "scenarios": {
+    "test_cs_candidates": {
+      "clips": 1201,
+      "conditions_per_model": 1,
+      "requests_all_models": 3603,
+      "audio_minutes_once": 199.53978333333333,
+      "planning_billable_minutes_per_model_per_condition": 209.81666666666666,
+      "by_model": {
+        "whisper-1": {
+          "usd_per_minute": "0.006",
+          "nominal_duration_cost_usd": "1.197238700000000000000000000",
+          "rounded_duration_cost_usd": "1.258900000000000000000000000"
+        },
+        "gpt-transcribe": {
+          "usd_per_minute": "0.0045",
+          "nominal_duration_cost_usd": "0.8979290249999999999999999998",
+          "rounded_duration_cost_usd": "0.9441750000000000000000000002"
+        },
+        "chirp_3_standard_v2": {
+          "usd_per_minute": "0.016",
+          "nominal_duration_cost_usd": "3.192636533333333333333333333",
+          "rounded_duration_cost_usd": "3.357066666666666666666666667"
+        }
+      },
+      "rounded_duration_total_usd": "5.560141666666666666666666667",
+      "reserve_fraction": "0.20",
+      "with_reserve_usd": "6.672170000000000000000000000",
+      "planning_amount_rounded_up_usd": "6.68"
+    },
+    "all_test_candidates": {
+      "clips": 1765,
+      "conditions_per_model": 1,
+      "requests_all_models": 5295,
+      "audio_minutes_once": 288.93335,
+      "planning_billable_minutes_per_model_per_condition": 303.9166666666667,
+      "by_model": {
+        "whisper-1": {
+          "usd_per_minute": "0.006",
+          "nominal_duration_cost_usd": "1.73360010",
+          "rounded_duration_cost_usd": "1.823500000000000000000000000"
+        },
+        "gpt-transcribe": {
+          "usd_per_minute": "0.0045",
+          "nominal_duration_cost_usd": "1.300200075",
+          "rounded_duration_cost_usd": "1.367625000000000000000000000"
+        },
+        "chirp_3_standard_v2": {
+          "usd_per_minute": "0.016",
+          "nominal_duration_cost_usd": "4.62293360",
+          "rounded_duration_cost_usd": "4.862666666666666666666666667"
+        }
+      },
+      "rounded_duration_total_usd": "8.053791666666666666666666667",
+      "reserve_fraction": "0.20",
+      "with_reserve_usd": "9.664550000000000000000000000",
+      "planning_amount_rounded_up_usd": "9.67"
+    },
+    "all_splits_cs_comparison_only": {
+      "clips": 19589,
+      "conditions_per_model": 1,
+      "requests_all_models": 58767,
+      "audio_minutes_once": 3323.221683333333,
+      "planning_billable_minutes_per_model_per_condition": 3492.4333333333334,
+      "by_model": {
+        "whisper-1": {
+          "usd_per_minute": "0.006",
+          "nominal_duration_cost_usd": "19.93933010000000000000000000",
+          "rounded_duration_cost_usd": "20.95460000000000000000000000"
+        },
+        "gpt-transcribe": {
+          "usd_per_minute": "0.0045",
+          "nominal_duration_cost_usd": "14.95449757500000000000000000",
+          "rounded_duration_cost_usd": "15.71595000000000000000000000"
+        },
+        "chirp_3_standard_v2": {
+          "usd_per_minute": "0.016",
+          "nominal_duration_cost_usd": "53.17154693333333333333333333",
+          "rounded_duration_cost_usd": "55.87893333333333333333333333"
+        }
+      },
+      "rounded_duration_total_usd": "92.54948333333333333333333333",
+      "reserve_fraction": "0.20",
+      "with_reserve_usd": "111.0593800000000000000000000",
+      "planning_amount_rounded_up_usd": "111.06"
+    }
+  },
+  "limitations": [
+    "Metadata durations have not been independently checked against decoded audio.",
+    "Test candidates still require provenance, duplicate, audio and reference checks; final eligible counts may shrink.",
+    "All-splits scenario is a cost comparison, not the intended research evaluation.",
+    "Reserve is a planning allowance, not a guaranteed upper bound; extra runs and language settings add cost."
+  ]
+}

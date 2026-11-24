@@ -1,0 +1,1647 @@
+{
+  "prepared_on": "2026-11-22",
+  "post_hoc": true,
+  "reviewer": "Sanskar Ananta Tiwari",
+  "source_sha256": {
+    "selection": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+    "audit": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+    "manifest": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+    "protocol": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+    "local_predictions": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+    "local_verification": "8e58da520c08bc3ac4f22ce140145edd86cc2ce3bd278c21bad55278fe20f632",
+    "whisper_api_predictions": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+    "whisper_api_verification": "ea414031e05ed4118f86042855981b26aa4bc7f3b3ca0bac7e44535770eefecf",
+    "protocol_document": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4"
+  },
+  "selection": [
+    {
+      "number": 1,
+      "clip_id": "test/bZFcrpg-tlo/500784-509872",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "okay",
+          "output": "or",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "service",
+          "output": "serviced",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "और",
+          "output": "all",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "task",
+          "output": "tasks",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "clip_id": "test/LhDdCCqBt4A/467552-472544",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "भन्नेतर्फ",
+          "output": "तर्फ",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "लागौँ",
+          "output": "लागो",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "होइन",
+          "output": "है",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "जहाँनिर",
+          "output": "ज्यानिर",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "चाहिँ",
+          "output": "जैं",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "हामी",
+          "output": "हमें",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "देख्न",
+          "output": "देखने",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "सक्छौँ",
+          "output": "सक्षुँ",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "हाम्रो",
+          "output": "अम्रो",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 10,
+          "reference": "program",
+          "output": "प्रोग्राम",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 11,
+          "reference": "भन्नेतर्फ",
+          "output": "लागो",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 12,
+          "reference": "लागौँ",
+          "output": "है",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 13,
+          "reference": "होइन",
+          "output": "न",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 14,
+          "reference": "जहाँनिर",
+          "output": "जानीरो",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 15,
+          "reference": "चाहिँ",
+          "output": "चाहिए",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 16,
+          "reference": "देख्न",
+          "output": "देखना",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 17,
+          "reference": "छ",
+          "output": "सह",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "clip_id": "test/HUfMJuhOj5w/1300976-1309488",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "तिमी",
+          "output": "ನಾವು",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "भन्ले",
+          "output": "ಬಳಿಗೆನ್ನು",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "hint",
+          "output": "ಬಾಸಾ",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "दिएपछि",
+          "output": "ನಾವು",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "के",
+          "output": "ಬಳಿಗೆನ್ನು",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "गरम",
+          "output": "ಬಾಸಾ",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "था",
+          "output": "ನಾವು",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "hint",
+          "output": "ಬಳಿಗೆನ್ನು",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "न",
+          "output": "ಬಾಸಾ",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "clip_id": "test/P9dy-ECijcI/3566016-3575392",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "a",
+          "output": "एरा",
+          "occurrences": {
+            "local": 2,
+            "whisper_api": 2
+          }
+        },
+        {
+          "id": 2,
+          "reference": "र",
+          "output": "बिले",
+          "occurrences": {
+            "local": 2,
+            "whisper_api": 2
+          }
+        },
+        {
+          "id": 3,
+          "reference": "b",
+          "output": "संगई",
+          "occurrences": {
+            "local": 2,
+            "whisper_api": 2
+          }
+        },
+        {
+          "id": 4,
+          "reference": "ले",
+          "output": "कद",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "गरे",
+          "output": "करे",
+          "occurrences": {
+            "local": 2,
+            "whisper_api": 2
+          }
+        },
+        {
+          "id": 6,
+          "reference": "त",
+          "output": "दा",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "ले",
+          "output": "एक",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "भनेको",
+          "output": "बुजिन",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "बुझिन्छ",
+          "output": "चाके",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 10,
+          "reference": "कि",
+          "output": "बुजिन",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 11,
+          "reference": "बुझिँदैन",
+          "output": "दाईना",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 12,
+          "reference": "भन्नुहोस्",
+          "output": "बन्णस",
+          "occurrences": {
+            "local": 2,
+            "whisper_api": 2
+          }
+        },
+        {
+          "id": 13,
+          "reference": "त",
+          "output": "ता",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 14,
+          "reference": "बुझिँदैन",
+          "output": "डाईना",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "clip_id": "test/qNsZlWl3yss/358592-369232",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "यहाँनिर",
+          "output": "यहाँ",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "चाहिँ",
+          "output": "नेरे",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "के",
+          "output": "क्योंकि",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "छ",
+          "output": "है",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "भने",
+          "output": "अमर",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "छ",
+          "output": "सह",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "यसलाई",
+          "output": "इसलई",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "चाहिँ",
+          "output": "हमने",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "लाई",
+          "output": "लई",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 10,
+          "reference": "गरिसकेपछि",
+          "output": "बईचि",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 11,
+          "reference": "हाम्रो",
+          "output": "आमर",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 12,
+          "reference": "के",
+          "output": "क्यों",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 13,
+          "reference": "भयो",
+          "output": "भायो",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 14,
+          "reference": "यसको",
+          "output": "इसको",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 15,
+          "reference": "चाहिँ",
+          "output": "थाक्के",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 16,
+          "reference": "ठिक",
+          "output": "ठीक",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 17,
+          "reference": "छ",
+          "output": "छा",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 18,
+          "reference": "के",
+          "output": "छैं",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 19,
+          "reference": "छ",
+          "output": "की",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 20,
+          "reference": "भने",
+          "output": "सबने",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 21,
+          "reference": "हाम्रो",
+          "output": "अमर",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 22,
+          "reference": "चाहिँ",
+          "output": "चैं",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 23,
+          "reference": "हामीले",
+          "output": "हमने",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 24,
+          "reference": "चाहिँ",
+          "output": "छैं",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 25,
+          "reference": "ठ्याक्कै",
+          "output": "ठक्के",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 26,
+          "reference": "ठिक",
+          "output": "है",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 27,
+          "reference": "छ",
+          "output": "ठिक्छा",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "clip_id": "test/P9dy-ECijcI/2883472-2891792",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "हेर्नुहोस्",
+          "output": "एक",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "त",
+          "output": "जाना",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "1",
+          "output": "महिला",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "जना",
+          "output": "ले",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "महिलाले",
+          "output": "एक",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "x",
+          "output": "जाना",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "दिनमा",
+          "output": "महिला",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "1",
+          "output": "ले",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "हेर्नुहोस्",
+          "output": "महिला",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 10,
+          "reference": "त",
+          "output": "ले",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 11,
+          "reference": "1",
+          "output": "एक",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 12,
+          "reference": "जना",
+          "output": "जाना",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 13,
+          "reference": "महिलाले",
+          "output": "महिला",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 14,
+          "reference": "x",
+          "output": "ले",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 15,
+          "reference": "दिनमा",
+          "output": "एक",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 16,
+          "reference": "1",
+          "output": "जाना",
+          "occurrences": {
+            "whisper_api": 2
+          }
+        },
+        {
+          "id": 17,
+          "reference": "काम",
+          "output": "महिला",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 18,
+          "reference": "गर्छिन्",
+          "output": "ले",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 19,
+          "reference": "x",
+          "output": "एक",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 20,
+          "reference": "को",
+          "output": "जाना",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 21,
+          "reference": "value",
+          "output": "महिला",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 22,
+          "reference": "320",
+          "output": "ले",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 23,
+          "reference": "अतः",
+          "output": "एक",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 24,
+          "reference": "जना",
+          "output": "महिला",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 25,
+          "reference": "महिलाले",
+          "output": "ल",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "clip_id": "test/sGhq22Tx5ew/226032-236624",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "भनेको",
+          "output": "बनेको",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "×",
+          "output": "इंटू",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "भयो",
+          "output": "बहयो",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "27",
+          "output": "सप्ताइस्तिया",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "तिया",
+          "output": "एकासी",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "81",
+          "output": "देर्पूर",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "कति",
+          "output": "कर",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "आयो",
+          "output": "दिया",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "त",
+          "output": "था",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 10,
+          "reference": "x",
+          "output": "बने",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 11,
+          "reference": "भनेको",
+          "output": "को",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 12,
+          "reference": "3",
+          "output": "थ्री",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 13,
+          "reference": "4",
+          "output": "बाई",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 14,
+          "reference": "भयो",
+          "output": "फो",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 15,
+          "reference": "27",
+          "output": "बायो",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 16,
+          "reference": "तिया",
+          "output": "सप्ताइस्तिया",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 17,
+          "reference": "81",
+          "output": "एकासी",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 18,
+          "reference": "therefore",
+          "output": "देर्फूर",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 19,
+          "reference": "x",
+          "output": "एक्स",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 20,
+          "reference": "value",
+          "output": "व्यालू",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "ins",
+          "output": "else",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "लेखिसकेपछि",
+          "output": "বেবে",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "होइन",
+          "output": "বেবে",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "int",
+          "output": "বেবে",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "main",
+          "output": "বেবে",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "start",
+          "output": "বেবে",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "गर्यो",
+          "output": "বেবে",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "str1",
+          "output": "বেবে",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "clip_id": "test/zYLanqYoX24/143984-152912",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "है",
+          "output": "मेट्रिक्स",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "matrix",
+          "output": "के",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "कै",
+          "output": "फॉर्मा",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "form",
+          "output": "से",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "मा",
+          "output": "मेट्रिक्स",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "same",
+          "output": "नहीं",
+          "occurrences": {
+            "local": 1,
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 7,
+          "reference": "matrix",
+          "output": "होगे",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 8,
+          "reference": "नै",
+          "output": "एर",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 9,
+          "reference": "हो",
+          "output": "तूरी",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 10,
+          "reference": "के",
+          "output": "यह",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 11,
+          "reference": "array",
+          "output": "नहीं",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 12,
+          "reference": "2d",
+          "output": "बढ़ने",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 13,
+          "reference": "array",
+          "output": "के",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 14,
+          "reference": "भनेकै",
+          "output": "मेट्रिक्स",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 15,
+          "reference": "है",
+          "output": "अब",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 16,
+          "reference": "अब",
+          "output": "आए",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 17,
+          "reference": "हेर",
+          "output": "रहा",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 18,
+          "reference": "matrix",
+          "output": "होगई",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 19,
+          "reference": "नै",
+          "output": "एरे",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 20,
+          "reference": "हो",
+          "output": "टूरी",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 21,
+          "reference": "के",
+          "output": "एरे",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 22,
+          "reference": "array",
+          "output": "वाने",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 23,
+          "reference": "2d",
+          "output": "के",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 24,
+          "reference": "array",
+          "output": "मेट्रिक्स",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 25,
+          "reference": "भनेकै",
+          "output": "हो",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 26,
+          "reference": "matrix",
+          "output": "अब",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 27,
+          "reference": "हो",
+          "output": "आये",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 28,
+          "reference": "है",
+          "output": "रहा",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 29,
+          "reference": "अब",
+          "output": "हूँ",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "clip_id": "test/hDWNurAsWSE/209520-213136",
+      "candidates": [
+        {
+          "id": 1,
+          "reference": "कुन",
+          "output": "हाई",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 2,
+          "reference": "चाहिँ",
+          "output": "नाम",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 3,
+          "reference": "होइन",
+          "output": "d",
+          "occurrences": {
+            "local": 1
+          }
+        },
+        {
+          "id": 4,
+          "reference": "कुन",
+          "output": "कुंचे",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 5,
+          "reference": "चाहिँ",
+          "output": "आई",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        },
+        {
+          "id": 6,
+          "reference": "होइन",
+          "output": "ना",
+          "occurrences": {
+            "whisper_api": 1
+          }
+        }
+      ]
+    }
+  ],
+  "history": [],
+  "scope": "Same ten preselected clips; manually accepted one-token renderings, not fuzzy/semantic matching or a corpus-wide truth classification.",
+  "reviews": [
+    {
+      "number": 1,
+      "clip_id": "test/bZFcrpg-tlo/500784-509872",
+      "listened": true,
+      "decisions": {
+        "1": "different",
+        "2": "same",
+        "3": "different",
+        "4": "same"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T08:43:02.462409+00:00"
+    },
+    {
+      "number": 2,
+      "clip_id": "test/LhDdCCqBt4A/467552-472544",
+      "listened": true,
+      "decisions": {
+        "1": "same",
+        "2": "same",
+        "3": "different",
+        "4": "same",
+        "5": "different",
+        "6": "same",
+        "7": "same",
+        "8": "same",
+        "9": "same",
+        "10": "same",
+        "11": "different",
+        "12": "different",
+        "13": "different",
+        "14": "same",
+        "15": "same",
+        "16": "same",
+        "17": "same"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T08:45:24.623167+00:00"
+    },
+    {
+      "number": 3,
+      "clip_id": "test/HUfMJuhOj5w/1300976-1309488",
+      "listened": true,
+      "decisions": {
+        "1": "reference_issue",
+        "2": "reference_issue",
+        "3": "reference_issue",
+        "4": "reference_issue",
+        "5": "reference_issue",
+        "6": "reference_issue",
+        "7": "reference_issue",
+        "8": "reference_issue",
+        "9": "reference_issue"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T08:46:27.719625+00:00"
+    },
+    {
+      "number": 4,
+      "clip_id": "test/P9dy-ECijcI/3566016-3575392",
+      "listened": true,
+      "decisions": {
+        "1": "reference_issue",
+        "2": "reference_issue",
+        "3": "reference_issue",
+        "4": "reference_issue",
+        "5": "reference_issue",
+        "6": "same",
+        "7": "reference_issue",
+        "8": "reference_issue",
+        "9": "reference_issue",
+        "10": "reference_issue",
+        "11": "reference_issue",
+        "12": "reference_issue",
+        "13": "same",
+        "14": "same"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T09:52:59.473764+00:00"
+    },
+    {
+      "number": 5,
+      "clip_id": "test/qNsZlWl3yss/358592-369232",
+      "listened": true,
+      "decisions": {
+        "1": "reference_issue",
+        "2": "reference_issue",
+        "3": "reference_issue",
+        "4": "reference_issue",
+        "5": "reference_issue",
+        "6": "reference_issue",
+        "7": "reference_issue",
+        "8": "reference_issue",
+        "9": "reference_issue",
+        "10": "reference_issue",
+        "11": "reference_issue",
+        "12": "reference_issue",
+        "13": "same",
+        "14": "same",
+        "15": "same",
+        "16": "same",
+        "17": "different",
+        "18": "different",
+        "19": "different",
+        "20": "same",
+        "21": "reference_issue",
+        "22": "reference_issue",
+        "23": "same",
+        "24": "different",
+        "25": "same",
+        "26": "different",
+        "27": "different"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T09:57:30.806143+00:00"
+    },
+    {
+      "number": 6,
+      "clip_id": "test/P9dy-ECijcI/2883472-2891792",
+      "listened": true,
+      "decisions": {
+        "1": "different",
+        "2": "different",
+        "3": "different",
+        "4": "different",
+        "5": "different",
+        "6": "different",
+        "7": "different",
+        "8": "different",
+        "9": "different",
+        "10": "different",
+        "11": "different",
+        "12": "different",
+        "13": "different",
+        "14": "different",
+        "15": "different",
+        "16": "different",
+        "17": "different",
+        "18": "different",
+        "19": "different",
+        "20": "different",
+        "21": "different",
+        "22": "different",
+        "23": "different",
+        "24": "different",
+        "25": "different"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T09:59:53.152433+00:00"
+    },
+    {
+      "number": 7,
+      "clip_id": "test/sGhq22Tx5ew/226032-236624",
+      "listened": true,
+      "decisions": {
+        "1": "same",
+        "2": "same",
+        "3": "same",
+        "4": "same",
+        "5": "reference_issue",
+        "6": "same",
+        "7": "reference_issue",
+        "8": "same",
+        "9": "same",
+        "10": "reference_issue",
+        "11": "reference_issue",
+        "12": "same",
+        "13": "reference_issue",
+        "14": "different",
+        "15": "reference_issue",
+        "16": "same",
+        "17": "same",
+        "18": "same",
+        "19": "same",
+        "20": "same"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T10:18:48.721509+00:00"
+    },
+    {
+      "number": 8,
+      "clip_id": "test/yTZL86j1yRE/440208-453184",
+      "listened": true,
+      "decisions": {
+        "1": "reference_issue",
+        "2": "reference_issue",
+        "3": "reference_issue",
+        "4": "reference_issue",
+        "5": "reference_issue",
+        "6": "reference_issue",
+        "7": "reference_issue",
+        "8": "reference_issue"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-22T16:14:03.140809+00:00"
+    },
+    {
+      "number": 9,
+      "clip_id": "test/zYLanqYoX24/143984-152912",
+      "listened": true,
+      "decisions": {
+        "1": "different",
+        "2": "different",
+        "3": "reference_issue",
+        "4": "reference_issue",
+        "5": "reference_issue",
+        "6": "reference_issue",
+        "7": "reference_issue",
+        "8": "reference_issue",
+        "9": "reference_issue",
+        "10": "reference_issue",
+        "11": "reference_issue",
+        "12": "reference_issue",
+        "13": "reference_issue",
+        "14": "reference_issue",
+        "15": "reference_issue",
+        "16": "reference_issue",
+        "17": "reference_issue",
+        "18": "reference_issue",
+        "19": "reference_issue",
+        "20": "reference_issue",
+        "21": "reference_issue",
+        "22": "reference_issue",
+        "23": "reference_issue",
+        "24": "reference_issue",
+        "25": "reference_issue",
+        "26": "reference_issue",
+        "27": "reference_issue",
+        "28": "reference_issue",
+        "29": "reference_issue"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-23T04:25:59.580241+00:00"
+    },
+    {
+      "number": 10,
+      "clip_id": "test/hDWNurAsWSE/209520-213136",
+      "listened": true,
+      "decisions": {
+        "1": "different",
+        "2": "different",
+        "3": "different",
+        "4": "different",
+        "5": "different",
+        "6": "different"
+      },
+      "notes": "",
+      "reviewed_at_utc": "2026-11-23T04:27:13.512929+00:00"
+    }
+  ]
+}

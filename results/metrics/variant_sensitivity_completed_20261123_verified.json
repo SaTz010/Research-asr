@@ -1,0 +1,38 @@
+{
+  "verified_on": "2026-11-23",
+  "source_sha256": {
+    "selection": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+    "audit": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+    "manifest": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+    "protocol": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+    "local_predictions": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+    "local_verification": "8e58da520c08bc3ac4f22ce140145edd86cc2ce3bd278c21bad55278fe20f632",
+    "whisper_api_predictions": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+    "whisper_api_verification": "ea414031e05ed4118f86042855981b26aa4bc7f3b3ca0bac7e44535770eefecf",
+    "protocol_document": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4"
+  },
+  "annotation_snapshot_sha256": "102596ad97b76d89039339d53e02c0f6edf644d3d66b1d338458ba7c3769033c",
+  "result_snapshot_sha256": "570717a7c93f653ad23114127f8b04c57eb4b728ff23f26de1792490ee7d7e25",
+  "helper_sha256": "75bd2c66592f02c807bcf15732b7b485ff048e8c79575076fac169ade947d9b5",
+  "reviewer": "Sanskar Ananta Tiwari",
+  "review_complete": true,
+  "candidate_pair_decisions": {
+    "different": 47,
+    "same": 37,
+    "reference_issue": 75
+  },
+  "independent_shortest_path_checks": 40,
+  "counts_verified": true,
+  "offline_tests_passed": 135,
+  "semantic_equivalences_independently_verified": false,
+  "notebook07_pending": [
+    9
+  ],
+  "reviewer_confirmed_same_definition": "Same spoken word, written differently; confirmed in chat November 23.",
+  "quality_follow_up": [
+    "Recheck accepted pairs against complete audio/context, especially clip 7 pair 6: 81 versus देर्पूर.",
+    "Reference_issue conflates alignment/reference concerns; do not count all as confirmed label errors."
+  ],
+  "inference_requests": 0,
+  "primary_results_changed": false
+}

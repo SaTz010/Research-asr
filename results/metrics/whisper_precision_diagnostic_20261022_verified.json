@@ -1,0 +1,324 @@
+{
+  "source_archive": "whisper_precision_diagnostic_20261022T101530449039Z.zip",
+  "source_sha256": "0ce840665bb3f2d54be5767cc080ea2076c8b5a4cf8cbc7967ba82c3ffde1bfb",
+  "checks": "All 20 per-clip and four corpus scores recomputed using independent Levenshtein distances. Manifest, revisions, generation settings, recorded language tokens, and EOS flags agree within the exports.",
+  "scope": "Five validation clips only. Audio and actual GPU computation were not independently observed; precision labels are recorded by the notebook.",
+  "clips": 5,
+  "total_audio_seconds": 50.976,
+  "runtime": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "gpu": "Tesla T4",
+    "dtypes": [
+      "fp16",
+      "fp32"
+    ],
+    "attention_implementation": "sdpa",
+    "allow_tf32_matmul": false
+  },
+  "scores": {
+    "fp16/auto": {
+      "clips": 5,
+      "wer": 2.8018018018018016,
+      "cer": 1.8628571428571428,
+      "outputs_without_eos": 1,
+      "reference_words": 111,
+      "word_errors": 311,
+      "reference_characters": 525,
+      "character_errors": 978,
+      "language_tokens": {
+        "<|hi|>": 2,
+        "<|en|>": 3
+      }
+    },
+    "fp16/forced_ne": {
+      "clips": 5,
+      "wer": 1.117117117117117,
+      "cer": 1.5257142857142858,
+      "outputs_without_eos": 2,
+      "reference_words": 111,
+      "word_errors": 124,
+      "reference_characters": 525,
+      "character_errors": 801,
+      "language_tokens": {
+        "<|ne|>": 5
+      }
+    },
+    "fp32/auto": {
+      "clips": 5,
+      "wer": 2.8018018018018016,
+      "cer": 1.8628571428571428,
+      "outputs_without_eos": 1,
+      "reference_words": 111,
+      "word_errors": 311,
+      "reference_characters": 525,
+      "character_errors": 978,
+      "language_tokens": {
+        "<|hi|>": 2,
+        "<|en|>": 3
+      }
+    },
+    "fp32/forced_ne": {
+      "clips": 5,
+      "wer": 1.117117117117117,
+      "cer": 1.5276190476190477,
+      "outputs_without_eos": 2,
+      "reference_words": 111,
+      "word_errors": 124,
+      "reference_characters": 525,
+      "character_errors": 802,
+      "language_tokens": {
+        "<|ne|>": 5
+      }
+    }
+  },
+  "precision_agreement": {
+    "auto": {
+      "pairs": 5,
+      "identical_hypotheses": 5,
+      "identical_token_sequences": 5,
+      "identical_wer": 5,
+      "identical_eos_status": 5
+    },
+    "forced_ne": {
+      "pairs": 5,
+      "identical_hypotheses": 4,
+      "identical_token_sequences": 4,
+      "identical_wer": 5,
+      "identical_eos_status": 5
+    }
+  },
+  "fp16_token_sequences_matching_original_pilot": 10,
+  "listening_checks": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "reference_check": "match",
+      "notes": ""
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "reference_check": "match",
+      "notes": ""
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "reference_check": "match",
+      "notes": ""
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "reference_check": "match",
+      "notes": ""
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "reference_check": "match",
+      "notes": ""
+    }
+  ],
+  "per_clip": [
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "precision": "fp16",
+      "mode": "auto",
+      "cmi": 18.75,
+      "wer": 0.9411764705882353,
+      "cer": 0.6052631578947368,
+      "language_token": "<|hi|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "precision": "fp16",
+      "mode": "auto",
+      "cmi": 26.92,
+      "wer": 0.8518518518518519,
+      "cer": 0.7789473684210526,
+      "language_token": "<|en|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "precision": "fp16",
+      "mode": "auto",
+      "cmi": 36.0,
+      "wer": 8.88,
+      "cer": 5.815789473684211,
+      "language_token": "<|en|>",
+      "ended_with_eos": false
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "precision": "fp16",
+      "mode": "auto",
+      "cmi": 44.44,
+      "wer": 1.0,
+      "cer": 0.6533333333333333,
+      "language_token": "<|en|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "precision": "fp16",
+      "mode": "auto",
+      "cmi": 33.33,
+      "wer": 1.5333333333333334,
+      "cer": 1.0777777777777777,
+      "language_token": "<|hi|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "precision": "fp16",
+      "mode": "forced_ne",
+      "cmi": 18.75,
+      "wer": 1.0,
+      "cer": 3.736842105263158,
+      "language_token": "<|ne|>",
+      "ended_with_eos": false
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "precision": "fp16",
+      "mode": "forced_ne",
+      "cmi": 26.92,
+      "wer": 0.9259259259259259,
+      "cer": 0.6947368421052632,
+      "language_token": "<|ne|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "precision": "fp16",
+      "mode": "forced_ne",
+      "cmi": 36.0,
+      "wer": 1.0,
+      "cer": 0.6578947368421053,
+      "language_token": "<|ne|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "precision": "fp16",
+      "mode": "forced_ne",
+      "cmi": 44.44,
+      "wer": 1.4814814814814814,
+      "cer": 1.9866666666666666,
+      "language_token": "<|ne|>",
+      "ended_with_eos": false
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "precision": "fp16",
+      "mode": "forced_ne",
+      "cmi": 33.33,
+      "wer": 1.1333333333333333,
+      "cer": 0.8666666666666667,
+      "language_token": "<|ne|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "precision": "fp32",
+      "mode": "auto",
+      "cmi": 18.75,
+      "wer": 0.9411764705882353,
+      "cer": 0.6052631578947368,
+      "language_token": "<|hi|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "precision": "fp32",
+      "mode": "auto",
+      "cmi": 26.92,
+      "wer": 0.8518518518518519,
+      "cer": 0.7789473684210526,
+      "language_token": "<|en|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "precision": "fp32",
+      "mode": "auto",
+      "cmi": 36.0,
+      "wer": 8.88,
+      "cer": 5.815789473684211,
+      "language_token": "<|en|>",
+      "ended_with_eos": false
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "precision": "fp32",
+      "mode": "auto",
+      "cmi": 44.44,
+      "wer": 1.0,
+      "cer": 0.6533333333333333,
+      "language_token": "<|en|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "precision": "fp32",
+      "mode": "auto",
+      "cmi": 33.33,
+      "wer": 1.5333333333333334,
+      "cer": 1.0777777777777777,
+      "language_token": "<|hi|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/JF_HlxEXcHQ/90896-99488",
+      "precision": "fp32",
+      "mode": "forced_ne",
+      "cmi": 18.75,
+      "wer": 1.0,
+      "cer": 3.736842105263158,
+      "language_token": "<|ne|>",
+      "ended_with_eos": false
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/633264-642192",
+      "precision": "fp32",
+      "mode": "forced_ne",
+      "cmi": 26.92,
+      "wer": 0.9259259259259259,
+      "cer": 0.6947368421052632,
+      "language_token": "<|ne|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/zJYS-XNDP2Q/1512240-1525520",
+      "precision": "fp32",
+      "mode": "forced_ne",
+      "cmi": 36.0,
+      "wer": 1.0,
+      "cer": 0.6578947368421053,
+      "language_token": "<|ne|>",
+      "ended_with_eos": true
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1205232-1216352",
+      "precision": "fp32",
+      "mode": "forced_ne",
+      "cmi": 44.44,
+      "wer": 1.4814814814814814,
+      "cer": 1.9866666666666666,
+      "language_token": "<|ne|>",
+      "ended_with_eos": false
+    },
+    {
+      "clip_id": "validation/TN8IzjVNnzs/1169296-1178352",
+      "precision": "fp32",
+      "mode": "forced_ne",
+      "cmi": 33.33,
+      "wer": 1.1333333333333333,
+      "cer": 0.8777777777777778,
+      "language_token": "<|ne|>",
+      "ended_with_eos": true
+    }
+  ],
+  "interpretation": "FP32 did not resolve the same three token-limit repetition failures. Automatic-mode outputs are unchanged; four of five forced-Nepali outputs are unchanged. No CMI association or model-ranking conclusion is supported."
+}

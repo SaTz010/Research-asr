@@ -1,0 +1,6 @@
+# Saved-output scoring/figures; does not install model inference packages.
+numpy==2.3.5
+soundfile==0.13.1
+jiwer==4.0.0
+scipy==1.18.1
+matplotlib==3.11.2
