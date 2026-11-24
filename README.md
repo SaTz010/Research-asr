@@ -4,6 +4,8 @@ An independent empirical study by **Sanskar Ananta Tiwari**. The question is whe
 
 **Report v0.5:** [Download the PDF](output/pdf/nepali_english_asr_research_report_draft.pdf) or read the [editable report](reports/research_report_draft.md). The report has a cover, clickable contents, plain-language summary, references and three appendices. Start on page 3 for the general-reader explanation. This is a working technical report, not a peer-reviewed publication.
 
+**Published on GitHub November 24, 2026.** The report download was verified against the checked local PDF. [Publication verification](reports/github_publication_20261124.md).
+
 ## Main results
 
 Both systems completed all **1,198 frozen code-switched test clips**: 199.01 minutes, 22 videos and two source channels from [Sailesh Dahal's Nepali-English Code-Switched ASR dataset](https://huggingface.co/datasets/saileshbro/nepali-cs-asr). Exact revision, source attribution and license are in [DATA_SOURCES.md](DATA_SOURCES.md).

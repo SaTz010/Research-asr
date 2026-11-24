@@ -1,0 +1,41 @@
+{
+  "published_on": "2026-11-24",
+  "repository": "https://github.com/SaTz010/Research-asr",
+  "branch": "main",
+  "verified_commit": "e4c6519dcdf0cbbd8cfaa0319d1a1b8955689473",
+  "github_tree_matches_local_commit": true,
+  "tracked_files_verified": 201,
+  "unauthenticated_download_checks": [
+    {
+      "path": "README.md",
+      "status": 200,
+      "sha256": "251ecc3b1e2e18d56ff02480a6c470a1ad0af61b28f906ef0bb471c2f344fd60"
+    },
+    {
+      "path": "output/pdf/nepali_english_asr_research_report_draft.pdf",
+      "status": 200,
+      "sha256": "0d16fc8b0ecf87d660a0526e0f2085808968e7ff8b17b5b2dd3bff23b907df5f"
+    },
+    {
+      "path": "output/pdf/nepali_english_asr_research_report_draft_v0.5_20261124.pdf",
+      "status": 200,
+      "sha256": "0d16fc8b0ecf87d660a0526e0f2085808968e7ff8b17b5b2dd3bff23b907df5f"
+    },
+    {
+      "path": "data/manifests/test_cs_benchmark_20261112.json",
+      "status": 200,
+      "sha256": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e"
+    },
+    {
+      "path": "reports/protocol_20261112.md",
+      "status": 200,
+      "sha256": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4"
+    }
+  ],
+  "report_url": "https://github.com/SaTz010/Research-asr/blob/main/output/pdf/nepali_english_asr_research_report_draft_v0.5_20261124.pdf",
+  "report_download_url": "https://raw.githubusercontent.com/SaTz010/Research-asr/main/output/pdf/nepali_english_asr_research_report_draft_v0.5_20261124.pdf",
+  "published": true,
+  "publication_scope": "GitHub repository contents and downloadable working report; not peer-reviewed journal/conference publication.",
+  "credentials_audio_and_weights_excluded": true,
+  "offline_tests_prepublication": 145
+}
