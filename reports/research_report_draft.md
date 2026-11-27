@@ -2,21 +2,21 @@
 
 # Code Mixing and Transcription Errors in Nepali English Speech
 
-## A paired evaluation of local and hosted Whisper
+## A paired evaluation of general and specialized Whisper systems
 
 **Sanskar Ananta Tiwari**
 
 Independent research project
 
-Research report | Working draft v0.5 | November 24, 2026
+Research report | Revised working report v0.6 | November 27, 2026
 
-How do speech-recognition systems handle sentences that mix Nepali and English? This report compares the same audio clips across a locally run Whisper model and a hosted Whisper API.
+How do general and specialized speech-recognition systems handle Nepali-English mixtures? This report compares three configured Whisper systems on identical audio, with separate evidence about references, uncertainty and training exposure.
 
 | Audio clips | Systems compared | Audio duration |
 |---|---|---|
-| **1,198** | **2** | **199 minutes** |
+| **1,198** | **3** | **199 minutes** |
 
-Not peer reviewed. Saved-output reproduction passed in a fresh Windows/Python environment. Final author and public-release checks remain pending.
+Not peer reviewed. Original benchmark plus exploratory specialist extension. The specialist has much lower measured error, but its exclusion from training has not been independently verified. The previous report is preserved.
 
 <!-- pagebreak -->
 
@@ -30,46 +30,45 @@ For a quick overview, start with the plain-language summary, then the conclusion
 
 ## Plain-language summary
 
-### What we were trying to find out
+### What we wanted to find out
 
-We asked whether speech-to-text makes more errors as Nepali and English become more evenly mixed. The Code-Mixing Index (CMI) measures that balance. We also compared a model on a laptop with a hosted API. ASR means automatic speech recognition: turning audio into written words.
+Does speech recognition make more errors as Nepali and English become more evenly mixed? We used the Code-Mixing Index (CMI), which measures that balance, and compared general and specialized Whisper systems.
 
 ### What we did
 
-We gave both systems exactly the same 1,198 audio clips, totaling about 199 minutes. We compared their transcripts with the dataset's existing answer key, called the reference transcript. Local means Whisper Large V2 running on the researcher's computer; hosted means OpenAI's whisper-1 transcription service. Neither system was trained or improved for this project.
-
-### What we found
+We transcribed the same 1,198 audio clips, about 199 minutes, and scored agreement with the dataset's written answer key. The original local Large V2 and hosted whisper-1 share a Large V2 foundation. A later extension tested a released Large V3 Turbo specialized for Nepali-English mixtures. We trained no models.
 
 | System | Word error rate | Character error rate |
 |---|---:|---:|
 | Local Whisper Large V2 | 90.95% | 69.60% |
 | Hosted Whisper API | 96.41% | 73.39% |
+| Code-mix-specialized Large V3 Turbo | 25.94% | 18.42% |
 
-**Lower error rates are better.** Local had lower overall word and character error rates on this test set. The comparison does not prove that running a model locally causes it to perform better; the systems also differ in their implementation and settings.
+### What changed and what did not
 
-**More balanced mixing did not show a clear steady rise in word errors.** The main CMI-word-error relationships were close to zero. Character errors showed a clearer increasing pattern overall, but that pattern varied between the two source channels. The higher-mixing comparisons also had wide uncertainty.
+**The specialist made far fewer measured edits.** Its WER was 65.01 percentage points below the original local system and 70.47 below the API. The advantage appeared across all five CMI groups and remained large under source-video resampling.
 
-**Writing style affects the score.** On ten reviewed examples, accepting selected alternative spellings or scripts lowered word error rates from 80.00% to 69.19% local and from 103.78% to 89.73% hosted. Six doubtful word equivalences were excluded. These ten clips are a diagnostic subset, not a new score for all 1,198 clips.
+**More balanced mixing did not show a steady rise in word errors.** All three CMI-WER correlations were near zero. Character-error patterns differed between systems and source channels. A weak correlation does not prove that mixing never matters.
 
-### What the high error rates mean
+### What the scores mean
 
-WER counts changed, missing and extra words against the written answer key. Different scripts, spellings and word boundaries can count as errors even when some spoken words are preserved. Added words can push WER above 100%. A WER near 90% is therefore not a measurement of how much meaning was lost. The reviewed examples also contain reported omissions, repetition and perceived language mismatches, so the high rates cannot all be dismissed as spelling differences.
+Lower is better. WER counts changed, missing and added words against written references; extra words can push it above 100%. Script, spelling, word boundaries and number writing affect agreement. It is not a measure of meaning understood. A separate ten-clip review accepted some same-word variants for the original systems; no such allowances were added for the specialist.
 
-### What we can conclude
+### What remains uncertain
 
-The result is a carefully documented comparison, not confirmation that more English-Nepali mixing necessarily makes recognition worse. The evidence comes from educational speech in two channels, mostly automatically produced reference labels and a single human reviewer. It should not be treated as a universal ranking of local models and APIs.
+The specialist was trained partly on our source dataset. Our test selection is separate from that revision's training/validation splits, and 411 clips have matching text/duration candidates in the authors' public test outputs. Its actual training exclusion remains unverified. We therefore report a strong exploratory result on these clips, not proven unseen-speech superiority or a fine-tuning-only effect. Two source channels, mainly silver labels and one reviewer limit the wider conclusions.
 
 <!-- pagebreak -->
 
 ## Abstract
 
-This study examines whether reference code-mixing intensity is associated with transcription errors in Nepali-English speech and whether two configured Whisper systems exhibit different patterns. A frozen evaluation set contains 1,198 code-switched test clips, totaling 199.01 minutes, from 22 videos and two source channels in the saileshbro/nepali-cs-asr dataset. Local Whisper Large V2 through faster-whisper with CUDA FP16 and hosted OpenAI whisper-1 transcribe identical audio with automatic language handling. Evaluation uses corpus word error rate (WER), character error rate (CER), five fixed Code-Mixing Index (CMI) bands and descriptive Spearman associations. Against published mixed-script silver references, local WER/CER are 90.95%/69.60%, compared with 96.41%/73.39% hosted. The local-minus-hosted WER gap is -5.46 percentage points, with an exploratory 95% paired video-bootstrap interval of [-9.79, -2.31]; the CER gap is -3.79 points, interval [-8.74, -0.38]. Clip-level CMI-WER associations are near zero (rho 0.0093 local, 0.0109 hosted). CMI-CER associations are positive (0.2698 and 0.2514) but vary substantially by channel. A single-reviewer 50-clip audit checks reference and lexical-CMI sensitivity. On ten preselected examples, reviewed alternative renderings lower WER from 80.00% to 69.19% local and 103.78% to 89.73% hosted; six uncertain equivalences are excluded. This post-hoc result is not semantic accuracy or a corpus-wide error decomposition. The observed overall local advantage persists under conditional video resampling, but high-CMI comparisons remain imprecise. These findings do not identify causal effects of mixing or hosting and do not generalize beyond the two observed channels without further evidence.
+This study examines the association between reference code-mixing intensity and Nepali-English ASR errors across three configured Whisper systems. The fixed dataset test selection contains 1,198 code-switched clips, 199.01 minutes, 22 videos and two source channels. The original paired benchmark compares local Large V2 through faster-whisper/CUDA FP16 with hosted whisper-1 using automatic language handling. A post-hoc extension evaluates an externally fine-tuned code-mix-specialized Large V3 Turbo, converted to CTranslate2 FP16, with Nepali specified and greedy decoding. On unchanged mixed-script silver references, normalized WER/CER are 90.95%/69.60% local, 96.41%/73.39% hosted and 25.94%/18.42% specialist. Specialist-minus-local WER is -65.01 percentage points with exploratory paired video-bootstrap interval [-68.77, -59.76]; specialist-minus-hosted is -70.47 points [-73.31, -67.05]. The original local-minus-hosted gap is -5.46 points [-9.79, -2.31]. Utterance CMI-WER correlations remain near zero: 0.0093 local, 0.0109 hosted and -0.0277 specialist. CMI-CER correlations are 0.2698, 0.2514 and 0.0066. The same 50-clip reference audit gives specialist WER 30.49% on published and 29.52% on corrected references; it is not a representative gold test. A separate ten-clip reviewed-variant analysis applies only to the original systems. Forced-Nepali sensitivity on those systems does not reproduce the specialist's gain. The specialist's training exclusion is unresolved despite supporting public held-out evidence. These results establish large observed differences in transcript agreement on this pool, not causal effects of hosting, fine-tuning or mixing, or verified generalization beyond the source and training conditions.
 
 ## 1 Research question and contribution
 
-The practical question is whether speech containing more balanced Nepali and English word use is harder for the evaluated recognizers to transcribe under a fixed mixed-script convention. The study also asks whether the observed pattern differs between a locally executed Whisper system and a hosted Whisper service. The target is an empirical comparison of existing systems, without new training, translation or application development.
+The primary question is whether more balanced Nepali-English word use is associated with more transcription errors under a fixed mixed-script convention. Secondary questions concern differences between the original local/hosted systems and the observed behavior of a released code-mix-specialized checkpoint. We distinguish a frozen original benchmark from later exploratory model and language-setting extensions. The project evaluates existing systems without training, translation or application development.
 
-The contribution is a reproducible paired benchmark on a pinned dataset revision, with explicit coverage, fixed settings, saved responses, source-aware analysis and a human-reviewed diagnostic subset. No claim of being the first Nepali-English ASR study, of improving a model, or of peer-reviewed publication is made. A weak or absent association is an informative outcome.
+The contribution is a reproducible evaluation with unchanged audio/references, saved responses, source-video uncertainty, a bounded human audit and an explicit training-overlap investigation. The specialist was developed by other researchers; its inclusion is an additional evaluation, not our fine-tuning contribution. No first-study, state-of-the-art, semantic-accuracy or peer-reviewed-publication claim is made. A weak association and a large configured-system difference answer different questions and are both reported.
 
 <!-- pagebreak -->
 
@@ -82,6 +81,10 @@ Das and Gamback introduce a token-based code-mixing index in work on word-level 
 Transcription conventions are particularly relevant when languages use different scripts. Emond and colleagues discuss evaluation distortions from rendering variation and propose transliteration-optimized WER [4]. PolyWER similarly studies evaluation that accepts alternative cross-script renderings [5]. These studies motivate caution in interpreting mixed-script WER. This benchmark retains its frozen primary WER/CER definitions. Its separate post-hoc sensitivity allows only manually approved, clip-specific single-token alternatives; it is not an implementation of either published framework and does not translate hypotheses.
 
 This report therefore separates three issues: observed recognition-system output, agreement with a particular reference spelling/script convention, and the reliability of the reference and CMI labels. The measured error rates combine these issues. Completed listening records and variant sensitivity illustrate the distinction on ten examples, but do not quantify each issue's corpus-wide contribution.
+
+Neupane and colleagues adapt models for Nepali-English code-mixed recognition and compare transcript conventions, numeric verbalization and model families [9]. Their released Whisper checkpoint [10] is the specialist evaluated here. Their results motivate the extension but use their own prepared test set and conventions; reported WER cannot be compared directly with our scores. Their paper says the original split assignments were retained and Whisper used the same training split, while warning that speaker-disjointness is not guaranteed. Section 5.10 distinguishes those statements from independently verifying training exclusion for our exact clips.
+
+<!-- pagebreak -->
 
 ## 3 Dataset and evaluation population
 
@@ -99,13 +102,11 @@ The source is Sailesh Dahal's Nepali-English Code-Switched ASR dataset [6], defa
 
 No clip was removed because of its transcription score. The field `speaker_id` identifies a YouTube channel, not a verified individual speaker. The test set is narrow in domain and source coverage. Channel-disjoint dataset partitions do not establish that the pretrained models never encountered related public audio.
 
-<!-- pagebreak -->
-
 ## 4 Experimental methods
 
 ### 4.1 Frozen paired systems
 
-Inputs, references and protocol were frozen before held-out inference, completed November 14 locally and November 16, 2026 remotely. Both systems received identical ordered WAVs without reference hints.
+The original two-system inputs, references and protocol were frozen before inference, completed November 14 locally and November 16, 2026 remotely. Both systems received identical ordered WAVs without reference hints. The specialist is a separate exploratory extension evaluated November 27 after inspection of the original results; its configuration was pinned before its new inference. All three use the same complete test selection.
 
 | Setting | Local system | Hosted system |
 |---|---|---|
@@ -117,9 +118,13 @@ Inputs, references and protocol were frozen before held-out inference, completed
 | Precision and execution | CUDA FP16, batch 1 | Provider managed |
 | Automatic retries | None | SDK retries 0 |
 
-SYSTRAN documents the local implementation [7]. OpenAI describes whisper-1 as V2-based and documents temperature fallback [8]. Hosted weights, preprocessing and decoding are unavailable; this configured-system comparison cannot isolate a causal hosting effect.
+SYSTRAN documents the local implementation [7]. OpenAI describes whisper-1 as powered by Whisper V2 and documents temperature fallback [8]. The original two systems therefore share a Large V2 foundation, rather than representing independent model families. Hosted internals are not fully exposed; their observed gap does not isolate hosting location.
 
 The local machine has an i7-11800H, approximately 16 GB RAM and an RTX 3060 Laptop GPU with 6,144 MiB memory. The protocol/manifest record model revision, weight checksum and software pins. A checkpoint-write interruption was recovered with responses preserved; independent verification required no repeated inference.
+
+The third system is AI Lab Pvt. Ltd.'s released Nepali-English code-mix-specialized Large V3 Turbo [10]. Its public BF16 safetensors were checksum-verified and converted to CTranslate2 FP16. It runs locally with faster-whisper 1.2.1, batch one, beam one/best-of one, temperature zero, Nepali specified, no VAD and no transcript prompt or previous-clip context. Input processing uses the checkpoint's 128-mel configuration. Twenty existing validation clips checked the runtime; all 1,198 test clips were then retained regardless of score. No training was performed.
+
+This is three systems with five measured configurations when the original systems' later forced-Nepali runs are included. The primary summary shows original automatic baselines and the specialist's intended Nepali setting; Section 5.9 provides the language-setting sensitivity. Different backbones, training histories, beam settings and implementations prevent attributing the full specialist advantage solely to fine-tuning. The original unfine-tuned Large V3 Turbo was not rerun, and conversion parity with the authors' Transformers implementation was not established. Exact versions are in Appendix A.
 
 ### 4.2 Scoring
 
@@ -133,20 +138,19 @@ For the human lexical audit, CMI = 100 x min(N_ne, N_en) / (N_ne + N_en), exclud
 
 The full benchmark uses the source's published script-derived CMI. Five fixed bands are [0,10], (10,20], (20,30], (30,40], (40,50]. Descriptive Spearman correlations relate CMI to utterance error rates and paired local-minus-hosted WER. Positive paired differences mean more local error. Channel, video and duration summaries check composition; no causal adjustment or significance test is claimed.
 
-<!-- pagebreak -->
-
 ## 5 Results
 
 ### 5.1 Coverage and overall errors
 
-Both systems have 1,198 successful saved responses and complete paired coverage. The hosted run used 1,198 attempts and distinct request IDs, with no unresolved requests. Eleven local and one hosted responses are empty successful hypotheses; their deletion errors remain in the scores.
+All three primary systems have 1,198 successful saved responses and complete paired coverage. The hosted run used 1,198 attempts and distinct request IDs, with no unresolved requests. Eleven local and one hosted responses are empty successful hypotheses; their deletion errors remain in the scores.
 
 | System | Word edits | Corpus WER | Character edits | Corpus CER |
 |---|---:|---:|---:|---:|
 | Local Large V2 | 25,663 | 90.95% | 77,443 | 69.60% |
 | Hosted whisper-1 | 27,204 | 96.41% | 81,657 | 73.39% |
+| Code-mix specialist | 7,319 | 25.94% | 20,494 | 18.42% |
 
-The observed local-minus-hosted gaps are -5.46 percentage points WER and -3.79 points CER; negative values mean lower local error throughout this report. These are error rates, not accuracy percentages. Raw WER/CER are 93.75%/71.61% local and 98.76%/75.37% hosted. Section 5.3 quantifies exploratory uncertainty. The high primary rates warrant examining recognition and reference/script agreement before assigning causes.
+The original local-minus-hosted gaps are -5.46 percentage points WER and -3.79 points CER. Specialist-minus-local gaps are -65.01 WER / -51.18 CER points; specialist-minus-hosted gaps are -70.47 / -54.97. Each difference explicitly names its direction; negative means the first-named system has lower error. These are error rates, not accuracy percentages. Raw WER/CER are 93.75%/71.61% local, 98.76%/75.37% hosted and 32.05%/20.67% specialist. The large specialist advantage is an observed configured-system result, not verified generalization or an isolated training effect.
 
 ### 5.2 Fixed CMI bands
 
@@ -158,11 +162,19 @@ The observed local-minus-hosted gaps are -5.46 percentage points WER and -3.79 p
 | (30,40] | 230 | 20 | 5,843 | 90.72% | 98.22% | 74.82% | 78.82% |
 | (40,50] | 123 | 22 | 2,703 | 92.86% | 106.73% | 78.16% | 93.68% |
 
-![Corpus error rates across the five fixed published CMI bands](../results/figures/research_report_cmi_bands_20261116.png)
+The original baseline band table above remains unchanged. The specialist, on the same groups, gives:
 
-Figure 1. Corpus errors against published silver references. Points connect ordered bands for readability. No confidence intervals are shown. Local WER is mostly flat; hosted WER is nonmonotonic, with its highest rate in the final band. CER rises across bands for both systems.
+| CMI band | Clips | Specialist WER | Specialist CER |
+|---|---:|---:|---:|
+| [0,10] | 199 | 27.49% | 18.67% |
+| (10,20] | 360 | 28.54% | 20.83% |
+| (20,30] | 286 | 22.68% | 16.27% |
+| (30,40] | 230 | 24.90% | 17.02% |
+| (40,50] | 123 | 26.64% | 20.15% |
 
-<!-- pagebreak -->
+![Corpus error rates for all three configured systems](../results/figures/codemix_turbo_cmi_20261127.png)
+
+Figure 1. Three-system corpus errors against unchanged published silver references. Points connect ordered bands for readability; no intervals are shown. Specialist WER ranges from 22.68% to 28.54%, without a steady rise. Its advantage is present in every band. The original local WER is mostly flat, hosted WER is nonmonotonic, and baseline CER rises across bands. Different model training exposure remains an unresolved limitation.
 
 ### 5.3 Paired video uncertainty
 
@@ -181,7 +193,18 @@ To check how sensitive the comparison is to the source videos, the analysis repe
 
 Figure 2. Paired corpus gaps in percentage points. Negative values favor local; dashed lines mark zero. The higher-CMI bands have wider uncertainty despite larger point gaps.
 
-Both overall intervals lie below zero under this conditional design. The two highest-CMI WER intervals span both directions; they neither establish different degradation slopes nor demonstrate equivalence. Intervals are separate exploratory summaries, not simultaneous bounds or confirmatory significance tests. They condition on two observed channels and fixed silver labels, excluding annotation uncertainty, unseen-channel variation and provider rerun variability.
+Both original local-minus-hosted overall intervals lie below zero under this conditional design. The two highest-CMI WER intervals span both directions; they neither establish different degradation slopes nor demonstrate equivalence. Intervals are separate exploratory summaries, not simultaneous bounds or confirmatory significance tests. They condition on two observed channels and fixed silver labels, excluding annotation uncertainty, unseen-channel variation and provider rerun variability.
+
+**Specialist comparison under the same source-video design.**
+
+The extension uses the same 2,000 channel-stratified video draws, seed and reference denominators. All specialist/baseline outcomes for a sampled video stay paired. These intervals describe observed-source uncertainty, not uncertainty about training exposure.
+
+| Comparison | WER change (pp) | 95% interval | CER change (pp) | 95% interval |
+|---|---:|---|---:|---|
+| Specialist minus local | -65.01 | [-68.77, -59.76] | -51.18 | [-54.42, -46.93] |
+| Specialist minus hosted | -70.47 | [-73.31, -67.05] | -54.97 | [-58.33, -51.78] |
+
+Both specialist WER intervals lie well below zero. Relative to the original local system, the specialist has lower word-edit counts on 1,120 clips, ties on 21 and higher counts on 57; versus the original API, the corresponding counts are 1,134, 14 and 50. The advantage is not present in every clip. These results support a large measured difference within this pool while leaving unseen-data and fine-tuning-effect claims unresolved.
 
 <!-- pagebreak -->
 
@@ -194,10 +217,12 @@ Both overall intervals lie below zero under this conditional design. The two hig
 | CMI versus local-minus-hosted WER | -0.0204 |
 | CMI versus local CER | +0.2698 |
 | CMI versus hosted CER | +0.2514 |
+| CMI versus specialist WER | -0.0277 |
+| CMI versus specialist CER | +0.0066 |
 | CMI versus duration | +0.0236 |
 | CMI versus normalized reference-word count | +0.0533 |
 
-The predeclared word-error associations are near zero. This does not rule out nonlinear relationships, subgroup patterns or effects hidden by noisy measurement. A higher final-band corpus rate is compatible with near-zero utterance rank correlation: corpus rates weight by reference length, while rank correlation describes ordering across individual clips.
+The original predeclared word-error associations are near zero, as is the later specialist association. The specialist CER association is also near zero, so the positive pooled baseline CER pattern does not extend to all evaluated systems. This does not rule out nonlinear relationships, subgroup patterns or effects hidden by noisy measurement. A higher final-band corpus rate is compatible with near-zero utterance rank correlation: corpus rates weight by reference length, while rank correlation describes ordering across individual clips.
 
 | Source summary | Channel A | Channel B |
 |---|---:|---:|
@@ -209,13 +234,11 @@ The predeclared word-error associations are near zero. This does not rule out no
 | CMI-local CER rho | +0.2891 | +0.0452 |
 | CMI-hosted CER rho | +0.3048 | +0.0145 |
 
-The exact source-channel identifiers are recorded in Appendix A. The positive pooled CER associations are not uniform across sources. Channel A retains a clearer positive CER pattern, while Channel B's CER correlations are near zero. Both source composition and within-source differences matter to interpretation.
+The specialist WER/CER are 29.70%/22.46% in Channel A and 22.64%/15.28% in Channel B. Its lower overall rates do not remove channel variation. The exact source-channel identifiers are recorded in Appendix A. The positive pooled CER associations are not uniform across sources. Channel A retains a clearer positive CER pattern, while Channel B's CER correlations are near zero. Both source composition and within-source differences matter to interpretation.
 
 Duration has little pooled association with CMI. Duration-WER correlations are -0.0935 local and -0.1246 hosted. Descriptive duration quartiles use cutpoints 8.608, 9.872 and 11.552 seconds, with tied observations in the lower group. Shortest-quartile WER is 93.88% local / 100.93% hosted, compared with 90.19% / 92.15% in the longest quartile. These summaries are contextual checks, not adjustment for duration, source, speaker or audio quality.
 
 Descriptive removal of each video in turn leaves WER gaps between -6.28 and -4.38 pp, and CER gaps between -4.89 and -2.58 pp. Neither single-video removal nor removal of either whole channel reverses the overall point direction. Channel A has only three videos, so its interval is withheld; Channel B's WER interval is [-11.19, +0.39] pp. These influence checks do not exclude joint effects of several videos or unseen-source differences. Local has lower WER on 488 clips, ties on 372 and higher WER on 338; clip counts do not substitute for corpus weighting.
-
-<!-- pagebreak -->
 
 ### 5.5 Human reference and lexical CMI sensitivity
 
@@ -227,8 +250,9 @@ Forty-two references were retained and eight corrected. Comparing published text
 |---|---:|---:|---:|---:|
 | Local Large V2 | 100.82% | 100.41% | 76.30% | 75.83% |
 | Hosted whisper-1 | 94.66% | 94.18% | 80.63% | 80.19% |
+| Code-mix specialist | 30.49% | 29.52% | 24.14% | 23.50% |
 
-Local word edits change from 982 to 983; hosted word edits remain 922. The reference denominator increases from 974 to 979. Thus lower rates do not mean improved hypotheses or fewer edit operations. The subset's word-error ranking differs from the full pool's; its balanced selection is not population-representative and cannot replace the full benchmark.
+Local word edits change from 982 to 983; hosted word edits remain 922. The reference denominator increases from 974 to 979. Thus lower rates do not mean improved hypotheses or fewer edit operations. The original local/API ranking differs from the full pool, while the specialist has lower measured error in both reference versions. Specialist word edits are 297 / 974 on published references and 289 / 979 on corrected references. Its corrected-reference WER gap is -70.89 points versus local, interval [-90.62, -51.07], and -64.66 points versus hosted, interval [-82.82, -49.14]. This balanced subset is not population-representative and cannot replace the full benchmark or settle training exclusion.
 
 Ten audited CMI values differ beyond a +/-0.005-point source-rounding allowance, and four clips change bands. Audited counts become 11, 8, 10, 13 and 8. CMI differences can reflect reference edits, tokenization, denominator conventions and language judgments. They must not be attributed exclusively to tag overrides.
 
@@ -238,15 +262,13 @@ The subset's local-minus-hosted WER gap is +6.16 pp with published references, i
 
 ### 5.6 Timing and usage
 
-The summed completed local transcription time is 45.57 minutes; summed hosted client request turnaround is 53.72 minutes. These scopes differ: local records materialized generation, while hosted includes network and service turnaround. Neither is complete workflow wall time; local excludes model loading and checkpoint recovery. No matched-hardware speed or total economic-cost claim follows.
+The summed completed original local transcription time is 45.57 minutes; summed hosted client request turnaround is 53.72 minutes. Specialist generation totals 9.19 minutes for 199.01 audio minutes, a real-time factor of 0.046. Its request-start timestamps span about 13.72 minutes before final saving/scoring, but this is not complete setup-to-report wall time. Its shorter decoder and beam-one configuration differ from the original beam-five Large V2 setup, so no matched-setting speedup is claimed. These scopes differ: local records materialized generation, while hosted includes network and service turnaround. Neither is complete workflow wall time; local excludes model loading and checkpoint recovery. No matched-hardware speed or total economic-cost claim follows.
 
-Provider-reported main-run usage is 12,549 audio seconds, or 209.15 minutes. The saved November 16 rate of USD 0.006 per minute gives an estimated USD 1.25490 usage charge. Invoice, taxes, balance and unrelated account usage were not verified. Largest observed whole-device GPU memory is 5,200 MiB; one snapshot is missing and continuous model peak/energy were not measured.
-
-<!-- pagebreak -->
+The specialist ran entirely locally and used no paid API calls; its largest whole-device post-transcription memory snapshot was 3,587 MiB, not a continuously measured model peak. The original local largest snapshot was 5,200 MiB. Provider-reported original main-run usage is 12,549 audio seconds, or 209.15 minutes. The saved November 16 rate of USD 0.006 per minute gives an estimated USD 1.25490 usage charge. Invoice, taxes, balance and unrelated account usage were not verified. Largest observed whole-device GPU memory is 5,200 MiB; one snapshot is missing and continuous model peak/energy were not measured.
 
 ### 5.7 Listening-based diagnostic examples
 
-The frozen protocol preselected ten clips, two per published CMI band, from the audited subset. They span nine videos. All ten now have saved researcher listening confirmations and qualitative judgments. This bounded set was not selected by highest observed error, but is too small and deliberately balanced to estimate corpus-wide error prevalence. The reviewer checked the published reference and classified each system's output; categories can overlap within a clip.
+This listening analysis concerns only the original two systems. The frozen protocol preselected ten clips, two per published CMI band, from the audited subset. They span nine videos. All ten now have saved researcher listening confirmations and qualitative judgments. This bounded set was not selected by highest observed error, but is too small and deliberately balanced to estimate corpus-wide error prevalence. The reviewer checked the published reference and classified each system's output; categories can overlap within a clip.
 
 | Recorded category | Local clips | Hosted clips |
 |---|---:|---:|
@@ -266,11 +288,9 @@ The records are concise and have limitations. For example, Example 05's local la
 
 A review-save issue was corrected from the researcher's original entries, without changing model responses or benchmark scores. Appendix A records the correction and its provenance.
 
-<!-- pagebreak -->
-
 ### 5.8 Post-hoc reviewed spelling/transliteration sensitivity
 
-The high strict error rates and subsequent inspection motivated a separate analysis on the same ten clips, after the main results were known. This extension was not predeclared and does not change the primary benchmark. Both systems retain their saved hypotheses and the same 185 normalized published-reference words.
+The high original-system strict error rates and subsequent inspection motivated a separate analysis on the same ten clips, after the main results were known. No specialist word-variant allowances or new listening judgments were added; its new ten-example text comparison is a review aid only. This extension was not predeclared and does not change the primary benchmark. Both systems retain their saved hypotheses and the same 185 normalized published-reference words.
 
 The original scoring algorithm first pairs reference words with model words, proposing single-word differences for review. These pairings minimize written word edits, so they are not always the words a listener would naturally pair. Identical reference/output pairs within a clip are reviewed once, with occurrences retained for both systems. The researcher listened and chose same, different, unsure or reference/alignment issue for all 159 distinct within-clip pairs. The researcher explicitly confirmed that same means the same audible lexical word written differently, not merely understandable meaning, a synonym, translation or an inflection change.
 
@@ -287,25 +307,50 @@ The local reduction is 20 edit operations, or 10.81 percentage points; the hoste
 
 This demonstrates sensitivity of string-based scores to the accepted rendering choices on these examples. It does not reveal the percentage of genuinely wrong spoken words, validate semantic accuracy, or establish a corpus-wide proportion of spelling errors. The 75 combined reference/alignment labels do not establish 75 inaccurate dataset words. Strict candidate alignment can mispair words and miss valid split/joined-word alternatives; the remaining 31 approvals are single-reviewer judgments, not independently verified equivalences. Six exclusions remain unresolved, and no interval or representative population estimate is claimed for this post-hoc subset.
 
-<!-- pagebreak -->
+### 5.9 Language-setting sensitivity
+
+Because the specialist uses Nepali specified while the original baselines used automatic handling, both original systems were also run with Nepali specified on all 1,198 clips. These follow-up outputs were saved separately and the automatic results were reused. This is a language-setting sensitivity, not a new provider or trained model.
+
+| Original system | Automatic WER | Forced Nepali WER | Change (pp) | 95% interval |
+|---|---:|---:|---:|---|
+| Local Large V2 | 90.95% | 91.13% | +0.17 | [-0.97, +1.60] |
+| Hosted whisper-1 | 96.41% | 97.12% | +0.71 | [-0.25, +2.05] |
+
+Both overall WER intervals span zero. Forced-condition CER is 70.57% local and 75.35% hosted. The specialist remains lower by 65.19 WER points versus forced local, interval [-68.88, -59.91], and 71.18 points versus forced hosted, interval [-74.39, -67.75]. Specifying Nepali alone therefore does not reproduce the specialist's large observed advantage. It does not isolate fine-tuning: backbone, training exposure, beam and implementation still differ. Hosted settings were evaluated on different dates, so service variability is not separated from the language parameter. A forced language label is not measured detection accuracy.
+
+### 5.10 Training exposure audit and interpretation
+
+The specialist authors disclose 44.5 training hours from the same lecture dataset [9,10]. Our exact source revision places all 1,198 clips in its test split; none of their canonical clip identities, 22 source videos or two channels appears in that revision's train or validation split. This verifies our selection, not the checkpoint's actual training history.
+
+The authors' public output table contains 1,574 lecture test records. Our audit finds the following conservative candidates, using exact project-normalized reference text plus duration within about one millisecond:
+
+| Public test evidence | Our clips |
+|---|---:|
+| Unique normalized-text and duration candidate | 411 |
+| No exact candidate | 787 |
+| Ambiguous candidates | 0 |
+
+The public IDs are aliases without original video/timestamp or waveform-hash links. Matching records support reported held-out use but do not independently verify audio identity or absence of duplicates in training. The 787 unmatched clips are not labelled as training examples: number verbalization, rewriting and filtering can prevent matches. The paper says inherited split assignments were preserved and Whisper used the same training split, but no membership list was found in the inspected official resources [9]. Shared-speaker warnings are not proof of reusing the same clip.
+
+**Training exclusion remains unverified.** This report includes the specialist's fixed-pool scores as exploratory findings, without treating them as independently confirmed unseen-data evaluation. A definitive audit needs the actual training/validation identities or author confirmation against the prepared canonical identity packet, including overlapping or augmented recordings. No authors were contacted and no private data was accessed. The unresolved status is retained in the machine-readable audit rather than converted into an assumption of either leakage or cleanliness.
 
 ## 6 Discussion and limitations
 
-The results do not support a simple monotonic increase in utterance WER as reference CMI rises in this pool. At the same time, band-level CER increases and positive pooled CMI-CER correlations indicate a metric-dependent pattern. The hosted system's highest-CMI corpus WER is elevated, but neither the paired-difference correlation nor the source-specific summaries supports reducing the finding to a universal degradation slope.
+The specialist produces a large reduction in measured edits across every CMI band and both channels. The same-50 reference sensitivity and conditional video intervals retain that observed advantage. This supports the practical relevance of configured-system choice on this pool. It does not separate recognition quality from script rendering, reference convention, training exposure, backbone or decoding. Training identities and a matched original Large V3 Turbo comparison are needed for stronger attribution.
 
-The task measures agreement with mixed-script references, while script-derived language labels also enter source CMI. Language identity and writing system differ: names, borrowing and transliteration can affect string agreement without equivalent changes in recovered meaning [4,5]. The ten-clip sensitivity shows that accepted renderings affect scores, but cannot quantify the corpus-wide share of script errors. No formal English-token preservation rate, automatic transliteration-aware corpus metric or language-detection accuracy was measured.
+Near-zero CMI-WER associations occur in all three systems. Baseline CMI-CER associations vary by channel, while the specialist association is near zero. A universal monotonic degradation slope is therefore unsupported. This does not prove that switches never cause errors: CMI measures balance, stored source labels are imperfect, and pooled summaries can hide nonlinear or subgroup effects.
 
-Several limitations bound the conclusions. First, the full benchmark uses mainly silver references; a 50-clip single-reviewer audit cannot establish gold-label quality for all 1,198 clips. Script-based tag suggestions may anchor the reviewer. Second, two source channels, uneven video contributions and educational subject matter restrict generalization. Third, the systems differ in runtime, decoding and unavailable provider internals, so their observed gap is not an isolated API-versus-local treatment effect. Fourth, CMI ignores word order, switch points, acoustic difficulty and which language is dominant. Fifth, the pretrained models' exposure to related public audio is unknown.
+Writing conventions remain part of the measurement. Names, borrowing, numbers, transliteration and word boundaries can change string agreement without an equivalent change in meaning [4,5,9]. The ten-clip sensitivity applies only to the original systems. No corpus-wide English-preservation score, semantic-accuracy metric or independently verified language-detection accuracy was measured.
 
-The exploratory intervals condition on two channels, fixed labels and one saved output per system/clip. They exclude annotation uncertainty, provider rerun variability and unseen-channel sampling. Wide high-CMI intervals limit degradation claims; separate bands are not a formal slope comparison. Single-video checks cannot exclude joint influence or confounding. The ten-clip records are complete, but short notes, category/notes inconsistencies, uncertain pairings and one listener limit interpretation. The post-hoc sensitivity is subject to reviewer and result-inspection effects. Final author and release checks remain pending; no speech-level error prevalence is established.
+Most references are silver, and the 50-clip single-reviewer audit is not representative gold truth. Educational speech from two channels and uneven video contributions restrict generalization. Conditional bootstrap intervals exclude annotation uncertainty, training contamination, unseen-channel variation and provider rerun variability. The specialist is a post-hoc extension with unresolved training exclusion; the original systems share a Large V2 foundation and differ in exposed/provider-managed settings. Neither a causal hosting effect nor a matched-setting speedup is established. Short diagnostic notes, category inconsistencies and one listener limit qualitative conclusions. Lower specialist WER was not converted into new listening judgments or tolerant allowances.
 
 ## 7 Conclusion
 
-On this frozen Nepali-English test pool, local Large V2 has lower corpus WER/CER than hosted whisper-1, with exploratory paired video intervals below zero for both local-minus-hosted gaps. No single-video removal reverses that overall point direction. Reference CMI has almost no monotonic association with utterance WER; character errors show a stronger pooled association with channel variation. Higher-CMI system comparisons remain imprecise. These results are conditional on metric, source and reference/script conventions, not proof of causal effects of mixing or hosting.
+On the same 1,198 clips and references, the specialist has WER/CER 25.94%/18.42%, versus 90.95%/69.60% for original local Large V2 and 96.41%/73.39% for hosted whisper-1. Its WER advantages are 65.01 and 70.47 percentage points, with exploratory paired intervals below zero. This is a large observed configured-system difference; training exclusion is unverified, and fine-tuning, backbone and implementation effects are not isolated.
 
-The diagnostic review records spelling/script differences, omissions, repetition and perceived language mismatches. Lower reviewed-variant WER in both systems shows that rendering choices matter on these ten examples. Residual edits are not necessarily acoustically wrong words, and high primary rates cannot all be dismissed as spelling differences. The main outcome is a source-bounded comparison with a weak CMI-WER association and explicit measurement limitations, rather than confirmation that more mixing necessarily makes ASR worse.
+CMI-WER correlations remain near zero across all three systems. The study therefore does not confirm a steady word-error increase with more balanced mixing. Character-error patterns vary by system and source. The ten-clip variant analysis documents rendering sensitivity for the original systems, not semantic accuracy or corpus-wide error causes.
 
-Author and release checks remain before a public version. Additional providers, training and applications remain outside this report's completion path. The evidence supports a technical report draft, without a claim of peer review, exhaustive novelty or population-wide superiority.
+The contribution is a reproducible, source-bounded evaluation with explicit exploratory extensions. Training/validation exclusion and a matched unfine-tuned Large V3 Turbo comparison would strengthen interpretation. No peer-review, exhaustive-novelty or universal-superiority claim is made.
 
 <!-- pagebreak -->
 
@@ -325,7 +370,11 @@ Author and release checks remain before a public version. Additional providers, 
 
 [7] SYSTRAN. faster-whisper. Software repository; evaluated package version 1.2.1. [Official repository](https://github.com/SYSTRAN/faster-whisper).
 
-[8] OpenAI. Audio transcription API reference. Documentation checked November 16, 2026; evaluated model whisper-1. [Official API reference](https://developers.openai.com/api/reference/python/resources/audio/subresources/transcriptions/methods/create). Service documentation may change; saved requests and responses define this experiment.
+[8] OpenAI. Audio transcription API reference. Evaluated model whisper-1, described as powered by Whisper V2. [Official API reference](https://developers.openai.com/api/reference/python/resources/audio/subresources/transcriptions/methods/create). Service documentation may change; saved requests and responses define this experiment.
+
+[9] Jeevan Neupane, Janardan Bhetwal, Kshitiz Paudel, Anup Aryal and Bipin Bashyal. 2026. Nepali-English Code-Mixed Speech Recognition: Data Preparation and Adaptation of a Speech Foundation Model. arXiv preprint, November 10, 2026. [Paper version 1](https://arxiv.org/html/2611.13512v1).
+
+[10] AI Lab Pvt. Ltd., Nepal. 2026. Whisper Large V3 Turbo fine-tuned for Nepali-English code-mixed speech recognition. CC BY-NC 4.0 checkpoint. [Pinned model card](https://huggingface.co/ailabpvtltd/whisper-large-v3-turbo-nepali-english-codemix-asr/blob/8eff5c489628694a9f3ff2a02f3225ccfd6c6046/README.md).
 
 <!-- pagebreak -->
 
@@ -333,7 +382,7 @@ Author and release checks remain before a public version. Additional providers, 
 
 ### A.1 Why this report records a long identifier
 
-The dataset revision ID below identifies the exact saved version used in the experiment. A dataset can change after a study; recording its revision allows someone else to retrieve the same version. It is a technical version identifier, not a research result, score or personal identifier. Readers do not need to interpret or memorize its characters.
+A revision selects the exact dataset version; a checksum verifies file identity. These identifiers support reproducibility and are not research scores or personal identifiers.
 
 **Dataset:** saileshbro/nepali-cs-asr, default configuration.
 
@@ -345,39 +394,41 @@ The dataset revision ID below identifies the exact saved version used in the exp
 
 ### A.2 Systems and frozen settings
 
-The local implementation is Systran/faster-whisper-large-v2 through faster-whisper 1.2.1 and CTranslate2, with CUDA FP16, beam 5, temperature 0, batch 1 and automatic language handling. The hosted model identifier is OpenAI whisper-1, with language omitted, temperature 0, verbose_json responses and SDK retries disabled. Neither system receives transcript hints or previous-clip context. Section 4 gives the comparison design.
+The original system settings are in Section 4 and the frozen manifest/protocol: Large V2 automatic through faster-whisper, and whisper-1 with language omitted. Saved software pins and exposed options define the comparison; hosted internals remain provider-managed. Machine-readable records retain exact input, model and prediction hashes.
 
-The manifest and protocol record the local model revision, weight checksum, software pins and exposed settings. Hosted internals are provider-managed and cannot be pinned in the same way. Long file checksums remain in the machine-readable records so they can be checked exactly without crowding the main text.
+**Specialist checkpoint:** `ailabpvtltd/whisper-large-v3-turbo-nepali-english-codemix-asr`.
+
+**Pinned specialist revision:** `8eff5c489628694a9f3ff2a02f3225ccfd6c6046`.
+
+**Original weights SHA-256:** `4c0a8779438f23ac518d6e4379c0f6edfacb8a470320fceb43081f9936eef549`.
+
+The separate CPU conversion environment used PyTorch 2.9.1, Transformers 4.57.6 and CTranslate2 4.8.5. Conversion/model hashes, package pins and source manifests are in `configs/codemix_turbo_experiment_20261127.json`. This does not identify the checkpoint's training members. The overlap audit pins the authors' repository and test-output dataset revisions separately.
 
 ### A.3 Review corrections and their limits
 
-The Example 09 decision cell originally saved to Example 08 because of a copied example number. The user's unsaved, completed cells were preserved and their literal answers restored to the correct records on November 23. The save target was corrected, the previous records retained, and recovery provenance stored. The assistant did not create new listening judgments or independently verify the audio. This correction affects diagnostic annotations only, not model responses or full-benchmark scores.
+An Example 09 cell originally saved to Example 08. The researcher's unsaved literal entries were preserved and restored to the correct records on November 23, with history and recovery provenance retained. Neither model responses nor primary references changed. The assistant supplied no new listening judgments.
 
-Six originally accepted word equivalences were conservatively excluded after assistant text review. Prior human decisions remain in history, while the amendments record a separate actor, timestamp, reason and lack of new listening. The remaining 31 approvals follow the researcher's listening judgments; no second listener independently validated them. Neither this correction nor the report redesign changes the frozen primary references or hypotheses.
-
-The review follow-up verification links current annotation checksums to the forty independent edit-distance checks. Appendix B identifies the repository files for reproduction. The full exact manifest/protocol/prediction hashes are available there; a hash comparison verifies file identity, not whether a transcript is acoustically correct.
+Six original same-word allowances were conservatively changed to unsure after assistant text review; original human decisions remain in history. The remaining 31 approvals are single-reviewer judgments. The follow-up record links annotation hashes to forty independent edit-distance checks. Hashes verify saved-file identity, not acoustic correctness.
 
 <!-- pagebreak -->
 
 ## Appendix B Reproduction and release status
 
-The repository is [SaTz010/Research-asr](https://github.com/SaTz010/Research-asr). This draft does not assert that the local artifacts have been pushed or that a public download URL is live. The editable report source is `reports/research_report_draft.md`; the generated PDF is `output/pdf/nepali_english_asr_research_report_draft.pdf`.
+The repository is [SaTz010/Research-asr](https://github.com/SaTz010/Research-asr). Version 0.5 was published November 24; that dated PDF and its editable source are preserved. Version 0.6 is a local revision prepared November 27 and has not been pushed or posted to a website or LinkedIn by this revision workflow. The stable editable source is `reports/research_report_draft.md`, with a stable PDF download filename and a separate dated v0.6 PDF.
 
-Frozen inputs are in `data/manifests/test_cs_benchmark_20261112.json` and `configs/evaluation_protocol_20261112.json`. Saved predictions and verification use prefix `test_cs_benchmark_20261112_` under `results/predictions/` and `results/metrics/`. Install `requirements-analysis.txt`; run `src/compare_audited_references.py`, `src/analyze_cmi.py` and `src/analyze_uncertainty.py` to reproduce from saved outputs without a key or new inference. Uncertainty results and verification are `results/metrics/paired_uncertainty_20261119.json` and its `_verified.json` companion.
+The original frozen inputs remain `data/manifests/test_cs_benchmark_20261112.json` and `configs/evaluation_protocol_20261112.json`. Original predictions, reference audits, qualitative decisions and word-variant histories are unchanged. Their earlier results retain the same scores, 2,000 source-video draws and denominators. Historical publication verification applies to v0.5, not automatically to this expanded revision.
 
-The qualitative records are `data/annotations/error_examples_20261120.json`; the variant decisions are `data/annotations/word_variants_20261122.json`. Notebooks 07 and 08 provide the corresponding review interfaces. Histories and the dated pre-recovery/original-variant snapshots retain earlier entries. `results/metrics/review_follow_up_20261123.json` records recovery, six conservative exclusions, current annotation hashes, independent edit-distance checks and unchanged frozen inputs. `reports/review_follow_up_20261123.md` explains the corrections. Completed forms are provenance, not independent validation of hearing.
+The specialist run uses `configs/codemix_turbo_experiment_20261127.json` and saved predictions/metrics with prefix `test_codemix_turbo_20261127`. Its independent `_verified.json` receipt reconstructs raw hypotheses and all normalized/raw edit counts. `src/analyze_codemix_experiment.py` recreates the specialist comparisons and figure. Its `--saved-text-only` mode reuses saved responses without audio, weights, a GPU or API calls and checks against the original audio-verification receipt. The default mode additionally rechecks the cached WAV identities.
 
-To recompute the ten-clip sensitivity without private audio, run `src/variant_sensitivity.py --saved-text-only`. This checks frozen references, predictions and saved reviews; it does not revalidate audio or hearing. Playback workflows retain their default WAV checks. Source audio, weights and credentials are excluded from the publication files; notebook playback outputs were removed after local backups were retained.
+The forced-language extension is defined in `configs/forced_ne_protocol_20261124.json`, with separate manifests and predictions. `src/analyze_forced_nepali.py` reproduces its paired results without inference. The overlap audit is `results/metrics/codemix_training_overlap_audit_20261127.json`; the 1,198-identity request packet is `data/manifests/codemix_overlap_request_20261127.json`. The recorded public-test candidate evidence is not a training-membership certificate. Repeating the external evidence inspection requires its public source tables; saved-output replay does not contact authors or independently verify their private training history.
 
-A fresh CPython 3.13 environment on Windows reproduced reference sensitivity, CMI analysis, paired uncertainty, reviewed-variant scores and the PDF. All 145 offline tests and the dependency check passed. Replay used a separate copy without source audio, credentials or network connections; all four result JSONs matched, allowing only the variant computation date to differ. PDF text and page count matched. This verifies saved-output replay on this platform, not cross-platform bitwise identity, repeated inference or independent annotation correctness.
+The original v0.5 fresh Windows/CPython 3.13 environment check passed 145 tests, four analysis JSON replays and PDF text/page-count comparison without audio or network connections. This revision extends the offline replay to include the specialist and forced-language results, checks their numerical agreement, and builds the revised PDF in an isolated copy. The current dated verification record gives its test count, stage outcomes and scope; it is not a rerun of model inference or a new independent listening audit. The original environment's lock and `src/reproduce_results.py` are used; REPRODUCING.md explains the commands. No inference runtime or model weights are needed for saved-output reproduction.
 
-Use `requirements-reproduction-lock.txt` and `src/reproduce_results.py`; REPRODUCING.md gives the commands and scope. Analysis figures are regenerated; the PDF uses two included report figure assets, ReportLab and Windows Arial. Evidence is in `results/metrics/clean_reproduction_20261124.json` and `results/metrics/publication_readiness_20261124.json`. Final author and public-link review remain.
+The PDF uses ReportLab, Windows Arial and included dated figure assets. The replay regenerates analysis figures, including the specialist comparison. Platform/font portability and binary-identical PDF timestamps are not established. Source audio/video, model weights, private caches and credentials remain excluded from publication files. For reviewed-variant replay without audio, use `src/variant_sensitivity.py --saved-text-only` in an isolated copy.
 
-The researcher conducted the project and supplied the listening, reference and token-language judgments. An AI coding assistant supported implementation, arithmetic checks, drafting and formatting; it recovered misdirected user entries and conservatively excluded six variant allowances through text review. It did not independently hear or validate the audio. The author must review final claims. Before public v1.0 release, complete final author/release and public-link checks.
+The researcher supplied the listening, reference and token-language judgments. An AI coding assistant supported implementation, source checks, arithmetic, drafting, formatting and the text-based conservative variant exclusions. It did not independently hear or validate the audio. The researcher should review the revised claims before public release. No outreach or new training was performed during report revision.
 
-Version 0.5 records completed saved-output reproduction and publication preparation. The v0.4 cover, contents, summary, glossary and appendices are retained, as are all findings. Earlier versions are preserved separately. No new inference was required. The current research package has not yet been pushed, and no website or LinkedIn publication has been performed.
-
-Original report text and figures are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by Sanskar Ananta Tiwari. Dataset-derived transcript excerpts retain the source dataset's CC BY-NC 4.0 terms and are excluded from that grant. Original code is MIT-licensed. LICENSING.md and DATA_SOURCES.md define the scope.
+Original report text and figures are licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) by Sanskar Ananta Tiwari. Dataset-derived transcript excerpts and third-party model outputs retain their separate source terms; the specialist checkpoint is CC BY-NC 4.0 and its weights are not distributed here. Original code is MIT-licensed. LICENSING.md and DATA_SOURCES.md describe the original grants and source attribution.
 
 <!-- pagebreak -->
 
@@ -399,7 +450,10 @@ Original report text and figures are licensed [CC BY 4.0](https://creativecommon
 | Percentage point (pp) | A difference between two percentages: 96.41% minus 90.95% is about 5.46 percentage points. |
 | Video-bootstrap interval | An exploratory range from repeatedly resampling source videos. It describes variation under the observed sampling design, not all possible sources of uncertainty. |
 | Reviewed-variant WER | A separate ten-clip score accepting specified same-word renderings. It is not semantic accuracy or a replacement for the main benchmark. |
-| Post-hoc analysis | An analysis added after seeing the main results. It is reported separately because it was not part of the original frozen plan. |
+| Post-hoc analysis | An analysis added after seeing the main results, such as this specialist extension. It is identified explicitly because it was not part of the original frozen plan. |
+| Code-mix specialist | An externally fine-tuned model targeting mixed Nepali-English transcripts. This project evaluated the released checkpoint without training it. |
+| Training overlap | Exposure of evaluation audio, duplicate/overlapping recordings or derivatives during model training. Validation/checkpoint selection also affects independence. Shared speakers alone do not prove exact clip overlap. |
+| Exploratory result | A measured result whose scope or design limits stronger confirmation. The specialist score is observed; its training exclusion remains unresolved. |
 | Revision ID / checksum | A revision selects an exact dataset version. A checksum helps verify that saved files have not changed. Neither is an accuracy score. |
 
 **Reading rule:** compare like with like. The full benchmark has 1,198 clips; the reference audit has 50; the reviewed-variant analysis has ten. Their scores have different denominators and purposes. A subset's score must not be presented as the result for the full dataset.

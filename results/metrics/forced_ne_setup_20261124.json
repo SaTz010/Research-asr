@@ -1,0 +1,205 @@
+{
+  "checked_at_utc": "2026-11-24T05:46:53.304215+00:00",
+  "status": "setup_verified_api_credential_update_required_before_paid_execution",
+  "condition": "forced_ne",
+  "automatic_results_policy": "reuse_only",
+  "automatic_sources_verified_unchanged": {
+    "automatic_manifest": {
+      "path": "data/manifests/test_cs_benchmark_20261112.json",
+      "sha256": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e"
+    },
+    "automatic_protocol": {
+      "path": "configs/evaluation_protocol_20261112.json",
+      "sha256": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571"
+    },
+    "automatic_protocol_document": {
+      "path": "reports/protocol_20261112.md",
+      "sha256": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4"
+    },
+    "reference_audit": {
+      "path": "data/annotations/reference_audit_20261112_frozen.json",
+      "sha256": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b"
+    },
+    "automatic_local": {
+      "path": "results/predictions/test_cs_benchmark_20261112_local.json",
+      "sha256": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1"
+    },
+    "automatic_api": {
+      "path": "results/predictions/test_cs_benchmark_20261112_whisper_api.json",
+      "sha256": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef"
+    },
+    "automatic_local_verified": {
+      "path": "results/metrics/test_cs_benchmark_20261112_local_verified.json",
+      "sha256": "8e58da520c08bc3ac4f22ce140145edd86cc2ce3bd278c21bad55278fe20f632"
+    },
+    "automatic_api_verified": {
+      "path": "results/metrics/test_cs_benchmark_20261112_whisper_api_verified.json",
+      "sha256": "ea414031e05ed4118f86042855981b26aa4bc7f3b3ca0bac7e44535770eefecf"
+    },
+    "original_api_pilot": {
+      "path": "results/predictions/whisper_api_pilot_20261022T105623043636Z.zip",
+      "sha256": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c"
+    },
+    "additional_validation": {
+      "path": "data/manifests/validation_check_20261104.json",
+      "sha256": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21"
+    }
+  },
+  "only_inference_setting_changed": "language=ne in both systems",
+  "dry_runs": [
+    {
+      "system": "local",
+      "condition": "forced_ne",
+      "input_clips_verified": 20,
+      "audio_s": 180.813,
+      "coverage": {
+        "successful_clips": 0,
+        "expected_clips": 20,
+        "complete": false,
+        "unattempted_clips": 20,
+        "unresolved_attempts": 0
+      },
+      "execute_requested": false
+    },
+    {
+      "system": "whisper_api",
+      "condition": "forced_ne",
+      "input_clips_verified": 20,
+      "audio_s": 180.813,
+      "coverage": {
+        "successful_clips": 0,
+        "expected_clips": 20,
+        "complete": false,
+        "unattempted_clips": 20,
+        "unresolved_attempts": 0
+      },
+      "execute_requested": false
+    },
+    {
+      "system": "local",
+      "condition": "forced_ne",
+      "input_clips_verified": 1198,
+      "audio_s": 11940.723,
+      "coverage": {
+        "successful_clips": 0,
+        "expected_clips": 1198,
+        "complete": false,
+        "unattempted_clips": 1198,
+        "unresolved_attempts": 0
+      },
+      "execute_requested": false
+    },
+    {
+      "system": "whisper_api",
+      "condition": "forced_ne",
+      "input_clips_verified": 1198,
+      "audio_s": 11940.723,
+      "coverage": {
+        "successful_clips": 0,
+        "expected_clips": 1198,
+        "complete": false,
+        "unattempted_clips": 1198,
+        "unresolved_attempts": 0
+      },
+      "execute_requested": false
+    }
+  ],
+  "model_weights_check": {
+    "model_sha256": "bf2a9746382e1aa7ffff6b3a0d137ed9edbd9670c3b87e5d35f5e85e70d0333a",
+    "bytes": 3086912962,
+    "matches_pinned_weights": true,
+    "model_loaded": false,
+    "inference_performed": false
+  },
+  "local_environment_check": {
+    "checked_at_utc": "2026-11-24T05:41:51.997535+00:00",
+    "python": "3.13.4",
+    "software_checks_passed": true,
+    "model_inference_performed_by_this_check": false,
+    "model_or_audio_downloaded_by_this_check": false,
+    "paid_api_calls": 0,
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.5",
+      "datasets": "4.4.1",
+      "huggingface-hub": "0.36.2",
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "nvidia-cuda-runtime-cu12": "12.9.79",
+      "nvidia-cublas-cu12": "12.9.2.10",
+      "nvidia-cudnn-cu12": "9.27.0.42"
+    },
+    "cuda_devices": 1,
+    "cuda_compute_types": [
+      "bfloat16",
+      "float16",
+      "float32",
+      "int8",
+      "int8_bfloat16",
+      "int8_float16",
+      "int8_float32"
+    ],
+    "saved_api_baseline": {
+      "archive": "whisper_api_pilot_20261022T105623043636Z.zip",
+      "sha256": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c",
+      "clips": 5,
+      "wer": 0.7297297297297297,
+      "cer": 0.4876190476190476
+    }
+  },
+  "api_access_check": {
+    "network_request_made": true,
+    "audio_uploaded": false,
+    "transcription_requested": false,
+    "status": "model_metadata_access_failed",
+    "error_type": "AuthenticationError",
+    "http_status": 401,
+    "error_code": null,
+    "credential_source": "local_env_file"
+  },
+  "offline_tests": {
+    "original_inference_environment": {
+      "passed": 150,
+      "failed": 0
+    },
+    "previously_clean_reproduction_environment": {
+      "passed": 150,
+      "failed": 0
+    },
+    "real_network_used_by_tests": false
+  },
+  "budget": {
+    "price_usd_per_minute_checked_20261124": "0.006",
+    "main_api_max_new_requests": 1198,
+    "validation_api_max_new_requests": 20,
+    "automatic_api_requests_planned": 0,
+    "automatic_retries": 0,
+    "user_reported_balance_usd": "2.29",
+    "balance_independently_verified": false,
+    "main_estimate_usd": "1.2556",
+    "validation_estimate_usd": "0.0190",
+    "total_with_20_percent_reserve_usd": "1.53"
+  },
+  "new_forced_inference_performed": false,
+  "new_automatic_inference_performed": false,
+  "new_audio_uploads": 0,
+  "new_transcription_requests": 0,
+  "inference_not_yet_verified": [
+    "Actual forced local model execution",
+    "Actual hosted transcription acceptance and billing",
+    "Complete forced coverage and paired outcome analysis"
+  ],
+  "artifacts": {
+    "README.md": "46073d8ab5c4416fc7178eccd23cbf871cb4b465ecdbd6d934183b20920a9eb6",
+    "src/run_evaluation.py": "37aabeec5b77f77f363b856185d796e914e4e51ae480e5301dad4bb7ceafacce",
+    "src/verify_evaluation.py": "56006f8a32fa604a7eb3c42b0fdfc0f0d096bbdb5111d42701f683d7e0e92a89",
+    "src/prepare_forced_nepali.py": "3c149c3e36f483489881181caf24ec5b78e8b6a4e3759a95c13714843ec4ceed",
+    "tests/test_forced_nepali.py": "64daf4938f89e0592ba47bba8431fc656f61495e704c30471e136f12c28b8ce6",
+    "reports/forced_ne_setup_20261124.md": "f435ae7beb604574425ac5edb9cc53cf48c676237e2ef164eb6d0d1179ff89e1",
+    "reports/protocol_forced_ne_20261124.md": "0b56c0a9bfe31686662b7058acd68fb369cf95a95e56289c3da70e0a46f071c8",
+    "configs/forced_ne_protocol_20261124.json": "825af118e138984ec8afbf94615bcea4aa16f14f8e48f86f2a31ca0395c70d6f",
+    "data/manifests/test_cs_forced_ne_20261124.json": "a7a8155f29f37fc28afe083bcac76e2d6f86211e5799be01a765c3d202e04f29",
+    "data/manifests/validation_forced_ne_20261124.json": "7183f13449330262107b2e231c4376b5ff20f5d212ec7e823d4d72743358e9a5"
+  }
+}

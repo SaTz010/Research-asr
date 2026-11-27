@@ -9,7 +9,8 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'output/pdf/nepali_english_asr_research_report_draft.pdf'
 SOURCE = ROOT / 'reports/research_report_draft.md'
-VERSION = '0.5'
+VERSION = '0.6'
+REPORT_DATE = '27 November 2026'
 
 
 def verify_structure(text):
@@ -121,7 +122,70 @@ def verify_numbers(text):
             raise ValueError('Report variant score table differs.')
     if len(result['per_clip']) != 1198:
         raise ValueError('Unexpected report population.')
+    verify_extension_numbers(text)
     verify_structure(text)
+
+
+def verify_extension_numbers(text):
+    receipt = json.loads((ROOT / 'results/metrics/report_extension_inputs_20261127_verified.json').read_bytes())
+    for name, expected in receipt['files_sha256'].items():
+        if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != expected:
+            raise ValueError('Report extension inputs differ from their checked receipt.')
+    for name, expected in receipt['result_content_sha256'].items():
+        content = json.loads((ROOT / name).read_bytes())
+        content.pop('computed_at_utc', None)
+        encoded = json.dumps(content, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+        if hashlib.sha256(encoded).hexdigest() != expected:
+            raise ValueError('Report extension result content differs from its checked receipt.')
+    specialist = json.loads((ROOT / 'results/metrics/codemix_turbo_comparison_20261127.json').read_bytes())
+    verified = json.loads((ROOT / 'results/metrics/test_codemix_turbo_20261127_verified.json').read_bytes())
+    if verified['coverage'] != {'expected': 1198, 'received': 1198, 'complete': True}:
+        raise ValueError('Report specialist coverage differs.')
+    scores = specialist['specialist_scores']
+    if any(scores[k] != v for k, v in verified['independent_edit_counts'].items()):
+        raise ValueError('Report specialist counts differ from independent verification.')
+    expected = f"| Code-mix-specialized Large V3 Turbo | {100*scores['wer']:.2f}% | {100*scores['cer']:.2f}% |"
+    if expected not in text:
+        raise ValueError('Report specialist summary scores differ.')
+    expected = f"| Code-mix specialist | {scores['word_errors']:,} | {100*scores['wer']:.2f}% | {scores['character_errors']:,} | {100*scores['cer']:.2f}% |"
+    if expected not in text:
+        raise ValueError('Report specialist edit-count table differs.')
+    for band, group in specialist['bands'].items():
+        s = group['specialist']
+        if f"| {band} | {group['clips']} | {100*s['wer']:.2f}% | {100*s['cer']:.2f}% |" not in text:
+            raise ValueError('Report specialist CMI table differs.')
+    for key, label in [('automatic_local', 'Specialist minus local'), ('automatic_api', 'Specialist minus hosted')]:
+        g = specialist['comparisons'][key]
+        d, i = g['specialist_minus_baseline_pp'], g['interval_95_pp']
+        expected = f"| {label} | {d['wer']:+.2f} | [{i['wer'][0]:+.2f}, {i['wer'][1]:+.2f}] | {d['cer']:+.2f} | [{i['cer'][0]:+.2f}, {i['cer'][1]:+.2f}] |"
+        if expected not in text:
+            raise ValueError('Report specialist uncertainty table differs.')
+    for metric in ['wer', 'cer']:
+        expected = f"| CMI versus specialist {metric.upper()} | {specialist['spearman']['cmi_vs_'+metric]:+.4f} |"
+        if expected not in text:
+            raise ValueError('Report specialist correlation differs.')
+    a, b = [specialist['audit_sensitivity'][v]['automatic_local']['specialist'] for v in ['published', 'corrected']]
+    expected = f"| Code-mix specialist | {100*a['wer']:.2f}% | {100*b['wer']:.2f}% | {100*a['cer']:.2f}% | {100*b['cer']:.2f}% |"
+    if expected not in text:
+        raise ValueError('Report specialist reference sensitivity differs.')
+    forced = json.loads((ROOT / 'results/metrics/forced_ne_comparison_20261124.json').read_bytes())
+    for key, label in [('local', 'Local Large V2'), ('whisper_api', 'Hosted whisper-1')]:
+        s = forced['overall']['systems'][key]
+        i = s['interval_95_pp']['wer']
+        expected = f"| {label} | {100*s['auto']['wer']:.2f}% | {100*s['forced_ne']['wer']:.2f}% | {s['forced_minus_auto_pp']['wer']:+.2f} | [{i[0]:+.2f}, {i[1]:+.2f}] |"
+        if expected not in text:
+            raise ValueError('Report forced-language sensitivity differs.')
+    audit = json.loads((ROOT / 'results/metrics/codemix_training_overlap_audit_20261127.json').read_bytes())
+    counts = Counter(row['evidence'] for row in audit['per_clip_evidence'])
+    for key, label in [('unique_public_test_candidate', 'Unique normalized-text and duration candidate'),
+                       ('no_exact_public_test_candidate', 'No exact candidate'),
+                       ('ambiguous_public_test_candidates', 'Ambiguous candidates')]:
+        if f'| {label} | {counts[key]} |' not in text:
+            raise ValueError('Report overlap evidence counts differ.')
+    if (len(audit['per_clip_evidence']) != 1198 or audit['number_of_our_clips_in_author_training'] is not None
+            or '**Training exclusion remains unverified.**' not in text
+            or 'exploratory' not in text.lower()):
+        raise ValueError('Report must retain the unresolved training-exclusion disclosure.')
 
 
 def markup(text):
@@ -138,7 +202,7 @@ def main():
     from reportlab.lib.styles import ParagraphStyle
     from reportlab.pdfbase import pdfmetrics
     from reportlab.pdfbase.ttfonts import TTFont
-    from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+    from reportlab.platypus import Image, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
     from reportlab.platypus.tableofcontents import TableOfContents
 
     class ResearchDocTemplate(SimpleDocTemplate):
@@ -229,11 +293,12 @@ def main():
             table.setStyle(TableStyle([
                 ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e9eff4')),
                 ('VALIGN', (0, 0), (-1, -1), 'TOP'), ('LEFTPADDING', (0, 0), (-1, -1), 5),
-                ('RIGHTPADDING', (0, 0), (-1, -1), 5), ('TOPPADDING', (0, 0), (-1, -1), 6),
-                ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+                ('RIGHTPADDING', (0, 0), (-1, -1), 5), ('TOPPADDING', (0, 0), (-1, -1), 3 if glossary else 6),
+                ('BOTTOMPADDING', (0, 0), (-1, -1), 3 if glossary else 6),
                 ('LINEBELOW', (0, 0), (-1, 0), .6, colors.HexColor('#aab8c3')),
                 ('LINEBELOW', (0, 1), (-1, -1), .3, colors.HexColor('#dbe2e8'))]))
-            story.extend([table, Spacer(1, 10)])
+            block = [table, Spacer(1, 10)]
+            story.extend([KeepTogether(block)] if len(cells) <= 10 else block)
         elif block.startswith('!['):
             match = re.fullmatch(r'!\[([^\]]*)\]\(([^)]+)\)', block)
             path = (SOURCE.parent / match[2]).resolve()
@@ -256,14 +321,14 @@ def main():
             canvas.setFillColor(colors.HexColor('#596978'))
         else:
             canvas.drawString(50, A4[1]-30, 'NEPALI ENGLISH ASR  /  RESEARCH REPORT')
-        canvas.drawString(50, 27, f'Sanskar Ananta Tiwari  |  Working draft v{VERSION}  |  24 November 2026')
+        canvas.drawString(50, 27, f'Sanskar Ananta Tiwari  |  Revised report v{VERSION}  |  {REPORT_DATE}')
         canvas.drawRightString(A4[0]-50, 27, str(doc.page))
         canvas.restoreState()
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     doc = ResearchDocTemplate(str(OUTPUT), pagesize=A4, leftMargin=50, rightMargin=50, topMargin=51, bottomMargin=46,
                             title='Code Mixing and Transcription Errors in Nepali English Speech',
-                            author='Sanskar Ananta Tiwari', subject='Local versus hosted Whisper paired evaluation; working draft')
+                            author='Sanskar Ananta Tiwari', subject='General and specialized Whisper systems; exploratory source-bounded evaluation')
     doc.multiBuild(story, onFirstPage=frame, onLaterPages=frame)
     print(OUTPUT)
 

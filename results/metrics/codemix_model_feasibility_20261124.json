@@ -1,0 +1,97 @@
+{
+  "checked_at_utc": "2026-11-24T09:17:09.972398+00:00",
+  "scope": "Metadata, configuration, local resources and study-design feasibility only",
+  "model_id": "ailabpvtltd/whisper-large-v3-turbo-nepali-english-codemix-asr",
+  "model_revision": "8eff5c489628694a9f3ff2a02f3225ccfd6c6046",
+  "public_ungated": true,
+  "parameters": {
+    "parameters": {
+      "BF16": 808878080
+    },
+    "total": 808878080
+  },
+  "weights": {
+    "filename": "model.safetensors",
+    "bytes": 1617825448,
+    "gib": 1.5067173615098,
+    "expected_sha256": "4c0a8779438f23ac518d6e4379c0f6edfacb8a470320fceb43081f9936eef549",
+    "downloaded": false
+  },
+  "configuration": {
+    "architectures": [
+      "WhisperForConditionalGeneration"
+    ],
+    "model_type": "whisper",
+    "dtype": "float32",
+    "torch_dtype": null,
+    "transformers_version": "4.57.6",
+    "encoder_layers": 32,
+    "decoder_layers": 4,
+    "num_mel_bins": 128,
+    "vocab_size": 51866,
+    "use_cache": false
+  },
+  "generation_defaults": {
+    "language": "ne",
+    "task": "transcribe",
+    "num_beams": null,
+    "do_sample": null,
+    "temperature": null,
+    "use_cache": null,
+    "max_length": 448,
+    "forced_decoder_ids": null
+  },
+  "local_hardware": {
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "total_vram_mib": 6144,
+    "free_vram_mib_at_check": 4523,
+    "driver": "610.91",
+    "free_disk_gib": 115.83964920043945
+  },
+  "existing_inference_packages": {
+    "torch": null,
+    "transformers": null,
+    "accelerate": null,
+    "safetensors": null,
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.5"
+  },
+  "benchmark": {
+    "clips": 1198,
+    "audio_s": 11940.723,
+    "max_clip_s": 14.0,
+    "sample_rates": [
+      16000
+    ]
+  },
+  "pilot_available": {
+    "validation_clips": 20,
+    "audio_s": 180.813
+  },
+  "training_overlap": {
+    "source_dataset_listed_by_model_authors": "saileshbro/nepali-cs-asr",
+    "training_clip_manifest_in_model_repository": false,
+    "exact_benchmark_overlap_status": "unresolved; not proven present or absent",
+    "unseen_data_claim_supported": false
+  },
+  "recommendation": "Technically plausible local batch-one pilot; keep separate and resolve training/test overlap before an independent generalization claim",
+  "model_inference_performed": false,
+  "model_weights_downloaded": false,
+  "packages_installed": false,
+  "paid_api_requests": 0,
+  "published_research_modified": false,
+  "metadata_files_sha256": {
+    "config.json": "e3133db16d2a7335dc0bb865d3cee3f05fed276d9bea0730651871d811bf97cb",
+    "generation_config.json": "2d17ed89815dd1cfd9f2e45563f0e4982b4f462a8dfdd9dd79383e009eb10adb",
+    "model_metadata.json": "2a960c4f7368841d2639c42740434d235682764270a4600beca72d2627d036a4",
+    "outputs_metadata.json": "ff24130b45e0546f4577a56a1aa124300cd1c2cbaaca5b2c5aa909b25b51e255",
+    "preprocessor_config.json": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+    "README.md": "9d331a757030b5f06cc21aeabc7adef3875cad6a7e4e3052a200c9388b677ef9",
+    "tokenizer_config.json": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6"
+  },
+  "report": {
+    "path": "reports/codemix_model_feasibility_20261124.md",
+    "sha256": "b59dff9835299759d99865862ea122093d17fcc8a76d34f1b9bc9ede9c8fad43"
+  },
+  "original_benchmark_sources_rechecked_unchanged": true
+}

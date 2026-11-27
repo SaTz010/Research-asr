@@ -1,0 +1,50 @@
+{
+  "conversion_environment": ".cache/codemix-conversion-env",
+  "conversion_dependencies": [
+    "certifi==2026.11.20",
+    "charset-normalizer==3.5.3",
+    "colorama==0.4.6",
+    "ctranslate2==4.8.5",
+    "filelock==4.2.4",
+    "fsspec==2026.9.0",
+    "huggingface_hub==0.36.2",
+    "idna==3.20",
+    "Jinja2==3.1.6",
+    "MarkupSafe==3.0.3",
+    "mpmath==1.3.0",
+    "networkx==3.7",
+    "numpy==2.3.5",
+    "packaging==26.4",
+    "PyYAML==6.0.4",
+    "regex==2026.11.25",
+    "requests==2.34.2",
+    "safetensors==0.8.0",
+    "setuptools==78.1.0",
+    "sympy==1.14.0",
+    "tokenizers==0.22.2",
+    "torch==2.9.1+cpu",
+    "tqdm==4.70.1",
+    "transformers==4.57.6",
+    "typing_extensions==4.16.0",
+    "urllib3==2.8.0"
+  ],
+  "pip_check": "No broken requirements found.",
+  "inference_environment": ".venv",
+  "inference_dependencies": {
+    "numpy": "2.3.5",
+    "soundfile": "0.13.1",
+    "jiwer": "4.0.0",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.5",
+    "huggingface-hub": "0.36.2"
+  },
+  "source_safetensors_sha256_verified": "4c0a8779438f23ac518d6e4379c0f6edfacb8a470320fceb43081f9936eef549",
+  "converted_files_sha256": {
+    "config.json": "27ec8ecb8ba05f3ac81522a7a035bd5ab19a5b567640bf68ccec90ded4fc1726",
+    "model.bin": "db1476949229acfa496fe74ad1763980e7f6dc9556ddf5bf662a904d194b55bf",
+    "preprocessor_config.json": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+    "tokenizer.json": "baca6211988abee274bc04c10065c07bc95db061987587eeeace28be76ef99c1",
+    "vocabulary.json": "697ee5a65726e46b4d294d1a243d98e1878f5d81caba17891b1c5ebab7a912a9"
+  },
+  "no_existing_packages_changed": true
+}

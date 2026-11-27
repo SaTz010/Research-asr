@@ -1,0 +1,72 @@
+{
+  "completed_at_utc": "2026-11-27T05:52:53.557431+00:00",
+  "status": "complete_exploratory_run_and_saved_output_analysis",
+  "benchmark": {
+    "expected": 1198,
+    "received": 1198,
+    "complete": true
+  },
+  "validation_clips_complete_and_independently_verified": 20,
+  "primary_scores": {
+    "wer": 0.25939183442018715,
+    "cer": 0.18419586201937768,
+    "word_errors": 7319,
+    "reference_words": 28216,
+    "character_errors": 20494,
+    "reference_characters": 111262
+  },
+  "bootstrap_replicates": 2000,
+  "comparisons_with_saved_baselines": [
+    "automatic_local",
+    "automatic_api",
+    "forced_local",
+    "forced_api"
+  ],
+  "offline_tests": {
+    "passed": 164,
+    "failed": 0,
+    "environment": ".cache/reproduction-20261124/env"
+  },
+  "replay": {
+    "status": "passed",
+    "environment": ".cache/reproduction-20261124/env",
+    "scope": "Saved-output analysis replay with network blocked; existing cached audio revalidated. No new environment installation or inference.",
+    "comparison": "All nested analysis fields matched except computation timestamp; report text matched byte for byte.",
+    "network_connection_attempts": 0,
+    "new_inference_requests": 0
+  },
+  "figure_visually_checked": true,
+  "training_overlap": "unresolved; results not a confirmed unseen-data evaluation",
+  "actual_inference_backend": "faster-whisper/CTranslate2 CUDA FP16; source BF16 weights converted, no training",
+  "no_existing_inference_packages_changed": true,
+  "new_paid_api_requests": 0,
+  "original_frozen_sources_unchanged": true,
+  "original_report_and_pdf_unchanged": true,
+  "git_head_unchanged": "16d6a8fb4880639883f820f989458696599d9739",
+  "github_update_performed": false,
+  "skipped": [
+    "No new base Large V3 Turbo run; no isolated fine-tuning-effect claim",
+    "No new listening labels or tolerant-score allowances",
+    "No integration into the published report or GitHub"
+  ],
+  "artifacts_sha256": {
+    "configs/codemix_turbo_experiment_20261127.json": "fa75109c7db21fc4de1d98288e9392918fcbc7e01b89440207b28a441e2b751d",
+    "src/prepare_codemix_model.py": "8f3122e34de42c419af6ccdaa54b9c7fc7e3a9022d96c5a854969097574ec41d",
+    "src/run_codemix_experiment.py": "1c902638a5afc0a7a87366bb24ab3c060ec99ded01572f697dada3532c7c0f21",
+    "src/analyze_codemix_experiment.py": "4f606c17d47477a1456da32334a968bdb4a96cc4ea71c2d909cec80aa929033b",
+    "tests/test_codemix_runner.py": "7b70c314d5e855072bc273c5048cb61c24aeb1597346a8bec0a5e6134b03bd6d",
+    "tests/test_codemix_analysis.py": "9a9bfc803f8b314c4792aeadf0ad7e3b5d7365145f1c7eeb08eac80468e689c4",
+    "results/predictions/test_codemix_turbo_20261127.json": "8e433919f883e0e2d723eac78bbcff0c5a962dadb1402ce43266c48721df0f41",
+    "results/predictions/validation_codemix_turbo_20261127.json": "36766fdd61cade62102edf3454c47a5be56b570df73cf44d28175ebef9207e0e",
+    "results/metrics/test_codemix_turbo_20261127.json": "017c31593c73969473d3e2882e9a33b9bd12d9f28e8947c0424de766bfc23e6a",
+    "results/metrics/test_codemix_turbo_20261127_verified.json": "0fac9da714b17c0e279628c7300cb220ffc802a56387b104526c9a9e81526850",
+    "results/metrics/validation_codemix_turbo_20261127_verified.json": "36ca4d0343c1472ff396ee2833085e4c41240cd1727713e1d82c4ecb70316eeb",
+    "results/metrics/codemix_turbo_comparison_20261127.json": "25c273c560e26f286d91d4e11c2d11a0d3461ab23b9e576df1314dc5c50aa682",
+    "results/metrics/codemix_environment_20261127.json": "b7f61b9d27081d22e19f029649185e4405e75c9e6d215c3cda9b48d002036b1c",
+    "results/metrics/codemix_analysis_replay_20261127.json": "14bec90d7fd6a76efb896ffd9e88f05e1d8880cbc905fc14c820b73744d113f3",
+    "reports/codemix_turbo_comparison_20261127.md": "b012e0bac724baaae42ef309dbaed720cf02cd0d0daaeadb24f270d74cb914ff",
+    "reports/codemix_turbo_examples_20261127.md": "69a0686d8283cae07eebe081099109497171f37db2bbf50fd3da330f49d7ec5c",
+    "results/figures/codemix_turbo_cmi_20261127.png": "c81a6c5b76fc291d4c76b054af96ca6ed8128b303c240f78c397b6ffba64fb93",
+    "results/figures/codemix_turbo_cmi_20261127.svg": "b88bd2bc2bde8ca27b6ab382edff8b6730cdcea1f3ca4d347ba53d650d54198d"
+  }
+}

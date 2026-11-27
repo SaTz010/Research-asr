@@ -1,0 +1,179 @@
+{
+  "checked_at_utc": "2026-11-27T11:24:40.773731+00:00",
+  "version": "0.6",
+  "status": "revised_report_and_saved_output_reproduction_verified",
+  "pdf_pages": 20,
+  "offline_tests_passed": 171,
+  "offline_tests_failed": 0,
+  "layout_checks": {
+    "pages": 20,
+    "body_margin_or_glyph_violations": [],
+    "contents_links": 68
+  },
+  "visual_review": "All twenty latest pages rendered and inspected; cover, contents, summary, tables, figures, disclosure, references and appendices checked.",
+  "reproduction": {
+    "checked_on": "2026-11-27",
+    "started_at_utc": "2026-11-27T11:22:21.411224+00:00",
+    "passed": true,
+    "python": "3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\.cache\\reproduction-20261124\\env\\Scripts\\python.exe",
+    "isolated_working_copy": "C:\\Users\\ADMIN\\OneDrive\\Documents\\ChatGPT\\Research-asr\\.cache\\reproduction-gy5ov_6m",
+    "site_packages_inherited": false,
+    "packages": {
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "nbformat": "5.11.1",
+      "openai": "2.54.0",
+      "reportlab": "4.4.9",
+      "pypdf": "6.21.4"
+    },
+    "audio_included": false,
+    "audio_revalidated": false,
+    "inference_requests": 0,
+    "stages": [
+      {
+        "name": "pip_check",
+        "exit_code": 0,
+        "elapsed_s": 0.664
+      },
+      {
+        "name": "offline_tests",
+        "exit_code": 0,
+        "elapsed_s": 9.794
+      },
+      {
+        "name": "reference_sensitivity",
+        "exit_code": 0,
+        "elapsed_s": 1.18
+      },
+      {
+        "name": "cmi_analysis",
+        "exit_code": 0,
+        "elapsed_s": 11.731
+      },
+      {
+        "name": "paired_uncertainty",
+        "exit_code": 0,
+        "elapsed_s": 9.299
+      },
+      {
+        "name": "reviewed_variants",
+        "exit_code": 0,
+        "elapsed_s": 0.71
+      },
+      {
+        "name": "forced_language_comparison",
+        "exit_code": 0,
+        "elapsed_s": 16.992
+      },
+      {
+        "name": "specialist_comparison",
+        "exit_code": 0,
+        "elapsed_s": 35.992
+      },
+      {
+        "name": "report_pdf",
+        "exit_code": 0,
+        "elapsed_s": 1.087
+      }
+    ],
+    "pdf_pages": 20,
+    "pdf_text_and_page_count_match": true,
+    "regenerated_json_results_match": [
+      "audited_reference_comparison_20261116.json",
+      "cmi_analysis_20261116.json",
+      "paired_uncertainty_20261119.json",
+      "variant_sensitivity_20261122.json",
+      "forced_ne_comparison_20261124.json",
+      "codemix_turbo_comparison_20261127.json"
+    ],
+    "analysis_figures_regenerated": [
+      "cmi_band_error_rates_20261116",
+      "cmi_continuous_wer_20261116",
+      "cmi_by_channel_20261116",
+      "cmi_duration_checks_20261116",
+      "paired_uncertainty_20261119",
+      "forced_ne_change_20261124",
+      "codemix_turbo_cmi_20261127"
+    ],
+    "report_figures": "PDF uses the regenerated specialist CMI plot and the included original uncertainty plot. The original figure assets remain archived.",
+    "network_connection_attempts": 0,
+    "input_hashes_unchanged": {
+      "data\\annotations\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "data\\annotations\\error_examples_20261120.json": "bc6c1b4de5542bf9d4cf061ea72c3cbdf1a54bb20ecc894f1452a9fa0ec09422",
+      "data\\annotations\\error_examples_20261123_pre_recovery.json": "11f4403c6287c4bd124189fc9a1429f427e218377edead0aff1b1b96a20aef7d",
+      "data\\annotations\\reference_audit_20261105.json": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+      "data\\annotations\\reference_audit_20261112_frozen.json": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b",
+      "data\\annotations\\reference_audit_20261112_pre_freeze.json": "cab09135b8dcd88e3acdd813f2c7251595e3a1698ee07195584cbf62719447eb",
+      "data\\annotations\\word_variants_20261122.json": "561c2cb2c525308b36ced3981d1afea0bcfdcfda6a15b1459d95f03cddf49dd7",
+      "data\\annotations\\word_variants_20261123_snapshot.json": "102596ad97b76d89039339d53e02c0f6edf644d3d66b1d338458ba7c3769033c",
+      "data\\manifests\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "data\\manifests\\budget_metadata_20261022.json": "2ed67804fb11e2920795569288975b79f6adc9178ac53ac57c7ff8ad041d6eb2",
+      "data\\manifests\\codemix_overlap_request_20261127.json": "4fbef63f4a932cd3353971e4d9e74d828b3ab9287d28219ecda478a0ccb21010",
+      "data\\manifests\\reference_audit_20261105_selection.json": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+      "data\\manifests\\test_cs_20261105.json": "a6aa51bb2592022f3da004853457c871e709af0b820defd2ae0f0d1f479324fc",
+      "data\\manifests\\test_cs_benchmark_20261112.json": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+      "data\\manifests\\test_cs_forced_ne_20261124.json": "a7a8155f29f37fc28afe083bcac76e2d6f86211e5799be01a765c3d202e04f29",
+      "data\\manifests\\test_cs_preflight_20261112.json": "d8621f611cbb1a21372378a685acfcbca4c7f18c7c3ad2b336bb23db2174f43d",
+      "data\\manifests\\validation_api_access_20261112.json": "1dafc42db21bc6cf60d5ce0f655799b16067c81902247177185dfc3c4c7bd993",
+      "data\\manifests\\validation_api_access_retry1_20261112.json": "315f497304fad469b23624c4633eb290efc24bf5f9cddb38c7dae51d7d814adb",
+      "data\\manifests\\validation_api_access_retry2_20261112.json": "d8f40cacc48dc590b77dabd41c8c67db70199c847609065b7a4a9313bf754da4",
+      "data\\manifests\\validation_check_20261104.json": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21",
+      "data\\manifests\\validation_check_20261104_selection.json": "9525d1af677310c045515a8450e3651e19813bc6af9da4148edc5f33561e1ccd",
+      "data\\manifests\\validation_forced_ne_20261124.json": "7183f13449330262107b2e231c4376b5ff20f5d212ec7e823d4d72743358e9a5",
+      "configs\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "configs\\api_prices_20261022.json": "572d807eedf2b2d7edd9960e9abb3a3623a4cbb3141e8299e8fc9561e938e01e",
+      "configs\\codemix_turbo_experiment_20261127.json": "fa75109c7db21fc4de1d98288e9392918fcbc7e01b89440207b28a441e2b751d",
+      "configs\\evaluation_protocol_20261112.json": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+      "configs\\forced_ne_protocol_20261124.json": "825af118e138984ec8afbf94615bcea4aa16f14f8e48f86f2a31ca0395c70d6f",
+      "configs\\local_whisper_pilot.json": "f997b305e570820bdf990a2de56d1dc97b47982f3b4cf960f28a7311644b2495",
+      "results\\predictions\\.gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "results\\predictions\\chirp3_api_pilot_20261023T080349973576Z.zip": "7aa7ed3b5acba14d906ced0b09bc40e532b409e4104ec43baa217ec52df19123",
+      "results\\predictions\\chirp3_api_pilot_20261023T090553705776Z.zip": "d8205069fb1f410d6a011b6a6643093fbfcda615da0830559121bf42e3092ef1",
+      "results\\predictions\\local_whisper_large_v2_pilot.json": "585b19af487abf78c50d4a0f85df67763cf435b7aeb1f71c72f1f94fb371977b",
+      "results\\predictions\\test_codemix_turbo_20261127.json": "8e433919f883e0e2d723eac78bbcff0c5a962dadb1402ce43266c48721df0f41",
+      "results\\predictions\\test_cs_benchmark_20261112_local.json": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+      "results\\predictions\\test_cs_benchmark_20261112_whisper_api.json": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef",
+      "results\\predictions\\test_cs_forced_ne_20261124_local.json": "36d38831aa27ad39ba76008f1af63b5f153140b5ebc7bf0ab038dba97a4566ff",
+      "results\\predictions\\test_cs_forced_ne_20261124_whisper_api.json": "fe7e3a59fa783fcc603e5d6e246dcd19140ab501680cf3d3d466f9178ffe4274",
+      "results\\predictions\\validation_api_access_20261112_whisper_api.json": "35e2933ec4cbe4ef82256428d00e1a65ca72a31e10917dcdabe244f6ef958aab",
+      "results\\predictions\\validation_api_access_retry1_20261112_whisper_api.json": "e5d11c8f6f37bd5e8a44141ffd136ef14dadd5e6c9821cd619bc5cc206ebb02f",
+      "results\\predictions\\validation_api_access_retry2_20261112_whisper_api.json": "f7052d24d83a899fdbebbd62e5efba7a2024fe98b24d3f4c9d93a7987394a69f",
+      "results\\predictions\\validation_check_20261104_local.json": "d8cdf097047f2900415f7897aa79efbfae1f44831a375d2ad5e750015316bcc1",
+      "results\\predictions\\validation_codemix_turbo_20261127.json": "36766fdd61cade62102edf3454c47a5be56b570df73cf44d28175ebef9207e0e",
+      "results\\predictions\\validation_forced_ne_20261124_local.json": "2219577c7b7e4d700cc3ed6a5a2f2e681b38ad9caade3e40c1369bd19f876f79",
+      "results\\predictions\\validation_forced_ne_20261124_whisper_api.json": "87e968bbc51d508ec3e144d2769b79b0565a757129c7171c0a1128df0552fbd9",
+      "results\\predictions\\whisper_api_pilot_20261022T105623043636Z.zip": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c",
+      "results\\predictions\\whisper_pilot_20261022T084926480010Z.zip": "ff3d8ffd26f70fd269d60b5b5cadc92c81f28dc2939b085d951d62f93db33cb0",
+      "results\\predictions\\whisper_precision_diagnostic_20261022T101530449039Z.zip": "0ce840665bb3f2d54be5767cc080ea2076c8b5a4cf8cbc7967ba82c3ffde1bfb"
+    },
+    "finished_at_utc": "2026-11-27T11:23:49.779999+00:00"
+  },
+  "v05_archives_match_previous_published_git_head": true,
+  "archived_v05_pdf_sha256": "0d16fc8b0ecf87d660a0526e0f2085808968e7ff8b17b5b2dd3bff23b907df5f",
+  "archived_v05_source_sha256": "cf77196a442676d52d28a11f3c7c204acd365e606b4929d955a6855ab5ab3bcc",
+  "new_inference_requests": 0,
+  "new_api_requests": 0,
+  "github_update_performed": false,
+  "remaining_scientific_limits": [
+    "Specialist training/validation exclusion unverified",
+    "No matched unfine-tuned Large V3 Turbo comparison",
+    "Single-reviewer diagnostics and mainly silver references; two channels"
+  ],
+  "artifacts_sha256": {
+    "reports/research_report_draft.md": "fd2d6b805b430a6f9920f54dd93785b08a1487aebd255bfa69bca24f4069babf",
+    "output\\pdf\\nepali_english_asr_research_report_draft.pdf": "80cebb2d0a8c5791eb0751d66524a0ca4a813d1a856a5b33b1869a4fc18b6637",
+    "output\\pdf\\nepali_english_asr_research_report_draft_v0.6_20261127.pdf": "80cebb2d0a8c5791eb0751d66524a0ca4a813d1a856a5b33b1869a4fc18b6637",
+    "README.md": "0665be2e42f290953e435684190ac5ce55c912a7970b98a2f4ef314ed8bfa0e0",
+    "CITATION.cff": "9d42c0234c857390a782cd1fd9d5fd4f3435eeeb675939444d0cb8186c3927cb",
+    "DATA_SOURCES.md": "3a1ec73746e2e1e0663c742fb82021e79dc1761be77457df6899973128139db1",
+    "REPRODUCING.md": "0ba122dc9899ea866c21660156d76c38f34e9d0c257af8b0802c6707f84577d1",
+    "src/build_research_report.py": "5faa449843077b537ef5f2e04c7263129adcc06fd6e7a3337d49065e9018ea9c",
+    "src/reproduce_results.py": "cf958be4bf0adf72cacd5ea52a7544e0edab7a8974e4dbe9f4eacc2202d82559",
+    "src/analyze_codemix_experiment.py": "d042508cef0d0065379b1774139d865983adbad9576db3c9ab3e837752c63e98",
+    "results/metrics/report_extension_inputs_20261127_verified.json": "ca2d9d7e490d2993a4a65630cac578d5557235fb2aee98053439b551a25fa7ef"
+  }
+}

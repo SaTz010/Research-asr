@@ -1,0 +1,39 @@
+{
+  "predictions": "results/predictions/validation_forced_ne_20261124_local.json",
+  "predictions_sha256": "2219577c7b7e4d700cc3ed6a5a2f2e681b38ad9caade3e40c1369bd19f876f79",
+  "manifest_sha256": "7183f13449330262107b2e231c4376b5ff20f5d212ec7e823d4d72743358e9a5",
+  "system": "local",
+  "purpose": "validation_forced_ne_language_setting_followup",
+  "coverage": {
+    "expected": 20,
+    "received": 20,
+    "complete": true
+  },
+  "independent_edit_counts": {
+    "word_errors": 375,
+    "character_errors": 1403,
+    "reference_words": 435,
+    "reference_characters": 1980,
+    "raw_word_errors": 389,
+    "raw_character_errors": 1429,
+    "raw_reference_words": 435,
+    "raw_reference_characters": 1993
+  },
+  "independent_scores": {
+    "wer": 0.8620689655172413,
+    "cer": 0.7085858585858585,
+    "raw_wer": 0.8942528735632184,
+    "raw_cer": 0.7170095333667837
+  },
+  "checks": "All WAV payloads/waveform hashes and identities rechecked. Raw hypotheses reconstructed from saved responses. Every per-clip and corpus normalized/raw WER/CER independently recomputed without jiwer.",
+  "audio_s": 180.813,
+  "completed_request_s": 24.19319760000144,
+  "reported_languages": {
+    "ne": 20
+  },
+  "largest_observed_device_memory_mib": 5176,
+  "missing_gpu_snapshot_clip_ids": [],
+  "scope": "Validation-only runtime check. Verification uses saved predictions without inference/API calls. Memory is whole-device snapshots, not continuously measured model peak; missing observations are disclosed, not imputed.",
+  "condition": "forced_ne",
+  "comparison_scope": "Reuse published automatic outputs; hosted conditions were run on different dates."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "environment": ".cache/reproduction-20261124/env",
+  "scope": "Saved-output analysis replay with network blocked; existing cached audio revalidated. No new environment installation or inference.",
+  "comparison": "All nested analysis fields matched except computation timestamp; report text matched byte for byte.",
+  "network_connection_attempts": 0,
+  "new_inference_requests": 0
+}

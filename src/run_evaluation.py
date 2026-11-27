@@ -1,5 +1,6 @@
 """One frozen audio manifest, local or hosted Whisper; validates inputs by default."""
 import argparse
+import copy
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from getpass import getpass
@@ -66,13 +67,45 @@ def read_manifest(path, root=ROOT):
     return manifest, clips
 
 
-def specification_for(manifest, path, system):
+def verify_followup(manifest):
+    """Only a separately pinned follow-up can change the original language setting."""
+    def pinned(receipt):
+        path = (ROOT / receipt['path']).resolve()
+        if not path.is_relative_to(ROOT.resolve()) or hashlib.sha256(path.read_bytes()).hexdigest() != receipt['sha256']:
+            raise ValueError('Follow-up source path/checksum differs; preserve and investigate.')
+        return path.read_bytes()
+
+    protocol = json.loads(pinned({'path': manifest['protocol_config'], 'sha256': manifest['protocol_config_sha256']}))
+    if protocol.get('condition') != 'forced_ne' or protocol.get('automatic_results_policy') != 'reuse_only':
+        raise ValueError('Expected the frozen forced-Nepali-only follow-up.')
+    for receipt in protocol['sources'].values():
+        pinned(receipt)
+    pinned(protocol['protocol_document'])
+    selection = protocol['input_sets'][manifest['dataset']['split']]
+    content = json.dumps(manifest['clips'], ensure_ascii=False, sort_keys=True).encode('utf-8')
+    if (hashlib.sha256(content).hexdigest() != selection['clips_sha256']
+            or len(manifest['clips']) != selection['clips']
+            or manifest['dataset'] != selection['dataset']
+            or manifest['frozen_system_configs'] != protocol['frozen_system_configs']
+            or manifest['frozen_packages'] != protocol['frozen_packages']):
+        raise ValueError('Follow-up selection/settings/packages differ from the pinned protocol.')
+
+
+def specification_for(manifest, path, system, condition='auto'):
+    if condition not in {'auto', 'forced_ne'} or manifest.get('condition', 'auto') != condition:
+        raise ValueError('The explicit condition must match its manifest. Automatic baselines cannot be repurposed.')
+    if condition == 'forced_ne':
+        verify_followup(manifest)
     packages = {name: version(name) for name in ['numpy', 'soundfile', 'jiwer']}
     if system == 'local':
         config = json.loads((ROOT / 'configs/local_whisper_pilot.json').read_text(encoding='utf-8'))
+        if condition == 'forced_ne':
+            config['transcribe']['language'] = 'ne'
         packages.update({name: version(name) for name in ['faster-whisper', 'ctranslate2', 'huggingface-hub']})
     elif system == 'whisper_api':
-        config = {'request_settings': API_SETTINGS, 'base_url': API_BASE_URL, 'timeout_s': 120, 'max_retries': 0}
+        config = {'request_settings': copy.deepcopy(API_SETTINGS), 'base_url': API_BASE_URL, 'timeout_s': 120, 'max_retries': 0}
+        if condition == 'forced_ne':
+            config['request_settings']['language'] = 'ne'
         packages['openai'] = version('openai')
     else:
         raise ValueError('Choose local or whisper_api.')
@@ -80,11 +113,15 @@ def specification_for(manifest, path, system):
         raise ValueError('Runtime settings differ from the frozen protocol. Preserve the protocol; investigate before inference.')
     if manifest.get('frozen_packages') is not None and manifest['frozen_packages'].get(system) != packages:
         raise ValueError('Package versions differ from the frozen protocol. Investigate before inference.')
-    return {'system': system, 'dataset': manifest['dataset'],
+    spec = {'system': system, 'dataset': manifest['dataset'],
             'purpose': manifest.get('purpose'), 'manifest_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
             'manifest': [entry['identity'] for entry in manifest['clips']],
             'payload_sha256': {entry['identity']['clip_id']: entry['payload_sha256'] for entry in manifest['clips']},
             'config': config, 'packages': packages}
+    if condition == 'forced_ne':
+        spec['condition'] = condition
+        spec['protocol_config_sha256'] = manifest['protocol_config_sha256']
+    return spec
 
 
 def score_run(state):
@@ -146,7 +183,8 @@ def run_api(clips, state, output, client, max_requests):
         started = time.perf_counter()
         try:
             response = client.audio.transcriptions.create(
-                file=(f'clip_{number:05d}.wav', clip['upload_bytes'], 'audio/wav'), **API_SETTINGS)
+                file=(f'clip_{number:05d}.wav', clip['upload_bytes'], 'audio/wav'),
+                **state['run_spec']['config']['request_settings'])
         except OpenAIError as error:
             record.update(status='api_error', error_type=type(error).__name__,
                           http_status=getattr(error, 'status_code', None), request_id=getattr(error, 'request_id', None),
@@ -173,19 +211,22 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', type=Path, required=True)
     parser.add_argument('--system', choices=['local', 'whisper_api'], required=True)
+    parser.add_argument('--condition', choices=['auto', 'forced_ne'], default='auto',
+                        help='Must match the manifest; default preserves the published automatic condition.')
     parser.add_argument('--execute', action='store_true', help='Run inference; omitted means input validation only.')
     parser.add_argument('--max-requests', type=int, help='Required for paid API execution; maximum new calls this invocation.')
     args = parser.parse_args(argv)
     manifest, clips = read_manifest(args.manifest)
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.manifest.stem):
         raise ValueError('Use a simple manifest filename with letters, digits, hyphens and underscores.')
-    spec = specification_for(manifest, args.manifest, args.system)
+    spec = specification_for(manifest, args.manifest, args.system, args.condition)
     name = args.manifest.stem + '_' + args.system
     output = ROOT / 'results/predictions' / (name + '.json')
     metrics_path = ROOT / 'results/metrics' / (name + '.json')
     state = load_state(output, spec)
     summary = score_run(state)['summary']
-    print(json.dumps({'system': args.system, 'input_clips_verified': len(clips),
+    print(json.dumps({'system': args.system, 'condition': args.condition,
+                      'input_clips_verified': len(clips),
                       'audio_s': sum(row['identity']['decoded_duration_s'] for row in clips),
                       'coverage': summary, 'execute_requested': args.execute}, indent=2))
     if not args.execute:

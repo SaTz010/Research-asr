@@ -1,0 +1,171 @@
+{
+  "prepared_on": "2026-11-24",
+  "scope": "Feasibility/planning only. No new experiment, inference, authentication or paid request.",
+  "current_models": {
+    "local": "Systran/faster-whisper-large-v2",
+    "hosted": "whisper-1"
+  },
+  "proposed_conditions": [
+    "auto",
+    "language=ne"
+  ],
+  "options": {
+    "pilot20_both_modes": {
+      "clips": 20,
+      "audio_seconds_once": "180.813",
+      "conservative_rounded_seconds_once": 190,
+      "api_conditions": 2,
+      "new_api_requests": 40,
+      "estimated_api_usd": "0.03800000000000000000000000000",
+      "with_20_percent_reserve_rounded_up_usd": "0.05"
+    },
+    "subset50_both_modes": {
+      "clips": 50,
+      "audio_seconds_once": "469.056",
+      "conservative_rounded_seconds_once": 493,
+      "api_conditions": 2,
+      "new_api_requests": 100,
+      "estimated_api_usd": "0.09860000000000000000000000000",
+      "with_20_percent_reserve_rounded_up_usd": "0.12"
+    },
+    "full_forced_only_reuse_old_auto": {
+      "clips": 1198,
+      "audio_seconds_once": "11940.7230000",
+      "conservative_rounded_seconds_once": 12556,
+      "api_conditions": 1,
+      "new_api_requests": 1198,
+      "estimated_api_usd": "1.255600000000000000000000000",
+      "with_20_percent_reserve_rounded_up_usd": "1.51"
+    },
+    "full_fresh_both_modes": {
+      "clips": 1198,
+      "audio_seconds_once": "11940.7230000",
+      "conservative_rounded_seconds_once": 12556,
+      "api_conditions": 2,
+      "new_api_requests": 2396,
+      "estimated_api_usd": "2.511200000000000000000000000",
+      "with_20_percent_reserve_rounded_up_usd": "3.02"
+    },
+    "pilot20_forced_only": {
+      "clips": 20,
+      "new_api_requests": 20,
+      "new_local_transcriptions": 20,
+      "estimated_api_usd": "0.01900000000000000000000000000"
+    }
+  },
+  "recommended_total_api_requests_including_pilot": 1218,
+  "recommended_total_local_transcriptions_including_pilot": 1218,
+  "recommended_estimated_api_usd_with_pilot": "1.274600000000000000000000000",
+  "recommended_with_20_percent_reserve_usd": "1.53",
+  "suggested_credit_allocation_usd": "1.53",
+  "price_usd_per_audio_minute": "0.006",
+  "price_checked_on": "2026-11-24",
+  "pricing_source": "https://developers.openai.com/api/docs/models/whisper-1",
+  "rounding": "Planning assumption: each clip duration rounded upward to whole seconds. Provider returned usage/invoice can differ.",
+  "cache_file_presence": {
+    "test_wavs": 1198,
+    "model_bin_present": true,
+    "payloads_and_model_checksum_reverified_this_task": false
+  },
+  "baseline_reported_language_counts": {
+    "local": {
+      "ne": 938,
+      "en": 36,
+      "hi": 109,
+      "te": 20,
+      "mr": 35,
+      "bn": 36,
+      "as": 6,
+      "de": 3,
+      "jw": 1,
+      "kn": 5,
+      "pt": 1,
+      "ko": 1,
+      "ur": 2,
+      "ru": 1,
+      "br": 1,
+      "ta": 2,
+      "gu": 1
+    },
+    "hosted": {
+      "nepali": 939,
+      "english": 30,
+      "telugu": 21,
+      "hindi": 108,
+      "marathi": 36,
+      "bengali": 27,
+      "assamese": 13,
+      "kannada": 5,
+      "german": 4,
+      "korean": 2,
+      "indonesian": 1,
+      "javanese": 1,
+      "not_returned": 1,
+      "gujarati": 2,
+      "urdu": 2,
+      "malayalam": 1,
+      "turkish": 1,
+      "breton": 1,
+      "tamil": 1,
+      "sinhala": 1,
+      "persian": 1
+    }
+  },
+  "historical_api_validation": {
+    "clips": 5,
+    "identical_auto_ne_hypotheses": 5,
+    "wer_both": 0.7297297297297297,
+    "cer_both": 0.4876190476190476,
+    "not_a_large_v2_forced_local_test": true
+  },
+  "schedule": {
+    "window": "06:00-09:00 Asia/Kathmandu",
+    "dates": [
+      "2026-11-25",
+      "2026-11-26",
+      "2026-11-27",
+      "2026-11-28"
+    ],
+    "allocated_hours": 12,
+    "hands_on_planning_hours": "8-12",
+    "revised_combined_announcement": "2026-11-28",
+    "extension_days_from_nov25": 3,
+    "contingency": "November 29 if access, quota or debugging delays occur"
+  },
+  "availability_risk": {
+    "whisper_1_documented_shutdown": "2027-02-26",
+    "source": "https://developers.openai.com/api/docs/deprecations",
+    "account_availability_and_balance_not_checked": true
+  },
+  "local_baseline_transcription_minutes": 45.57,
+  "api_baseline_summed_turnaround_minutes": 53.72,
+  "new_inference_requests": 0,
+  "paid_calls": 0,
+  "published_baseline_modified": false,
+  "source_sha256": {
+    "data/manifests/test_cs_benchmark_20261112.json": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e",
+    "data/manifests/reference_audit_20261105_selection.json": "b49b904b6e8bba3b6a63418eaf136a89ccd1fc68c7521685cdc6a880264e3555",
+    "data/manifests/validation_check_20261104.json": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21",
+    "configs/evaluation_protocol_20261112.json": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571",
+    "results/metrics/whisper_api_pilot_20261022_verified.json": "00b98f4d67b3c9e6bf00d8ff47ae2ef63c5e9bca031a52cfceecb70fd1122609",
+    "results/predictions/test_cs_benchmark_20261112_local.json": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1",
+    "results/predictions/test_cs_benchmark_20261112_whisper_api.json": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef"
+  },
+  "selected_design": "Reuse both published automatic baselines; new Nepali-specified inference only on all 1,198 clips in both systems.",
+  "user_reported_balance_usd": "2.29",
+  "balance_independently_verified": false,
+  "unallocated_balance_after_planned_budget_usd": "0.76",
+  "fresh_automatic_inference_planned": false,
+  "comparison_limit": "The hosted automatic and forced-Nepali runs occur on different dates. Describe observed differences without attributing them solely to the language parameter.",
+  "artifact_verification": {
+    "pdf_pages": 2,
+    "visually_checked_pages": [
+      1,
+      2
+    ],
+    "pdf_sha256": "7611a89b5608e2ca01ea60bcbe6fcf63be3e6b1751ad7346e43eb8b107966698",
+    "report_source_sha256": "e6f2f5f50da7ded76a8896d0fab7e4764d3a64f806fdf023a49980c68022a075",
+    "source_hashes_unchanged": true,
+    "budget_checked": true
+  }
+}

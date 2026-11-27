@@ -15,7 +15,8 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ['audited_reference_comparison_20261116.json', 'cmi_analysis_20261116.json',
-           'paired_uncertainty_20261119.json', 'variant_sensitivity_20261122.json']
+           'paired_uncertainty_20261119.json', 'variant_sensitivity_20261122.json',
+           'forced_ne_comparison_20261124.json', 'codemix_turbo_comparison_20261127.json']
 
 
 def compare(actual, expected, path='result'):
@@ -76,7 +77,7 @@ def main():
     env.update(PYTHONNOUSERSITE='1', PYTHONPATH=str(guard), PYTHONUTF8='1',
                HF_HUB_OFFLINE='1', HF_DATASETS_OFFLINE='1', MPLCONFIGDIR=str(work / '.cache/matplotlib'),
                REPRO_NETWORK_LOG=str(attempts))
-    report = {'checked_on': '2026-11-24', 'started_at_utc': datetime.now(timezone.utc).isoformat(),
+    report = {'checked_on': '2026-11-27', 'started_at_utc': datetime.now(timezone.utc).isoformat(),
               'passed': False, 'python': sys.version, 'executable': sys.executable,
               'isolated_working_copy': str(work), 'site_packages_inherited': sys.prefix == sys.base_prefix,
               'packages': {p: version(p) for p in ['numpy', 'soundfile', 'jiwer', 'scipy', 'matplotlib',
@@ -88,6 +89,8 @@ def main():
               ('cmi_analysis', ['src/analyze_cmi.py']),
               ('paired_uncertainty', ['src/analyze_uncertainty.py']),
               ('reviewed_variants', ['src/variant_sensitivity.py', '--saved-text-only']),
+              ('forced_language_comparison', ['src/analyze_forced_nepali.py']),
+              ('specialist_comparison', ['src/analyze_codemix_experiment.py', '--saved-text-only']),
               ('report_pdf', ['src/build_research_report.py'])]
     try:
         for label, command in stages:
@@ -105,6 +108,9 @@ def main():
             if name.startswith('variant_sensitivity'):
                 regenerated.pop('computed_on', None)
                 saved.pop('computed_on', None)
+            if name in ['forced_ne_comparison_20261124.json', 'codemix_turbo_comparison_20261127.json']:
+                regenerated.pop('computed_at_utc', None)
+                saved.pop('computed_at_utc', None)
             compare(regenerated, saved, name)
         from pypdf import PdfReader
         filename = 'output/pdf/nepali_english_asr_research_report_draft.pdf'
@@ -115,13 +121,13 @@ def main():
         report['regenerated_json_results_match'] = RESULTS
         figure_names = ['cmi_band_error_rates_20261116', 'cmi_continuous_wer_20261116',
                         'cmi_by_channel_20261116', 'cmi_duration_checks_20261116',
-                        'paired_uncertainty_20261119']
+                        'paired_uncertainty_20261119', 'forced_ne_change_20261124', 'codemix_turbo_cmi_20261127']
         for stem in figure_names:
             for suffix in ['png', 'svg']:
                 if not (work / f'results/figures/{stem}.{suffix}').is_file():
                     raise ValueError(f'Missing reproduced figure: {stem}.{suffix}')
         report['analysis_figures_regenerated'] = figure_names
-        report['report_figures'] = 'PDF uses the two included report figure assets; other analysis figures are regenerated.'
+        report['report_figures'] = 'PDF uses the regenerated specialist CMI plot and the included original uncertainty plot. The original figure assets remain archived.'
         report['network_connection_attempts'] = len(attempts.read_text().splitlines()) if attempts.exists() else 0
         if report['network_connection_attempts']:
             raise ValueError('Unexpected network attempt during reproduction')

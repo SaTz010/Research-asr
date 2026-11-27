@@ -23,3 +23,8 @@ Dataset citation:
 ```
 
 Local inference uses [SYSTRAN faster-whisper](https://github.com/SYSTRAN/faster-whisper) and converted Whisper Large V2 weights. Hosted outputs were obtained with OpenAI's whisper-1 transcription endpoint. Software/model names identify the evaluated systems and imply no provider endorsement. The report contains the research bibliography and limitations.
+
+
+The November 27 exploratory extension evaluates AI Lab Pvt. Ltd.'s [Nepali-English code-mix-specialized Large V3 Turbo](https://huggingface.co/ailabpvtltd/whisper-large-v3-turbo-nepali-english-codemix-asr), pinned to revision `8eff5c489628694a9f3ff2a02f3225ccfd6c6046`. Its authors release the weights under CC BY-NC 4.0; weights and the converted copy remain private cached downloads and are not redistributed. The source checkpoint and training disclosures are credited to Jeevan Neupane, Janardan Bhetwal, Kshitiz Paudel, Anup Aryal, Bipin Bashyal and AI Lab Pvt. Ltd.; see their [preprint](https://arxiv.org/html/2611.13512v1). This project performed no fine-tuning. Original dataset-derived output texts retain their source attribution/terms, and third-party releases are excluded from this project's original-work grants.
+
+The [overlap audit](reports/codemix_training_overlap_audit_20261127.md) uses the authors' public text-only evaluation table as supporting evidence. It does not distribute training data or certify training exclusion. The complete 1,198-clip result is presented as exploratory in v0.6, with no claim that the checkpoint's actual training identities were independently checked.

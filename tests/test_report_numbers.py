@@ -19,6 +19,30 @@ class ReportNumberTests(unittest.TestCase):
     def test_current_report_matches_verified_results(self):
         report.verify_numbers(self.text)
 
+    def test_specialist_summary_cmi_and_associations_cannot_drift(self):
+        for original, changed, message in [
+            ('| Code-mix-specialized Large V3 Turbo | 25.94% | 18.42% |', '| Code-mix-specialized Large V3 Turbo | 20.00% | 18.42% |', 'summary scores'),
+            ('| (20,30] | 286 | 22.68% | 16.27% |', '| (20,30] | 286 | 20.00% | 16.27% |', 'CMI table'),
+            ('| CMI versus specialist WER | -0.0277 |', '| CMI versus specialist WER | +0.0277 |', 'correlation'),
+        ]:
+            with self.subTest(original=original), self.assertRaisesRegex(ValueError, message):
+                report.verify_extension_numbers(self.text.replace(original, changed))
+
+    def test_specialist_interval_and_forced_control_cannot_drift(self):
+        for original, changed, message in [
+            ('| Specialist minus local | -65.01 | [-68.77, -59.76] |', '| Specialist minus local | +65.01 | [-68.77, -59.76] |', 'uncertainty table'),
+            ('| Local Large V2 | 90.95% | 91.13% | +0.17 |', '| Local Large V2 | 90.95% | 80.00% | +0.17 |', 'forced-language sensitivity'),
+        ]:
+            with self.subTest(original=original), self.assertRaisesRegex(ValueError, message):
+                report.verify_extension_numbers(self.text.replace(original, changed))
+
+    def test_overlap_counts_and_unresolved_disclosure_are_required(self):
+        with self.assertRaisesRegex(ValueError, 'overlap evidence counts'):
+            report.verify_extension_numbers(self.text.replace('| Unique normalized-text and duration candidate | 411 |',
+                                                              '| Unique normalized-text and duration candidate | 412 |'))
+        with self.assertRaisesRegex(ValueError, 'training-exclusion disclosure'):
+            report.verify_extension_numbers(self.text.replace('**Training exclusion remains unverified.**', ''))
+
     def test_plain_language_summary_must_match_the_full_benchmark(self):
         original = '| Local Whisper Large V2 | 90.95% | 69.60% |'
         self.assertIn(original, self.text)

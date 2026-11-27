@@ -1,0 +1,28 @@
+{
+  "predictions_sha256": "8e433919f883e0e2d723eac78bbcff0c5a962dadb1402ce43266c48721df0f41",
+  "experiment_config_sha256": "fa75109c7db21fc4de1d98288e9392918fcbc7e01b89440207b28a441e2b751d",
+  "coverage": {
+    "expected": 1198,
+    "received": 1198,
+    "complete": true
+  },
+  "independent_edit_counts": {
+    "word_errors": 7319,
+    "reference_words": 28216,
+    "character_errors": 20494,
+    "reference_characters": 111262,
+    "raw_word_errors": 9021,
+    "raw_reference_words": 28151,
+    "raw_character_errors": 23172,
+    "raw_reference_characters": 112126
+  },
+  "independent_scores": {
+    "wer": 0.25939183442018715,
+    "cer": 0.18419586201937768,
+    "raw_wer": 0.3204504280487372,
+    "raw_cer": 0.20666036423309492
+  },
+  "checks": "All input WAV payloads/waveforms rechecked. Raw text reconstructed from segments; settings and every corpus/per-clip normalized/raw metric independently checked.",
+  "inference_requests": 0,
+  "training_overlap": "unknown; no independent held-out generalization claim"
+}

@@ -27,17 +27,19 @@ It runs:
 3. Full 1,198-clip CMI analysis and its channel/video/duration checks.
 4. The 2,000-draw paired video-bootstrap analysis.
 5. Ten-clip reviewed-variant scoring with `--saved-text-only`.
-6. The research PDF build.
+6. The forced-Nepali paired language-setting comparison.
+7. The specialist comparison using `--saved-text-only`, preserving the original audio-verification receipt.
+8. The revised research PDF build.
 
-The four regenerated result JSONs must match the saved results recursively, including their counts, denominators, coverage, provenance, resample weights and decisions. Floating-point comparisons allow absolute roundoff of `1e-12`; only the variant result's computation date is ignored. The PDF must have identical text and page count. Input/prediction/annotation hashes must remain unchanged, and no network connection attempt may occur.
+The six regenerated result JSONs must match the saved results recursively, including their counts, denominators, coverage, provenance, resample weights and decisions. Floating-point comparisons allow absolute roundoff of `1e-12`; the variant result's computation date and the two follow-up results' computation timestamps are ignored. All other counts, settings, source hashes and resample weights must match. The PDF must have identical text and page count. Input/prediction/annotation hashes must remain unchanged, and no network connection attempt may occur.
 
-The five analysis charts are regenerated as PNG/SVG. The PDF embeds the two included, dated report-chart assets; this workflow does not recreate the styling of those two assets from scratch. PDF binary hashes and SVG metadata are not expected to be identical because generated timestamps/IDs can differ.
+Seven analysis charts are regenerated as PNG/SVG. The revised PDF embeds the specialist CMI chart and the included original uncertainty report-chart asset; the latter is not recreated from scratch. The overlap audit is checked as a saved evidence record, not rerun against the authors' private training data. Public evidence collection requires separate source access and does not certify training exclusion. PDF binary hashes and SVG metadata are not expected to be identical because generated timestamps/IDs can differ.
 
 ## Inspect the evidence
 
 By default, logs and `verification.json` are written under ignored `output/reproduction/`. A different destination can be selected with `--output-dir`. Every stage must have exit code zero and the final JSON must say `passed: true`. The record identifies the Python executable, packages, stage timings, result comparisons, PDF check and input hashes. A failed stage writes evidence and stops; it does not substitute a smaller test pool or request new predictions.
 
-The November 24 publication check is summarized in `results/metrics/clean_reproduction_20261124.json`, with release checks in `results/metrics/publication_readiness_20261124.json`.
+The November 27 v0.6 revision/replay is recorded in `results/metrics/report_revision_v06_20261127_verified.json`. Its replay uses the previously created clean environment and a new isolated working copy; it is not a second fresh installation or a cross-machine test. The historical November 24 publication check is summarized in `results/metrics/clean_reproduction_20261124.json`, with release checks in `results/metrics/publication_readiness_20261124.json`.
 
 ## Audio review is separate
 

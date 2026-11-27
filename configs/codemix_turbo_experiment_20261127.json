@@ -1,0 +1,104 @@
+{
+  "prepared_at_utc": "2026-11-27T05:33:43.627214+00:00",
+  "purpose": "Separate exploratory code-mix-specialist comparison; training overlap unresolved.",
+  "system": "codemix_turbo",
+  "model_id": "ailabpvtltd/whisper-large-v3-turbo-nepali-english-codemix-asr",
+  "model_revision": "8eff5c489628694a9f3ff2a02f3225ccfd6c6046",
+  "source_weights_sha256": "4c0a8779438f23ac518d6e4379c0f6edfacb8a470320fceb43081f9936eef549",
+  "source_weights_format": "BF16 safetensors",
+  "converted_directory": ".cache/models/codemix-turbo-8eff5c48-ct2-fp16",
+  "conversion_quantization": "float16",
+  "converted_files_sha256": {
+    "config.json": "27ec8ecb8ba05f3ac81522a7a035bd5ab19a5b567640bf68ccec90ded4fc1726",
+    "model.bin": "db1476949229acfa496fe74ad1763980e7f6dc9556ddf5bf662a904d194b55bf",
+    "preprocessor_config.json": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+    "tokenizer.json": "baca6211988abee274bc04c10065c07bc95db061987587eeeace28be76ef99c1",
+    "vocabulary.json": "697ee5a65726e46b4d294d1a243d98e1878f5d81caba17891b1c5ebab7a912a9"
+  },
+  "source_files_sha256": {
+    "added_tokens.json": "3c51f66c4c21f9e126970078f11ae77a78c74aee8df606ee9daba86e467108e0",
+    "config.json": "e3133db16d2a7335dc0bb865d3cee3f05fed276d9bea0730651871d811bf97cb",
+    "generation_config.json": "2d17ed89815dd1cfd9f2e45563f0e4982b4f462a8dfdd9dd79383e009eb10adb",
+    "merges.txt": "2df2990a395e35e8dfbc7511e08c12d56018d8d04691e0133e5d63b21e154dc6",
+    "model.safetensors": "4c0a8779438f23ac518d6e4379c0f6edfacb8a470320fceb43081f9936eef549",
+    "normalizer.json": "bf1c507dc8724ca9cf9903640dacfb69dae2f00edee4f21ceba106a7392f26dd",
+    "preprocessor_config.json": "654cf18d3e163b948ceaf9766da56ce0b52de265d58673cf61c9376f126bd499",
+    "README.md": "9d331a757030b5f06cc21aeabc7adef3875cad6a7e4e3052a200c9388b677ef9",
+    "special_tokens_map.json": "baea4ea09372eb4fca86b4e4346139fd73cb807d5087e9de0948e971739c3e74",
+    "tokenizer.json": "baca6211988abee274bc04c10065c07bc95db061987587eeeace28be76ef99c1",
+    "tokenizer_config.json": "3c75940dfce3a294fca7041a5faff011677f1b68fa85e47511bb8cf6dccaded6",
+    "vocab.json": "6788c80b082e9b0d1393147d3a3e62ba19285ac0c82ace8e5ef00f37ead58971"
+  },
+  "conversion_packages": {
+    "torch": "2.9.1+cpu",
+    "transformers": "4.57.6",
+    "ctranslate2": "4.8.5",
+    "numpy": "2.3.5",
+    "huggingface-hub": "0.36.2"
+  },
+  "runtime_packages": {
+    "numpy": "2.3.5",
+    "soundfile": "0.13.1",
+    "jiwer": "4.0.0",
+    "faster-whisper": "1.2.1",
+    "ctranslate2": "4.8.5",
+    "huggingface-hub": "0.36.2"
+  },
+  "device": "cuda",
+  "compute_type": "float16",
+  "batch_size": 1,
+  "transcribe": {
+    "task": "transcribe",
+    "language": "ne",
+    "beam_size": 1,
+    "best_of": 1,
+    "temperature": 0.0,
+    "condition_on_previous_text": false,
+    "vad_filter": false,
+    "word_timestamps": false,
+    "without_timestamps": true
+  },
+  "sources": {
+    "test_manifest": {
+      "path": "data/manifests/test_cs_benchmark_20261112.json",
+      "sha256": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e"
+    },
+    "validation_manifest": {
+      "path": "data/manifests/validation_forced_ne_20261124.json",
+      "sha256": "7183f13449330262107b2e231c4376b5ff20f5d212ec7e823d4d72743358e9a5"
+    },
+    "automatic_local": {
+      "path": "results/predictions/test_cs_benchmark_20261112_local.json",
+      "sha256": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1"
+    },
+    "automatic_api": {
+      "path": "results/predictions/test_cs_benchmark_20261112_whisper_api.json",
+      "sha256": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef"
+    },
+    "forced_local": {
+      "path": "results/predictions/test_cs_forced_ne_20261124_local.json",
+      "sha256": "36d38831aa27ad39ba76008f1af63b5f153140b5ebc7bf0ab038dba97a4566ff"
+    },
+    "forced_api": {
+      "path": "results/predictions/test_cs_forced_ne_20261124_whisper_api.json",
+      "sha256": "fe7e3a59fa783fcc603e5d6e246dcd19140ab501680cf3d3d466f9178ffe4274"
+    },
+    "reference_audit": {
+      "path": "data/annotations/reference_audit_20261112_frozen.json",
+      "sha256": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b"
+    }
+  },
+  "training_evaluation_overlap": "unknown; no independent held-out generalization claim",
+  "comparison_limit": "Different base model and training history from Large V2/whisper-1; not an isolated fine-tuning or hosting effect.",
+  "primary_scoring": "Reuse existing normalization, references and CMI; no reference edits or outcome-based exclusions.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 42,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "minimum_videos_for_interval": 10
+  },
+  "published_research_update_authorized": false
+}

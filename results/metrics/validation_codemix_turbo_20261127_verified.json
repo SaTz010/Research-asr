@@ -1,0 +1,24 @@
+{
+  "coverage": {
+    "expected": 20,
+    "received": 20,
+    "complete": true
+  },
+  "predictions_sha256": "36766fdd61cade62102edf3454c47a5be56b570df73cf44d28175ebef9207e0e",
+  "experiment_config_sha256": "fa75109c7db21fc4de1d98288e9392918fcbc7e01b89440207b28a441e2b751d",
+  "independent_scores": {
+    "word_errors": 88,
+    "reference_words": 435,
+    "character_errors": 241,
+    "reference_characters": 1980,
+    "raw_word_errors": 97,
+    "raw_reference_words": 435,
+    "raw_character_errors": 253,
+    "raw_reference_characters": 1993,
+    "wer": 0.20229885057471264,
+    "cer": 0.12171717171717172,
+    "raw_wer": 0.22298850574712645,
+    "raw_cer": 0.12694430506773707
+  },
+  "scope": "Validation only; all WAVs rechecked and hypotheses/settings/edit counts independently verified; no inference or API calls."
+}

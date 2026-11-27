@@ -1,0 +1,163 @@
+{
+  "prepared_on": "2026-11-24",
+  "condition": "forced_ne",
+  "automatic_results_policy": "reuse_only",
+  "status": "frozen_before_forced_ne_inference",
+  "protocol_document": {
+    "path": "reports/protocol_forced_ne_20261124.md",
+    "sha256": "0b56c0a9bfe31686662b7058acd68fb369cf95a95e56289c3da70e0a46f071c8"
+  },
+  "sources": {
+    "automatic_manifest": {
+      "path": "data/manifests/test_cs_benchmark_20261112.json",
+      "sha256": "1743414c8ae3e824900ba5ceb1ff0bffd2ae694f5004b103bd2a4e969b10761e"
+    },
+    "automatic_protocol": {
+      "path": "configs/evaluation_protocol_20261112.json",
+      "sha256": "f0991f6d6f10504983b31ea36732e856ab9a454052b23acf549148cd0fccc571"
+    },
+    "automatic_protocol_document": {
+      "path": "reports/protocol_20261112.md",
+      "sha256": "ed6d5b78546b57cb77e3b9b8777ac0135ff48a3e0345f930fd367e3873d550c4"
+    },
+    "reference_audit": {
+      "path": "data/annotations/reference_audit_20261112_frozen.json",
+      "sha256": "a2afd18ce75fdd662f4cdaff3bc33afc7180341684d8d9750bd155b0b69e883b"
+    },
+    "automatic_local": {
+      "path": "results/predictions/test_cs_benchmark_20261112_local.json",
+      "sha256": "48670b83f79e0727834ff6eeb170d02584d759262a208372aad28f3f46013fd1"
+    },
+    "automatic_api": {
+      "path": "results/predictions/test_cs_benchmark_20261112_whisper_api.json",
+      "sha256": "a483977e471dfb6f3ec6bc379fb95064c2aedb0571416fcc2c027619bea0a2ef"
+    },
+    "automatic_local_verified": {
+      "path": "results/metrics/test_cs_benchmark_20261112_local_verified.json",
+      "sha256": "8e58da520c08bc3ac4f22ce140145edd86cc2ce3bd278c21bad55278fe20f632"
+    },
+    "automatic_api_verified": {
+      "path": "results/metrics/test_cs_benchmark_20261112_whisper_api_verified.json",
+      "sha256": "ea414031e05ed4118f86042855981b26aa4bc7f3b3ca0bac7e44535770eefecf"
+    },
+    "original_api_pilot": {
+      "path": "results/predictions/whisper_api_pilot_20261022T105623043636Z.zip",
+      "sha256": "8733d683d43667eca01cb519a796574a7c9d3064fe7a4f8229e52714ff66ef8c"
+    },
+    "additional_validation": {
+      "path": "data/manifests/validation_check_20261104.json",
+      "sha256": "6eb158317ae576a412c17a11b70b8c42df2b7825f7fb0250a5fc0bc286e6ea21"
+    }
+  },
+  "frozen_system_configs": {
+    "local": {
+      "model_id": "Systran/faster-whisper-large-v2",
+      "model_revision": "f0fe81560cb8b68660e564f55dd99207059c092e",
+      "model_sha256": "bf2a9746382e1aa7ffff6b3a0d137ed9edbd9670c3b87e5d35f5e85e70d0333a",
+      "device": "cuda",
+      "compute_type": "float16",
+      "batch_size": 1,
+      "transcribe": {
+        "task": "transcribe",
+        "language": "ne",
+        "beam_size": 5,
+        "temperature": 0.0,
+        "condition_on_previous_text": false,
+        "vad_filter": false,
+        "word_timestamps": false,
+        "without_timestamps": true
+      }
+    },
+    "whisper_api": {
+      "request_settings": {
+        "model": "whisper-1",
+        "response_format": "verbose_json",
+        "temperature": 0.0,
+        "language": "ne"
+      },
+      "base_url": "https://api.openai.com/v1",
+      "timeout_s": 120,
+      "max_retries": 0
+    }
+  },
+  "frozen_packages": {
+    "local": {
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.8.5",
+      "huggingface-hub": "0.36.2"
+    },
+    "whisper_api": {
+      "numpy": "2.3.5",
+      "soundfile": "0.13.1",
+      "jiwer": "4.0.0",
+      "openai": "2.54.0"
+    }
+  },
+  "input_sets": {
+    "validation": {
+      "dataset": {
+        "id": "saileshbro/nepali-cs-asr",
+        "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+        "config": "default",
+        "split": "validation"
+      },
+      "clips": 20,
+      "clips_sha256": "15cb5dfac2f6aea8addd184d6ec998596cb1ab18284ad9dc15fbcb9faa78cb3f"
+    },
+    "test": {
+      "dataset": {
+        "id": "saileshbro/nepali-cs-asr",
+        "revision": "dd00ca41dd38774cd6097c372c16939d7f3746df",
+        "config": "default",
+        "split": "test"
+      },
+      "clips": 1198,
+      "clips_sha256": "47f76771226658f14d189c21ede642f4862fe288a00232eac549dbd6095f0b29"
+    }
+  },
+  "analysis": {
+    "primary_metric": "corpus_WER",
+    "secondary_metric": "corpus_CER",
+    "cmi_bands": [
+      "[0,10]",
+      "(10,20]",
+      "(20,30]",
+      "(30,40]",
+      "(40,50]"
+    ],
+    "continuous_association": "descriptive Spearman: reference CMI vs each system utterance WER; CMI vs paired local-minus-API WER",
+    "paired_difference_sign": "local minus hosted; positive is more local error",
+    "bootstrap": {
+      "resample": "source videos within each channel; same sampled clips for both systems",
+      "replicates": 2000,
+      "seed": 42,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "minimum_videos_for_interval": 10
+    },
+    "audited_sensitivity": "same 50 clips, published vs corrected reference and source-script vs audited-lexical CMI"
+  },
+  "budget": {
+    "price_usd_per_minute_checked_20261124": "0.006",
+    "main_api_max_new_requests": 1198,
+    "validation_api_max_new_requests": 20,
+    "automatic_api_requests_planned": 0,
+    "automatic_retries": 0,
+    "user_reported_balance_usd": "2.29",
+    "balance_independently_verified": false,
+    "main_estimate_usd": "1.2556",
+    "validation_estimate_usd": "0.0190",
+    "total_with_20_percent_reserve_usd": "1.53"
+  },
+  "limitations": [
+    "Exploratory follow-up after inspection of the published automatic outputs.",
+    "Hosted automatic and forced conditions have different execution dates.",
+    "No causal isolation of language-setting effects from service variability.",
+    "No independently verified detection confidence in a forced-language label."
+  ]
+}

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the author and report when using this research. Dataset-derived material retains its separate source license."
 type: software
-version: "0.5"
+version: "0.6"
 title: "Research-asr: Nepali-English code-switched ASR evaluation"
 authors:
   - family-names: Tiwari
@@ -11,7 +11,7 @@ url: "https://github.com/SaTz010/Research-asr"
 license: MIT
 preferred-citation:
   type: report
-  title: "Code Mixing and Transcription Errors in Nepali English Speech: A paired evaluation of local and hosted Whisper"
+  title: "Code Mixing and Transcription Errors in Nepali English Speech: A paired evaluation of general and specialized Whisper systems"
   authors:
     - family-names: Tiwari
       given-names: Sanskar Ananta

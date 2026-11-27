@@ -1,0 +1,92 @@
+{
+  "checked_at_utc": "2026-11-24T09:09:59.392464+00:00",
+  "status": "forced_runs_verified_and_paired_analysis_complete",
+  "run_verification": {
+    "test_cs_forced_ne_20261124_local": {
+      "verification_sha256": "5061c0038fd7c925dd5c4500e2208d01960d27a1baaf258c375fc4add46cbd7d",
+      "coverage": {
+        "expected": 1198,
+        "received": 1198,
+        "complete": true
+      },
+      "independent_scores": {
+        "wer": 0.9112560249503827,
+        "cer": 0.7057126422318492,
+        "raw_wer": 0.9360235870839402,
+        "raw_cer": 0.7247828335979166
+      }
+    },
+    "test_cs_forced_ne_20261124_whisper_api": {
+      "verification_sha256": "3637f2cba118dedb47639658621d54d9d0087f765599d06168f28ba6ba3ca9bf",
+      "coverage": {
+        "expected": 1198,
+        "received": 1198,
+        "complete": true
+      },
+      "independent_scores": {
+        "wer": 0.971186560816558,
+        "cer": 0.7534737826032248,
+        "raw_wer": 0.991474547973429,
+        "raw_cer": 0.772443501061306
+      }
+    },
+    "validation_forced_ne_20261124_local": {
+      "verification_sha256": "531cb02c01e09d2305d38fe52f0477ed14375eae11d50046343e7506100df1bf",
+      "coverage": {
+        "expected": 20,
+        "received": 20,
+        "complete": true
+      },
+      "independent_scores": {
+        "wer": 0.8620689655172413,
+        "cer": 0.7085858585858585,
+        "raw_wer": 0.8942528735632184,
+        "raw_cer": 0.7170095333667837
+      }
+    },
+    "validation_forced_ne_20261124_whisper_api": {
+      "verification_sha256": "4bc76e5ff400da733b09b70517d4ce063e103d873cee110d27bdc6bfc138b57e",
+      "coverage": {
+        "expected": 20,
+        "received": 20,
+        "complete": true
+      },
+      "independent_scores": {
+        "wer": 0.8045977011494253,
+        "cer": 0.5813131313131313,
+        "raw_wer": 0.8390804597701149,
+        "raw_cer": 0.596588058203713
+      }
+    }
+  },
+  "automatic_baselines_match_frozen_followup_sources": true,
+  "analysis_replay": {
+    "status": "passed",
+    "scope": "Full follow-up analysis replayed from saved outputs in the previously clean reproduction environment; not a new environment installation or inference rerun.",
+    "comparison": "Every JSON field matches except the computation timestamp; nested counts and numerical results checked.",
+    "network_requests": 0,
+    "audio_read_by_analysis": false
+  },
+  "offline_tests": {
+    "passed": 156,
+    "failed": 0,
+    "environment": ".cache/reproduction-20261124/env"
+  },
+  "figure_visually_checked": true,
+  "new_inference_requests_by_this_analysis": 0,
+  "published_report_v0_5_modified": false,
+  "github_followup_pushed": false,
+  "remaining": [
+    "Human review of the same ten examples with forced outputs",
+    "Integration into a new version of the main report/PDF",
+    "Follow-up publication checks and GitHub update"
+  ],
+  "artifact_sha256": {
+    "src/analyze_forced_nepali.py": "353d03dbd8814148504c7b849825e96d541de7e870b11e98f82d868996df9487",
+    "tests/test_forced_nepali_analysis.py": "fe9b11041873c923d262fbed021810926477023c76186661067ac23bbd8a5931",
+    "reports/forced_ne_comparison_20261124.md": "de8e0523e0a9be703c56e91eb233635f0bf17796425dc366a66e259981df17da",
+    "results/metrics/forced_ne_comparison_20261124.json": "4c56106c1b2ee1b406d586d5d63cf013534ec946f66529c46fe15df5584ebeaa",
+    "results/figures/forced_ne_change_20261124.png": "14fef4d9bd9c0092f1c88246d30fb14b8e96f7411694328414e381ac117bac11",
+    "results/figures/forced_ne_change_20261124.svg": "65519530445edeb14acc6ad6a6d57c24cdab4ab2676b53928fbcae2f8b9411c2"
+  }
+}

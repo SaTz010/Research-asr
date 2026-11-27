@@ -8,7 +8,7 @@ from pathlib import Path
 
 from asr_common import normalize_text
 from check_local_environment import ROOT
-from run_evaluation import read_manifest
+from run_evaluation import read_manifest, verify_followup
 from verify_local_pilot import distance
 
 
@@ -17,6 +17,15 @@ def verify(manifest_path, predictions_path, metrics_path):
     data = json.loads(predictions_path.read_text(encoding='utf-8'))
     metrics = json.loads(metrics_path.read_text(encoding='utf-8'))
     spec = data['run_spec']
+    condition = spec.get('condition', 'auto')
+    if condition != manifest.get('condition', 'auto'):
+        raise ValueError('Saved condition differs from the manifest.')
+    if condition == 'forced_ne':
+        verify_followup(manifest)
+        if (spec['config'] != manifest['frozen_system_configs'][spec['system']]
+                or spec['packages'] != manifest['frozen_packages'][spec['system']]
+                or spec.get('protocol_config_sha256') != manifest['protocol_config_sha256']):
+            raise ValueError('Forced-Nepali saved settings/packages/protocol differ.')
     assert spec == metrics['run_spec']
     assert spec['manifest_sha256'] == hashlib.sha256(manifest_path.read_bytes()).hexdigest()
     assert spec['dataset'] == manifest['dataset']
@@ -42,6 +51,8 @@ def verify(manifest_path, predictions_path, metrics_path):
             assert options['beam_size'] == spec['config']['transcribe']['beam_size']
             assert options['temperatures'] == [0.0] and not options['condition_on_previous_text']
             languages[row['response']['info']['language']] += 1
+            if condition == 'forced_ne':
+                assert row['response']['info']['language'] == 'ne'
             times.append(row['transcription_s'])
             snapshot = row.get('gpu_after_transcription')
             if isinstance(snapshot, dict) and snapshot.get('used_memory_mib') is not None:
@@ -87,6 +98,9 @@ def verify(manifest_path, predictions_path, metrics_path):
         'scope': ('Frozen held-out test evaluation.' if manifest['dataset']['split'] == 'test' else
                   'Validation-only runtime check.') + ' Verification uses saved predictions without inference/API calls. Memory is whole-device snapshots, not continuously measured model peak; missing observations are disclosed, not imputed.'
     }
+    if condition == 'forced_ne':
+        report['condition'] = condition
+        report['comparison_scope'] = 'Reuse published automatic outputs; hosted conditions were run on different dates.'
     return report
 
 

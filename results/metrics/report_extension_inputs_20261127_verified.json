@@ -1,0 +1,20 @@
+{
+  "checked_at_utc": "2026-11-27T11:08:31.656804+00:00",
+  "report_version": "0.6",
+  "scope": "Frozen extension input identities and numerically verified saved results; not training-exclusion certification.",
+  "files_sha256": {
+    "configs/codemix_turbo_experiment_20261127.json": "fa75109c7db21fc4de1d98288e9392918fcbc7e01b89440207b28a441e2b751d",
+    "results/predictions/test_codemix_turbo_20261127.json": "8e433919f883e0e2d723eac78bbcff0c5a962dadb1402ce43266c48721df0f41",
+    "results/metrics/test_codemix_turbo_20261127.json": "017c31593c73969473d3e2882e9a33b9bd12d9f28e8947c0424de766bfc23e6a",
+    "results/metrics/test_codemix_turbo_20261127_verified.json": "0fac9da714b17c0e279628c7300cb220ffc802a56387b104526c9a9e81526850",
+    "results/metrics/codemix_training_overlap_audit_20261127.json": "820a2702d1af96ac09acdf812513344dd0cb97c3cc1c65c478d2294ab66c2760",
+    "data/manifests/codemix_overlap_request_20261127.json": "4fbef63f4a932cd3353971e4d9e74d828b3ab9287d28219ecda478a0ccb21010"
+  },
+  "result_content_sha256": {
+    "results/metrics/codemix_turbo_comparison_20261127.json": "863101471bf29b72d39a3dba4eabac52443516672fc1a4587da55489e8f7e9e0",
+    "results/metrics/forced_ne_comparison_20261124.json": "abbfd91b9dce0906a85b24ef4d00d1549b15151f6457e7c985892288759585cd"
+  },
+  "original_specialist_results_unchanged_by_saved_text_replay": true,
+  "training_exclusion_verified": false,
+  "new_inference_requests": 0
+}
