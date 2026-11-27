@@ -4,7 +4,7 @@ An independent empirical study by **Sanskar Ananta Tiwari**. The question is whe
 
 **Revised report v0.6 (November 27):** [Download the PDF](output/pdf/nepali_english_asr_research_report_draft.pdf) or read the [editable report](reports/research_report_draft.md). The report has a cover, clickable contents, plain-language summary, references and three appendices. Start on page 3 for the general-reader explanation. This is a working technical report, not a peer-reviewed publication.
 
-**Publication status:** v0.5 was published on GitHub November 24, 2026 ([historical verification](reports/github_publication_20261124.md)). The expanded v0.6 report is a local revision; it has not been pushed by this revision workflow. The [dated v0.5 PDF](output/pdf/nepali_english_asr_research_report_draft_v0.5_20261124.pdf) and [source](reports/research_report_draft_v0.5_20261124.md) are preserved.
+**Publication status:** v0.6 was published on GitHub November 27, 2026, and its public report downloads were verified ([publication checks](reports/github_publication_v06_20261127.md)). The [dated v0.6 PDF](output/pdf/nepali_english_asr_research_report_draft_v0.6_20261127.pdf) is available alongside the preserved [v0.5 PDF](output/pdf/nepali_english_asr_research_report_draft_v0.5_20261124.pdf) and [v0.5 source](reports/research_report_draft_v0.5_20261124.md).
 
 ## Main results
 

@@ -1,0 +1,63 @@
+{
+  "checked_at_utc": "2026-11-27T12:55:05.142184+00:00",
+  "version": "0.6",
+  "repository": "https://github.com/SaTz010/Research-asr",
+  "branch": "main",
+  "research_commit": "8954df25b44b1fa2bf8c77c18981587b74f9d6d4",
+  "remote_head_at_verification": "8954df25b44b1fa2bf8c77c18981587b74f9d6d4",
+  "github_tree_blob_count": 264,
+  "all_tree_blobs_match": true,
+  "unauthenticated_downloads": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/SaTz010/Research-asr/8954df25b44b1fa2bf8c77c18981587b74f9d6d4/README.md",
+      "bytes": 8818,
+      "sha256": "0665be2e42f290953e435684190ac5ce55c912a7970b98a2f4ef314ed8bfa0e0",
+      "matches_local": true
+    },
+    {
+      "path": "output/pdf/nepali_english_asr_research_report_draft.pdf",
+      "url": "https://raw.githubusercontent.com/SaTz010/Research-asr/8954df25b44b1fa2bf8c77c18981587b74f9d6d4/output/pdf/nepali_english_asr_research_report_draft.pdf",
+      "bytes": 410636,
+      "sha256": "80cebb2d0a8c5791eb0751d66524a0ca4a813d1a856a5b33b1869a4fc18b6637",
+      "matches_local": true
+    },
+    {
+      "path": "output/pdf/nepali_english_asr_research_report_draft_v0.6_20261127.pdf",
+      "url": "https://raw.githubusercontent.com/SaTz010/Research-asr/8954df25b44b1fa2bf8c77c18981587b74f9d6d4/output/pdf/nepali_english_asr_research_report_draft_v0.6_20261127.pdf",
+      "bytes": 410636,
+      "sha256": "80cebb2d0a8c5791eb0751d66524a0ca4a813d1a856a5b33b1869a4fc18b6637",
+      "matches_local": true
+    },
+    {
+      "path": "reports/research_report_draft.md",
+      "url": "https://raw.githubusercontent.com/SaTz010/Research-asr/8954df25b44b1fa2bf8c77c18981587b74f9d6d4/reports/research_report_draft.md",
+      "bytes": 53415,
+      "sha256": "fd2d6b805b430a6f9920f54dd93785b08a1487aebd255bfa69bca24f4069babf",
+      "matches_local": true
+    },
+    {
+      "path": "results/metrics/report_revision_v06_20261127_verified.json",
+      "url": "https://raw.githubusercontent.com/SaTz010/Research-asr/8954df25b44b1fa2bf8c77c18981587b74f9d6d4/results/metrics/report_revision_v06_20261127_verified.json",
+      "bytes": 11448,
+      "sha256": "40ee0d55b32aa747b74273ebb971a2c8b538494f961f43f1b7f29261d0e439de",
+      "matches_local": true
+    }
+  ],
+  "prepublication_checks": {
+    "changed_files": 72,
+    "secret_pattern_findings": [],
+    "excluded_asset_findings": [],
+    "oversized_files": [],
+    "offline_tests_passed": 171,
+    "analysis_replays_passed": 6,
+    "pdf_pages": 20
+  },
+  "new_inference_requests": 0,
+  "new_paid_api_requests": 0,
+  "notes": [
+    "The v0.6 report and revision receipt preserve their dated preparation-stage status. This record verifies the later publication.",
+    "The README publication status is updated after the verified research push, so its final bytes differ from the historical prepublication receipt.",
+    "Specialist training exclusion remains unverified; publishing the results does not resolve that scientific limitation."
+  ]
+}
